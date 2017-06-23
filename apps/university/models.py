@@ -24,7 +24,7 @@ class University(models.Model):
     english_name = models.CharField(verbose_name=u'英文名', max_length=200)
     country = models.ForeignKey(Country, verbose_name=u'所属国家')
     city = models.CharField(verbose_name=u'所属城市', max_length=100)
-    type = models.CharField(choices=(('private',u'私立'), ('public', u'公立')), default='public', max_length=13)
+    type = models.CharField(choices=(('private',u'私立'), ('public', u'公立')), default='public', max_length=13, verbose_name=u'学校类型')
     bulid_time = models.DateTimeField(verbose_name=u'建校时间', null=True, blank=True)
     tea_stu = models.CharField(verbose_name=u'师生比', max_length=10)
     students = models.IntegerField(verbose_name=u'学生人数', default=0)
@@ -66,8 +66,9 @@ class MajorField(models.Model):
 
 class Major(models.Model):
     name = models.CharField(verbose_name=u'专业名称', max_length=50)
+    university = models.ForeignKey(University, verbose_name=u'所属大学', null=True, blank=True)
     desc = models.CharField(verbose_name=u'专业描述', null=True, blank=True, max_length=100)
-    type = models.CharField(choices=(('college', u'本科'), ('graduate', u'研究生')), default='college', max_length=15)
+    type = models.CharField(choices=(('college', u'本科'), ('graduate', u'研究生')), default='college', max_length=15, verbose_name=u'学位类型')
     field = models.ForeignKey(MajorField, verbose_name=u'专业方向')
     add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)
 

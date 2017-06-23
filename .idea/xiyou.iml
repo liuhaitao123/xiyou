@@ -15,8 +15,9 @@
       <sourceFolder url="file://$MODULE_DIR$/xiyou" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/extra_apps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/apps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/apps/university" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 2.7.13 virtualenv at C:\Users\littlestar\Envs\xiyan (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
