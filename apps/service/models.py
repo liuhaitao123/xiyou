@@ -44,6 +44,7 @@ class Visa(models.Model):
     type = models.CharField(choices=(('xs', u'学生签证'), ('ly', u'旅游签证'), ('ye', u'1+2套餐'), ('bg', u'包过套餐')), verbose_name=u'签证类型', max_length=8)
     desc = models.CharField(verbose_name=u'描述', max_length=300, null=True, blank=True)
     price = models.FloatField(verbose_name=u'价格', default=0)
+    add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)
 
     class Meta:
         verbose_name = u'签证'
