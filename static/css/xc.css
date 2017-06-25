@@ -1,0 +1,183 @@
+.xc ul{
+	height: 60px;
+    background: #f5f5f5;
+}
+.xc .list li{
+	font-size: 16px;
+	float: left;
+	padding: 19px 10px;
+	border-bottom: 1px solid #f5f5f5;
+	margin-left: 20px;
+	margin-right: 20px;
+	color: #1a1a1a;
+}
+.xc .list li.on{
+	color: #f80;
+	border-color:  #f80;
+}
+.xc h2{
+	font-size: 20px;
+	margin-top: 40px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f80;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.xc p{
+	font-size: 14px;
+	color: #4c4c4c;
+	line-height: 26px;
+    margin-left:430px ;
+}
+.xc .jipiao{
+	position: relative;
+}
+.xc h3{
+	position: absolute;
+	font-size: 14px;
+	color: #4c4c4c;
+	line-height: 26px;
+    left:350px ;
+    top: 67px;
+}
+.xc .jp-con{
+	width: 960px;
+	height: 440px;
+	background: #f5f5f5;
+	margin: 30px auto;
+	padding-top: 30px;
+}
+.xc .jp-con li{
+	float: left;
+	width: 360px;
+	font-size: 16px;
+	color: #1a1a1a;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.xc .jp-con li input{
+	padding-left: 24px;
+	width: 214px;
+	height: 38px;
+	background: #fff;
+	border: 1px solid #ededed;
+	border-radius: 4px;
+
+}
+.xc .jp-con li select{
+	padding-left: 14px;
+	width: 238px;
+	height: 38px;
+	background: #fff;
+	border: 1px solid #ededed;
+	border-radius: 4px;
+	color: #999;
+
+}
+.xc .jp-con .lx input{
+	width: 14px;
+	height: 14px;
+	margin-left: 5px;
+	margin-right: 5px;
+
+}
+.xc .jp-con .lx span{
+	margin-right: 30px;
+	font-size: 14px;
+	color: #4c4c4c;
+}
+.xc .jp-con .top1{
+	margin-left: 63px;
+}
+.xc .jp-con .top2{
+	margin-left: 98px;
+}
+.xc .jp-con p{
+	margin-top: 250px;
+	width: 300px;
+	font-size: 12px;
+	line-height: 12px;
+	color: #4c4c4c;
+	font-family: '宋体';
+	margin-left:380px ;
+}
+.xc .jp-con p span{
+	color: #014fff;
+}
+.xc .jp-con p input{
+	margin-right: 10px;
+	width: 12px;
+	height: 12px;
+}
+.xc .jp-con button{
+   width: 120px;
+   height: 50px;
+   font-family: '微软雅黑';
+   background: #f80;
+   color: #fff;
+   border-radius: 4px;
+   text-align: center;
+   line-height: 50px;
+   font-size: 20px;
+   border: none;
+   margin-top: 20px;
+   margin-left: 440px;
+}
+.xc .jieji .top1{
+	margin-left: 90px;
+}
+.xc .jieji .top2{
+	margin-left: 100px;
+}
+.xc .jieji .jp-con p{
+	margin-top: 260px;
+	margin-left: 190px;
+	width: 650px;
+}
+.xc .jieji .jp-con p i{
+
+	margin-right: 90px;
+
+}
+.xc .sushe .top1{
+	margin-left: 138px;
+}
+.xc .sushe .top2{
+	margin-left: 132px;
+}
+.xc .sushe .top3{
+	margin-left: 94px;
+}
+.xc .sushe .top4{
+	margin-left: 68px;
+}
+.xc .sushe .jp-con p{
+	margin-top: 220px;
+	margin-left: 390px;
+	
+}
+.xc .sushe,.xc .jieji{
+	display: none;
+}
+.xc .jieji{
+	position: relative;
+}
+.xc .jieji h3{
+	position: absolute;
+	font-size: 14px;
+	color: #4c4c4c;
+	line-height: 26px;
+    left:350px ;
+    top: 67px;
+}
+.xc .sushe{
+	position: relative;
+}
+.xc .sushe h3{
+	position: absolute;
+	font-size: 14px;
+	color: #4c4c4c;
+	line-height: 26px;
+    left:350px ;
+    top: 67px;
+}

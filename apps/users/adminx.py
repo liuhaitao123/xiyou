@@ -1,6 +1,22 @@
 # -*- coding:utf-8 -*-
 import xadmin
+from xadmin import views
 from .models import UserProfile, EmailVerifyRecord, BannerIndex, BannerOther
+
+
+# xadmin后台基础设置
+class BaseSettings(object):
+    # xadmin开启主体支持
+    enable_themes = True
+    use_bootswatch = True
+
+
+# xadmin后台全局设置
+class GlobalSettings(object):
+    site_title = u'西柚留学网'
+    site_footer = u'北京西柚科技有限公司'
+    # 左侧菜单项折叠设置
+    menu_style = 'accordion'
 
 
 class UserProfileAdmin(object):
@@ -33,3 +49,5 @@ class BannerOtherAdmin(object):
 xadmin.site.register(EmailVerifyRecord, EmailVerifyRecordAdmin)
 xadmin.site.register(BannerIndex, BannerIndexAdmin)
 xadmin.site.register(BannerOther, BannerOtherAdmin)
+xadmin.site.register(views.BaseAdminView, BaseSettings)
+xadmin.site.register(views.CommAdminView, GlobalSettings)

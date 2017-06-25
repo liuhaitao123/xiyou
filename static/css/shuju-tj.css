@@ -1,0 +1,114 @@
+.up{
+	border: 1px solid #ededed;
+	background: #fafafa;
+    margin-bottom: 60px;
+    margin-top:50px;
+}
+.up h4{
+	line-height:59px;
+	text-align: center;
+	border-bottom: 1px solid #ededed;
+    font-size: 20px;
+    color: #1a1a1a;
+}
+.up ul li{
+	position: relative;
+	font-size: 16px;
+	color: #1a1a1a;
+	line-height: 58px;
+	border-bottom: 1px solid #ededed;
+
+}
+.up ul li span{
+	position: absolute;
+	top: 23px;
+	left: 320px;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #ededed;
+	background: #fff url(../images/duihao.png) no-repeat ;
+	background-position: 0px -12px ;
+	display: inline-block;
+}
+.up ul li input{
+	width: 544px;
+	height: 38px;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px;
+	margin-left: 310px;
+	color: #999;
+	font-size: 14px;
+	text-align: center;
+	font-family: '宋体';
+}
+.up ul li i{
+	position: absolute;
+    top:10px;
+    left: 850px;
+    width: 58px;
+    height: 38px;
+    background: #fff;
+    border: 1px solid #f80;
+    border-radius: 5px;
+    line-height: 38px;
+    text-align: center;
+}
+.up ul li a{
+	position: absolute;
+    top:3px;
+    right: 900px;
+}
+.up ul li button{
+	width: 100px;
+	line-height: 40px;
+	background: #f80;
+	border-radius: 5px;
+	text-align: center;
+	border: none;
+	font-size: 14px;
+	color: #fff;
+	margin-left: 114px;
+}
+.up input.tj{
+	width: 200px;
+	line-height: 60px;
+	background: #f80;
+	border-radius: 5px;
+	text-align: center;
+	border: none;
+	font-size: 24px;
+	color: #fff;
+	margin: 15px 498px;
+	font-family: '微软雅黑';
+}
+.sm h2{
+	font-size: 20px;
+	color: #1a1a1a;
+	line-height: 32px;
+    border-bottom: 1px solid #1a1a1a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.sm h3{
+	font-size: 16px;
+	color: #1a1a1a;
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+.sm h4{
+	font-size: 14px;
+	color: #1a1a1a;
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+.sm p{
+	font-size: 14px;
+	color: #5c5c5c;
+	margin-left:10px;
+	margin-bottom: 20px;
+	text-indent: 2em;
+	line-height: 24px;
+}
+.line{
+	height: 40px;
+}

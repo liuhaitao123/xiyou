@@ -1,0 +1,164 @@
+.wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+body{
+	font-family: "微软雅黑";
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.header{
+	height: 140px;
+	margin-bottom: 40px;
+	-webkit-box-shadow: 0px 3px 5px #f4f4f4;
+	-moz-box-shadow: 0px 3px 5px #f4f4f4;
+	box-shadow: 0px 3px 5px #f4f4f4;
+}
+.header .logo{
+	margin-top: 34px;
+	padding-right: 38px;
+	width: 279px;
+	border-right: 1px dashed #d6d6d6;
+}
+.header h4{
+	font-size: 24px;
+	color: #f80;
+	margin-top: 34px;
+	padding-left: 40px;
+	line-height: 79px;
+}
+.header p{
+	font-size: 16px;
+	color: #666;
+	margin-top: 102px;	
+}
+.header p a{
+	font-size: 16px;
+	color: #1a1a1a;
+}
+.zckuang-box{
+	width: 960px;
+	height: 400px;
+	background: #fafafa;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+.zckuang-box .shunxu{
+	margin-left: 220px;
+}
+.zckuang-box .shunxu ul .oo{
+	color: #f80;
+	border-color: #f80;
+}
+.zckuang-box .shunxu ul li{
+	position: relative;
+	float: left;
+	width: 128px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 16px;
+	color: #666;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+	margin-right: 60px;
+	margin-top: 60px;
+}
+.zckuang-box .shunxu ul li span{
+	position: absolute;
+	top: 14px;
+	right: -35px;
+}
+.zckuang-box .zckuang{
+	position: relative;
+	width: 500px;
+	margin: 0 auto;
+}
+.zckuang-box .zckuang .bb{
+	position: absolute;
+}
+.zckuang-box .zckuang .bb li{ 
+    float: left;
+    width: 250px;
+    font-size: 16px;
+    line-height: 38px;
+    text-align: center;
+    margin-top:50px ;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    border-bottom: 1px solid #ededed;
+    cursor: pointer;
+}
+.zckuang-box .zckuang .bb li.on{
+	color: #f80;
+    border-bottom: 1px solid #f80;
+}
+.zckuang-box .zckuang .form{
+   padding-top: 120px;
+}
+.zckuang-box .zckuang .form ul li input{
+	width: 384px;
+	height: 38px;
+	border: 1px solid #999;
+	border-radius:7px;
+	margin-bottom: 20px;
+	margin-left: 16px;
+	color: #ccc;
+	font-size: 12px;
+	padding-left: 24px;
+}
+
+.zckuang-box .zckuang .form ul li span{
+
+	top:10px;
+	left: 32px;
+}
+
+.zckuang-box .zckuang .form ul .sjyz input,.zckuang-box .zckuang .form ul .yz input{
+	width: 244px;
+	height: 38px;
+}
+
+.zckuang-box .zckuang .form ul .yz div,.zckuang-box .zckuang .form ul .sjyz div{
+    float: right;
+    width: 118px;
+    height: 38px;
+    border:1px solid #999;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+.zckuang-box .zckuang .form ul .yz div img{
+	width: 118px;
+    height: 38px;
+}
+.zckuang-box .zckuang .form ul .sjyz div input{
+	width: 118px;
+    height: 38px;
+    margin-left: 0;
+    padding-left: 0;
+    background: #fff;
+    border: none;
+}
+.zckuang-box .zckuang .form .now input{
+	width: 480px;
+	height: 50px;
+	border: none;
+	background: #f80;
+	font-size: 18px;
+	color: #fff;
+	padding-left: 0;
+	line-height: 50px;
+	font-family: '微软雅黑';
+	margin-bottom: 50px;
+}
+.zckuang-box .zckuang .form ul .yz span{
+	margin-left: 16px;
+}
+.zckuang-box .zckuang .form .youxiang{
+	display: none;
+}

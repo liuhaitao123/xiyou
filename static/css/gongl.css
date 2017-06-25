@@ -1,0 +1,240 @@
+.xiangqing .left{
+	width: 930px;
+	position: relative;
+	
+}
+.xiangqing{
+	margin-bottom: 30px;
+}
+.xiangqing .left .jack{
+	
+	height: 80px;
+	background: #f5f5f5;
+	margin-top: 50px;
+	padding-left: 80px;
+
+}
+.xiangqing .left .gj{
+	position: absolute;
+	font-size: 16px;
+	color: #4c4c4c;
+	top:80px;
+	left: 25px;
+	
+}
+.xiangqing .left .jack li{
+	position: relative;
+	float: left;
+	margin-right: 60px;
+	margin-top: 25px;
+	cursor: pointer;
+
+/*
+	background: #fff;*/
+}
+.xiangqing .left .jack li img{
+	display: inline-block;
+	margin-right: 5px;
+}
+.xiangqing .left .jack li span{
+	position: absolute;
+    font-size: 14px;
+	color: #4c4c4c;
+	top :8px;
+	left: 50px;
+	width: 50px;
+	display: inline-block;
+
+}
+.xiangqing .left .jack li.on span{
+	color: #f80;
+}
+/*.xiangqing .left .jack li span:hover{
+	color: #f80;
+}*/
+.xiangqing .left .gl{
+	height: 686px;
+	overflow: hidden;
+}
+.xiangqing .left .gl h2{
+    font-size: 26px;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.xiangqing .left .gl div div{
+	width: 455px;
+	height: 290px;
+	padding: 5px;
+
+}
+.xiangqing .left .gl div p{
+	font-size: 16px;
+	color: #333;
+	
+	width: 425px;
+	padding-left: 20px;
+	margin-left: 5px;
+	line-height: 50px;
+	border-bottom: 1px dotted #ccc;
+} 
+.xiangqing .left .gl div p a{
+	font-size: 12px;
+	color: #fff;
+	display: inline-block;
+	width: 50px;
+	height: 16px;
+	border-radius: 3px;
+	line-height: 16px;
+	margin-left: 300px;
+	background: #f80;
+	text-align: center;
+} 
+.xiangqing .left .gl div div img{
+   float: left;
+   margin: 30px 18px;
+}
+.xiangqing .left .gl div div ul{
+   float: left; 
+   margin-top: 30px;
+}
+.xiangqing .left .gl div div ul li{
+	font-size: 14px;
+	color: #5c5c5c;
+	margin-bottom: 25px;
+}
+.xiangqing .left .gl div div ul li a{
+	font-size: 12px;
+	color: #999;
+	margin-left: 15px;
+}
+.xiangqing .left .gl div div ul li span{
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: #f80;
+   margin-right: 8px;
+   display: inline-block;
+}
+.xiangqing .left .gl .lxgl{
+	background: url(../images/bg-gl.png) no-repeat;
+}
+.xiangqing .left .gl .lxlt{
+	background: url(../images/bg-gl.png) no-repeat;
+}
+.xiangqing .left .gl .lxzx{
+	background: url(../images/bg-gl.png) no-repeat;
+}
+.xiangqing .left .gl .lxwd{
+	background: url(../images/bg-gl.png) no-repeat;
+}
+.xiangqing .left .gl .lxwd div li{
+	margin-bottom: 4px;
+	
+	margin-left: 20px;
+}
+.xiangqing .left .gl .en,.xiangqing .left .gl .ca,.xiangqing .left .gl .ao{
+	display: none;
+}
+.xiangqing .left .gl .lxwd div p{
+	font-size: 14px;
+	color: #808080;
+	border: none;
+	line-height: 28px;
+	margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.xiangqing .right{
+	width: 242px;
+}
+.xiangqing .right .other ul li{
+	margin: 0 20px 20px;
+}
+.xiangqing .right h4{
+	font-size: 16px;
+	color: #666;
+	text-align:center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f80;
+
+}
+.xiangqing .right .sc-list{
+	width: 240px;
+	height: 128px;
+	border: 1px solid #ededed;
+	margin-top: 20px;
+}
+.xiangqing .right .sc-list img{
+	margin: 20px 10px;
+	width: 90px;
+	height: 90px;
+}
+.xiangqing .right .img-con{
+	margin-top: 16px;
+}
+.xiangqing .right .img-con p{
+	font-size: 12px;
+	font-family: '宋体';
+	color: #666;
+	line-height: 24px;
+}
+.xiangqing .right .tuijian h4{
+	margin-top: 22px;
+}
+.xiangqing .anli  h2{
+    font-size: 26px;
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.xiangqing .anli a{
+    width:100px;
+    height: 26px;
+    background: #f80;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 26px; 
+    border-radius: 3px;
+    display: block;
+    margin-left: 810px;
+    margin-bottom: 10px;
+
+}
+.xiangqing .anli ul li{
+	float: left;
+	margin-left: 25px;
+	margin-bottom: 30px;
+	width: 265px;
+	height: 310px;
+	padding: 5px;
+	border: 1px solid #f4f4f4;
+	font-family: '宋体';
+	cursor: pointer;
+}
+.xiangqing .anli ul li:hover{
+    border-color: #f80;
+}
+.xiangqing .anli ul li h4{
+    font-size: 16px;
+    color: #4c4c4c;
+    padding: 10px 0px 10px 8px;
+}
+.xiangqing .anli ul li h5{
+    font-size: 14px;
+    color: #4c4c4c;
+    padding: 0px 0px 10px 8px;
+    border-bottom: 1px dotted #ccc;
+}
+.xiangqing .anli ul li h6{
+    font-size: 14px;
+    color: #4c4c4c;
+    padding: 8px 0px 10px 8px;
+    line-height: 20px;
+}
+

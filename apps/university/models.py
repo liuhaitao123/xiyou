@@ -66,6 +66,7 @@ class MajorField(models.Model):
 
 class Major(models.Model):
     name = models.CharField(verbose_name=u'专业名称', max_length=50)
+    english_name = models.CharField(verbose_name=u'英文名称', max_length=100, null=True, blank=True)
     university = models.ForeignKey(University, verbose_name=u'所属大学', null=True, blank=True)
     desc = models.CharField(verbose_name=u'专业描述', null=True, blank=True, max_length=100)
     type = models.CharField(choices=(('college', u'本科'), ('graduate', u'研究生')), default='college', max_length=15, verbose_name=u'学位类型')

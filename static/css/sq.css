@@ -1,0 +1,107 @@
+
+.sq h2{
+	font-size: 20px;
+	color: #1a1a1a;
+	text-align: center;
+	margin-top: 60px;
+}
+.sq p{
+	font-size: 16px;
+	color: #333;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 10px;
+}
+.sq p span{
+	color: #f00;
+}
+.sq .lc{
+	position: relative;
+	height: 260px;
+	background: #fff7ee;
+}
+.sq .lc ul li{
+	float: left;
+	background: url(../images/yuan1.png) no-repeat;
+	color: #666;
+	width: 116px;
+	height: 110px;
+	margin: 40px 50px 0px 50px;
+	cursor: pointer;
+}
+.sq .lc ul li span{
+	font-size: 30px;
+	
+	font-family: Arial;
+	padding-top: 20px;
+	margin-left: 47px;
+	display: block;
+
+}
+.sq .lc ul li h4{
+	font-size: 16px;
+	
+	margin-top: 8px;
+	margin-left: 25px;
+}
+.sq .lc .ou{
+	position: absolute;
+	top: 80px;
+	left: 110px;
+}
+.sq .lc .ou li{
+	float: left;
+	background: url(../images/yuan2.png) no-repeat;
+	
+}
+.sq .lc .ou .ten{
+	float: left;
+	background: url(../images/yuan4.png) no-repeat;
+	
+}
+.sq .lc ul .ten span{
+
+	margin-left: 38px;
+}
+.sq .lc ul li:hover{
+	color: #f80;
+}
+.sq .xt{
+	height: 370px;
+	background: #d9f2ff;
+	margin: 30px 0px 60px;
+	padding-top: 90px;
+}
+.sq .xt li{
+	margin-left: 420px;
+}
+.sq .xt li input{
+	width: 218px;
+	height: 38px;
+	border: 1px solid #ededed;
+	border-radius: 5px;
+	padding-left: 20px;
+	margin-bottom: 30px;
+}
+.sq .xt li span{
+	color: #1a1a1a;
+	font-size: 16px;
+
+}
+.sq .xt .name span{
+	padding-left: 32px;
+}
+.sq .xt button{
+	width: 160px;
+	height: 50px;
+	background: #f80;
+	color: #fff;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 50px;
+    border: none;
+    font-size: 24px;
+    font-family: '微软雅黑';
+    margin-left: 520px;
+
+}

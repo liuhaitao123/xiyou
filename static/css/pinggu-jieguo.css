@@ -1,0 +1,235 @@
+.zizhu{
+	background:#FaFaFa url(../images/juxing.png) no-repeat;
+	height: 120px;
+	margin-top: 40px ;
+	margin-bottom: 40px ;   
+}
+.zizhu h1,.zizhu p{
+	float: left;
+}
+.zizhu h1{
+	font-size: 36px;
+	color: #fff;
+	margin-left: 20px;
+	line-height: 120px;
+}
+.zizhu p{
+	font-size: 28px;
+	color: #1a1a1a;
+	margin-left: 110px;
+	line-height: 120px;
+}
+.school-li{
+	margin-top: 30px;
+	
+}
+.school-li p{
+	font-size: 20px;
+	color: #1a1a1a;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+.school-li hr{
+	background-color: #f80;
+	border:0;
+	height: 1px;
+}
+.school-li .school-li-box{
+    margin-top: 30px;
+    padding-bottom: 20px;
+	border-bottom: 1px dotted #ccc;
+}
+.school-li .school-li-box img,.school-li .school-li-box ul li{
+    float: left;
+}
+.school-li .school-li-box img{
+	margin-right: 26px;
+}
+.school-li .school-li-box ul li h3{
+	font-size: 20px;
+	color: #1a1a1a;
+	margin-top: 13px;
+}
+.school-li .school-li-box ul li h4{
+	font-size: 16px;
+	font-family: Arial;
+	color: #1a1a1a;
+	margin-top: 13px;
+	margin-bottom: 22px;
+}
+.school-li .school-li-box ul li p{
+	font-size: 14px;
+	color: #4c4c4c;
+	line-height: 24px;
+}
+.school-li .school-li-box ul{
+	float: left;
+}
+.school-li .school-li-box .time{
+	margin-top: 91px;
+	margin-left: 80px;
+}
+.school-li .school-li-box .paiming{
+	background: url(../images/pai-bg.png);
+	width: 136px;
+	height: 154px;
+	margin-top: 13px;
+	margin-left: 70px;
+}
+.school-li .school-li-box .paiming p{
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+	margin-top: 34px;
+	margin-bottom: 10px;
+
+}
+.school-li .school-li-box .paiming h2{
+	font-size: 36px;
+	font-family: Arial;
+	font-weight: bold; 
+	color: #fff;
+	text-align: center;
+}
+.school-li .school-li-box .bnt{
+	margin-top: 13px;
+	margin-left: 70px;
+}
+.school-li .school-li-box .bnt a{
+   width: 120px;
+   height: 42px;
+   font-size: 16px;
+   font-family: "宋体";
+   color: #fff;
+   background: #f80;
+   line-height: 42px;
+   text-align: center;
+   display: block;
+   border-radius: 5px;
+}
+.school-li .school-li-box .bnt .luqu{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background: #008aff;
+}
+.school-li .school-li-box .bnt .shenqing{
+	background: #ff0000;
+}
+.school-li .fenye{
+	margin-top:20px;
+	margin-left: 440px;
+	margin-bottom: 40px;
+
+}
+.school-li .fenye li{
+	float: left;
+	margin-right: 20px;
+}
+.school-li .fenye li a{
+	font-size: 12px;
+	font-family: "宋体";
+	color: #4c4c4c;
+	display: block;
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+}
+.school-li .fenye li .at{
+	background: #f80;
+	color: #fff;
+}
+.school-li .fenye li a:hover{
+	background: #f80;
+	color: #fff;
+}
+.duibikuang{
+	position: fixed;
+	width: 1198px;
+	height: 158px;
+	border: 1px solid #f80;
+	background: #fff;
+	bottom: 10px;
+	left: 70px;
+	display: none;
+}
+.duibikuang .kuang-head{
+	background: #fafafa;
+	height: 16px;
+	padding:12px 20px;
+}
+.duibikuang .kuang-head p{
+	float: left;
+	font-size: 16px;
+	color: #f80;
+}
+.duibikuang .kuang-head a{
+	float: right;
+	font-size: 14px;
+	color: #4c4c4c;
+	margin-right: 17px;
+}
+
+.duibikuang .sc-list .img-tu{
+	
+	margin:20px 10px 0 20px;
+}
+.duibikuang .sc-list .img-tu img{
+    width: 66px;
+	height: 66px;
+	border: 1px solid #999;
+	padding: 13px;
+	display: block;
+
+}
+.duibikuang .sc-list .img-con{
+	margin-top: 20px;
+	padding-right: 20px;
+	border-right: 1px dotted #4c4c4c;
+}
+.duibikuang .sc-list .img-con h3{
+	font-size: 14px;
+	color: #4c4c4c;
+	line-height: 26px;
+}
+.duibikuang .sc-list .img-con h4{
+	font-size: 14px;
+	font-family: Arial;
+	color: #4c4c4c;
+	line-height: 26px;
+}
+.duibikuang .sc-list .img-con p{
+	font-size: 12px;
+	font-family: "宋体";
+	color: #4c4c4c;
+	line-height: 20px;
+}
+.duibikuang .contrast .first{
+	margin: 22px 20px 10px 0;
+	width: 60px;
+	height: 40px;
+	background: #f80;
+	border-radius: 3px;
+} 
+
+.duibikuang .contrast .first a{
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	display: block;
+
+}
+.duibikuang .contrast .sen{
+	width: 60px;
+	height: 40px;
+	background: #fff;
+	border-radius: 3px;
+} 
+
+.duibikuang .contrast .sen a{
+	color: #4c4c4c;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	display: block;
+
+}

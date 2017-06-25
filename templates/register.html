@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+</head>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/global.css' %}">
+<link rel="stylesheet" href="{% static 'css/zhuce.css' %}">
+<script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+
+
+<body>
+	<div class="header">
+		<div class="wrap cleafix">
+			<div class="logo fl">
+				<img src="{% static 'img/logo-top.png' %}" alt="">
+			</div>
+			<h4 class="fl">欢迎注册</h4>
+			<p class="fr">已有账号&nbsp<a href="login.html">请登录</a></p>
+
+		</div>
+	</div>
+	<div class="zckuang-box">
+	  <div class="zckuang">
+	  	<ul class="clearfix bb">
+			<li class="on">手机号码注册</li>
+			<li>邮箱注册</li>
+		</ul>
+		<div class="form">
+		   <ul class="bd">
+		      <li class="shouji">
+		      	<form action="">
+				   <div class="">
+                     <span class="">手机号码</span>
+                     <input class="" type="text" value="" placeholder="请输入常用的手机号码"/>
+                    </div>
+                    <div class="">
+                     <span class="">设置密码</span>
+                     <input class="" type="password" value="" placeholder="建议使用数字、字母和符号两种及以上的组合"/>
+                     </div>
+                      <div class="">
+                     <span class="">确认密码</span>
+                     <input class="" type="password" value="" placeholder="请再次输入密码"/>
+                     </div>
+                     <div class="yz clearfix">
+                     <span class="">验证码</span>
+                     <input class="" type="text" value="" placeholder="请输入图片验证码"/>
+                     <div><img src="images/yanzheng.png" alt=""></div>
+                     </div>
+                     <div class="sjyz clearfix">
+                     <span class="">手机验证码</span>
+                     <input class="" type="text" value="" placeholder="请输入手机验证码"/>
+                     <div><input type="submit" value="免费获取" ></div>
+                    </div>
+                    <div class="now">
+                    	<input type="submit" value="立即注册" >
+                    </div>
+			    </form>
+		      </li>
+		   	  <li class="youxiang">
+		      	<form action="">
+				   <div class="">
+                     <span class="yx">邮箱</span>
+                     <input class="" type="text" value="" placeholder="请输入邮箱地址"/>
+                    </div>
+                    <div class="">
+                     <span class="">设置密码</span>
+                     <input class="" type="password" value="" placeholder="建议使用数字、字母和符号两种及以上的组合"/>
+                     </div>
+                      <div class="">
+                     <span class="">确认密码</span>
+                     <input class="" type="password" value="" placeholder="请再次输入密码"/>       
+                     </div>
+                     <div class="yz clearfix">
+                     <span class="">验证码</span>
+                     <input class="" type="text" value="" placeholder="请输入图片验证码"/>
+                     <div><img src="images/yanzheng.png" alt=""></div>
+                     </div>
+                     <div class="sjyz clearfix">
+                     <span class="">邮箱激活码</span>
+                     <input class="" type="text" value="" placeholder="请输入激活码"/>  
+                     <div><input type="submit" value="免费获取" ></div>   
+                    </div>
+                    <div class="now">
+                    	<input type="submit" value="立即注册" >
+                    </div>
+			    </form>
+		      </li>
+		   </ul>
+		</div>
+	  </div>
+	  <script language="javascript">
+		$('.bb li').click(function(){
+		$(this).addClass("on").siblings().removeClass();
+		  // 删除其他兄弟元素的样式
+		       // $(this).addClass('selected');
+		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除；
+		$(".bd > li").hide().eq($('.bb li').index(this)).show();
+		});
+		</script>
+	</div>
+	 
+</body>
+</html>

@@ -1,0 +1,239 @@
+.xiangqing .left{
+	width: 930px;
+
+	
+}
+.xiangqing{
+	margin-bottom: 30px;
+}
+.xiangqing .left .jack{
+	
+	height: 60px;
+	background: #f5f5f5;
+	margin-top: 50px;
+	
+
+}
+.xiangqing .left .jack li a{
+	color: #4c4c4c; 
+}
+
+.xiangqing .left .jack li{
+	float: left;
+	margin-right: 13px;
+	margin-left: 13px;
+	padding-left: 13px;
+	padding-right: 13px;
+	line-height: 59px;
+	cursor: pointer;
+	font-size: 16px;
+	
+	border-bottom: 1px solid #f5f5f5;
+	display: inline-block;
+
+/*
+	background: #fff;*/
+}
+
+
+.xiangqing .left .jack li.on a{
+	color: #f80;
+
+}
+.xiangqing .left .jack li.on{
+	color: #f80;
+	border-color: #f80;
+}
+.xiangqing .left .gl{
+	position: relative;
+}
+.xiangqing .left .gl ul.ls{
+	height: 38px;
+	border: 1px solid #999;
+	font-size: 14px;
+	color: #4c4c4c;
+	margin-top: 30px;
+	padding-left: 50px;
+
+}
+.xiangqing .left .gl span{
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+.xiangqing .left .gl .ls li{
+	float: left;
+	line-height: 30px;
+	background: #fff;
+	border-radius: 3px;
+	padding: 0 20px;
+	margin-top: 4px;
+	margin-left: 40px;
+	cursor: pointer;
+}
+.xiangqing .left .gl .ls li.on{
+	color: #fff;
+	background: #f80;
+}
+.xiangqing .left .gl-list{
+	background: #fff;
+	border-bottom: 1px dotted #999;
+}
+.xiangqing .left .gl-list:hover{
+	background: #f4f4f4;
+}
+.xiangqing .left .gl-list img{
+   float: left;
+   margin: 30px 20px;
+}
+.xiangqing .left .gl-list .gl-list-con{
+   float: left;
+   width: 758px;
+   font-family: '宋体';
+   font-size: 12px;
+   color: #333;
+   margin-top: 30px;
+   padding-right: 10px;
+}
+.xiangqing .left .gl-list .gl-list-con h6{
+	position: relative;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.xiangqing .left .gl-list .gl-list-con h6 span{
+	position: absolute;
+	top: 10px;
+	font-size: 5px;
+	left: 690px;
+}
+.xiangqing .left .gl-list .gl-list-con p{
+	text-indent: 2em;
+	line-height: 18px;
+	
+}
+.xiangqing .fy .fenye {
+    margin-top: 20px;
+    margin-left: 270px;
+    margin-bottom: 30px;
+}
+.xiangqing .left .fy .fenye li{
+	float: left;
+	margin-right: 20px;
+}
+.xiangqing .fy .fenye li a {
+    font-size: 12px;
+    font-family: "宋体";
+    color: #4c4c4c;
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+.xiangqing .fy .fenye li .at{
+    background: #f80;
+    color: #fff;
+}
+.xiangqing .fy .fenye li a:hover{
+    background: #f80;
+    color: #fff;
+}
+
+.xiangqing .left .lt,.xiangqing .left .zx,.xiangqing .left .gl1,.xiangqing .left .al{
+	display: none;
+}
+
+.xiangqing .left .wd ul.ls{
+	height: 38px;
+	border: 1px solid #999;
+	font-size: 14px;
+	color: #4c4c4c;
+	margin-top: 30px;
+	padding-left: 50px;
+	width: 700px;
+
+}
+.xiangqing .left .wd{
+	position: relative;
+	font-family: '微软雅黑';
+}
+.xiangqing .left .wd .tw{
+	position:absolute;
+	top:8px;
+	right: 2px;
+}
+.xiangqing .left .wd .tw img{
+	position: absolute;
+   display: inline-block;
+   top: 2px;
+   left: -35px;
+}
+.xiangqing .left .wd .tw a{
+   font-size: 18px;
+   color: #f80;
+
+
+}
+.xiangqing .left .wd h4{
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+.xiangqing .left .wd textarea{
+	width: 920px;
+	height: 330px;
+	max-height:330px;
+	max-width: 920px;
+}
+.xiangqing .left .wd button{
+	width: 160px;
+	height: 40px;
+	font-size: 14px;
+	color: #fff;
+	background: #f80;
+	border: none;
+	border-radius: 3px;
+	font-family: "微软雅黑";
+	margin: 30px 0 30px 360px;
+}
+.xiangqing .right{
+	width: 242px;
+}
+.xiangqing .right .other ul li{
+	margin: 0 20px 20px;
+}
+.xiangqing .right h4{
+	font-size: 16px;
+	color: #666;
+	text-align:center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f80;
+
+}
+.xiangqing .right .sc-list{
+	width: 240px;
+	height: 128px;
+	border: 1px solid #ededed;
+	margin-top: 20px;
+}
+.xiangqing .right .sc-list img{
+	margin: 20px 10px;
+	width: 90px;
+	height: 90px;
+}
+.xiangqing .right .img-con{
+	margin-top: 16px;
+}
+.xiangqing .right .img-con p{
+	font-size: 12px;
+	font-family: '宋体';
+	color: #666;
+	line-height: 24px;
+}
+.xiangqing .right .tuijian h4{
+	margin-top: 22px;
+}
+
+
