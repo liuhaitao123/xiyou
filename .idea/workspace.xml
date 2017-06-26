@@ -2,185 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20b34dda-dc3a-4218-8b52-d5c53cab0d66" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/08.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/1+2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/Australia.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/Australia1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/CV.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/PS.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/RL.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/about.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/ad_ctr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/alogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/alpha.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/an-left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/an-right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/anli-tu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/apply.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/banner-01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/banner-shuju.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/bg-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/bg-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/bg-dl.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/bg-gl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/biyezheng.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/boshidun-logo-72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/boshidun-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/byrz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/car.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/chenji.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dbx1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dbx2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dh1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dh2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dingdan.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dl-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dl-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dongtai-tu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dongtai.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/dot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/douban.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/duihao.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/fangda.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/gl-tu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/gl-tu1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/jack-a.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/jack-b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/jack-c.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/jack-d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/jiantou.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/jiesuan.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/juxing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/jykh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/line-foot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/logo-foot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/logo-top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/lxda.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/mali-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/new.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/onn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pai-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/paihang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/ps-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/ps-80.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/pulin-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/renren.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/rr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/shopping-car.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/shoppingcar-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/sl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/sr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/std-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/sv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/tiwen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/touxiang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/tu11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/tv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/tx-160.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/vd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/vip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/weibo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/weitu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/weixin-b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/weixin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/xiaofei.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/xueweizhen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/yanzheng.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/yinglian.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/yonghu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/yuan1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/yuan2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/yuan3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/yuan4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/yxrz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/zhang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/zsyh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/免费评估.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/提交申请材料.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/文书和签证服务.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/留学服务.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/选择学校.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/operation/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/university/migrations/0005_major_english_name.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/users/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/about-con.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/about.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/denglu-wjmm-sj.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/denglu-wjmm-wc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/denglu-wjmm.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/denglu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/global.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gongl-1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gongl-2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gongl-al.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gongl-gl.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gongl.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gouwuche-dd.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gouwuche-zf.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/gouwuche.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/pinggu-jieguo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/pinggu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/public.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/qianzheng.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/shuju-duibi.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/shuju-tj.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/shuju-xitong.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/shuju-xyxq.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/shuju.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/slider1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/sq.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wenshu-xq.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wenshu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wode-dd.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wode-ddxq.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wode-sq.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wode-sqxq.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wode-wen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wode-zhgl.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wode.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/xc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/zhuce.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/ScrollPicLeft.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/register.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/visa.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/university/models.py" afterPath="$PROJECT_DIR$/apps/university/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/users/adminx.py" afterPath="$PROJECT_DIR$/apps/users/adminx.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/information/urls.py" afterPath="$PROJECT_DIR$/apps/information/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/operation/urls.py" afterPath="$PROJECT_DIR$/apps/operation/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/service/urls.py" afterPath="$PROJECT_DIR$/apps/service/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/service/views.py" afterPath="$PROJECT_DIR$/apps/service/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/university/urls.py" afterPath="$PROJECT_DIR$/apps/university/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/users/forms.py" afterPath="$PROJECT_DIR$/apps/users/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/users/urls.py" afterPath="$PROJECT_DIR$/apps/users/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/users/views.py" afterPath="$PROJECT_DIR$/apps/users/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xiyou/settings.py" afterPath="$PROJECT_DIR$/xiyou/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xiyou/urls.py" afterPath="$PROJECT_DIR$/xiyou/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -195,7 +29,99 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xiyou/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#638#679#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/service/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/service/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding>
+                <element signature="e#24#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/university/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="102" column="26" lean-forward="true" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/service/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visa.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/visa.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doc.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/doc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="462" column="58" lean-forward="false" selection-start-line="462" selection-start-column="58" selection-end-line="462" selection-end-column="58" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#li#2;n#ul#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -207,10 +133,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>images</find>
-      <find>image</find>
       <find>ima</find>
       <find>log</find>
       <find>注册</find>
+      <find>登录</find>
+      <find>image</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -238,16 +165,22 @@
         <option value="$PROJECT_DIR$/apps/information/apps.py" />
         <option value="$PROJECT_DIR$/apps/university/models.py" />
         <option value="$PROJECT_DIR$/apps/operation/forms.py" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/apps/users/adminx.py" />
         <option value="$PROJECT_DIR$/static/css/index.css" />
-        <option value="$PROJECT_DIR$/apps/users/urls.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/xiyou/settings.py" />
-        <option value="$PROJECT_DIR$/xiyou/urls.py" />
-        <option value="$PROJECT_DIR$/apps/users/forms.py" />
-        <option value="$PROJECT_DIR$/apps/users/views.py" />
         <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/apps/users/forms.py" />
+        <option value="$PROJECT_DIR$/apps/users/urls.py" />
+        <option value="$PROJECT_DIR$/apps/users/views.py" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/apps/university/urls.py" />
+        <option value="$PROJECT_DIR$/apps/operation/urls.py" />
+        <option value="$PROJECT_DIR$/apps/information/urls.py" />
+        <option value="$PROJECT_DIR$/xiyou/urls.py" />
+        <option value="$PROJECT_DIR$/apps/service/views.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/apps/service/urls.py" />
+        <option value="$PROJECT_DIR$/templates/doc.html" />
       </list>
     </option>
   </component>
@@ -258,8 +191,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="112" />
-    <option name="width" value="1258" />
+    <option name="x" value="89" />
+    <option name="width" value="1281" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -280,6 +213,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -316,6 +250,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiyou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiyou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="apps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -338,9 +286,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiyou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiyou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="university" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiyou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiyou" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -608,26 +591,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="112" y="0" width="1258" height="728" extended-state="0" />
+    <frame x="89" y="0" width="1281" height="728" extended-state="0" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17035218" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18151261" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5159664" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37478992" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1769616" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="manage.py@xiyou" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.594958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3394958" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37478992" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28067228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="manage.py@xiyou" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.594958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -693,76 +676,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="all apps models register to xadmin" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiyou/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#638#679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1113">
-          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/university/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/information/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/information/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -831,14 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/university/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -857,32 +768,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/service/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="45" column="7" lean-forward="false" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/visa/01.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/service/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/service/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/service/adminx.py">
@@ -996,13 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="56" column="76" lean-forward="true" selection-start-line="56" selection-start-column="76" selection-end-line="56" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1024,42 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6430">
-          <caret line="193" column="35" lean-forward="false" selection-start-line="193" selection-start-column="35" selection-end-line="193" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiyou/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiyou/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="e#638#679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1068,22 +913,171 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Envs/xiyan/Lib/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#24#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/information/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operation/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="168">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="47" column="45" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#form#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="102" column="26" lean-forward="true" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/service/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/university/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/service/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/service/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/service/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#24#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/university/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="168">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiyou/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiyou/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#638#679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/service/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/visa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/doc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="462" column="58" lean-forward="false" selection-start-line="462" selection-start-column="58" selection-end-line="462" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#li#2;n#ul#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -29,22 +29,28 @@
 		<div class="form">
 		   <ul class="bd">
 		      <li class="shouji">
-		      	<form action="">
+		      	<form action="{% url 'user:login' %}" method="post">
+                {% csrf_token %}
 				   <div class="">
                      <span class=""><img src="{% static 'img/dl-1.png' %}" alt=""></span>
-                     <input class="" type="text" value="" placeholder="手机号/邮箱"/>         
+                     <input class="" name="username" type="text"  placeholder="手机号/邮箱"/>
                     </div>
                     <div class="">
                      <span class=""><img src="{% static 'img/dl-2.png' %}" alt=""></span>
-                     <input class="" type="password" value="" placeholder="密码"/>       
+                     <input class="" name="password" type="password"  placeholder="密码"/>
                      </div>
                     
-                     <div class="yz clearfix">
-                     
-                     <input class="" type="text" value="" placeholder="请输入图片验证码"/> 
-                     <div><img src="{% static 'img/yanzheng.png' %}" alt=""></div>
-                     </div>
-                  
+{#                     <div class="yz clearfix">#}
+{#                     #}
+{#                     <input class="" type="text" value="" placeholder="请输入图片验证码"/> #}
+{#                     <div><img src="{% static 'img/yanzheng.png' %}" alt=""></div>#}
+{#                     </div>#}
+                {% if login_form.errors.items %}
+                    <div style="width: 418px;height: 40px;line-height:40px;text-align: center;margin-left: 18px;border-radius: 3px;
+                     margin-bottom: 18px;font-size: 20px; background: pink; color: red">
+                    	{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}
+                    </div>
+                {% endif %}
                     <div class="now">
                     	<input type="submit" value="立即登录" >
                     </div>

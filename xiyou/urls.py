@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^captche/', include('captcha.urls')),
     url(r'', include('apps.users.urls', namespace='user')),
+    url(r'', include('apps.service.urls', namespace='service')),
 ]

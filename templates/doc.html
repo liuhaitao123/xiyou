@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留学数据</title>
+</head>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/global.css' %}">
+<link rel="stylesheet" href="{% static 'css/public.css' %}">
+<link rel="stylesheet" href="{% static 'css/slider1.css' %}">
+<link rel="stylesheet" href="{% static 'css/wenshu.css' %}">
+<script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+<script src="{% static 'js/slider.js' %}"></script>
+
+<body>
+	<div class="top-header">
+		<div class="wrap clearfix">
+			<p class="top-header-l">欢迎来到西燕留学网！咨询热线：<span>010-62514855</span></p>
+			<ul class="top-header-r">
+				<li class="deng">您好，请<a href="">登录</a></li>
+				<li class="deng">免费<a href="">注册</a></li>
+				<li id="wo"><a href="">|&nbsp我的西燕</a></li>
+				<li id="guan"><a href="">|&nbsp关注西燕</a></li>
+				<li id="ke"><a href="">|&nbsp客户服务</a></li>
+				<li id="dao"><a href="">|&nbsp网站导航</a></li>
+			</ul>
+			<div id="wode" class="wode">
+				<ul>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">账号管理</a></li>				
+					<li><a href="">我的问答</a></li>
+				</ul>
+			</div>
+			<div id="guanzhu" class="guanzhu">
+				<img src="{% static 'img/weitu.png' %}" alt="">
+			</div>
+			<div id="kefu" class="kefu">
+				<ul>
+					<li><a href="">联系我们</a></li>
+					<li><a href="">帮助中心</a></li>				
+				</ul>
+			</div>
+			<div id="daohang" class="daohang clearfix">
+				<ul class="school">
+					<li><a href="">美国院校</a></li>
+					<li><a href="">英国院校</a></li>
+					<li><a href="">加拿大院校</a></li>
+					<li><a href="">澳洲院校</a></li>
+				</ul>
+				<ul class="news">
+					<li><a href="">留学资讯</a></li>
+					<li><a href="">院校数据</a></li>
+					<li><a href="">院校排行</a></li>
+				</ul>
+				<ul class="server">
+					<li><a href="">特色服务</a></li>
+					<li><a href="">文书服务</a></li>
+					<li><a href="">签证服务</a></li>
+					<li><a href="">行程服务</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="search">
+		<div class="wrap clearfix">
+			<div class="logo-top">
+				<img src="{% static 'img/logo-top.png' %}" alt="">
+			</div>
+			<div class="search-box clearfix">
+				<input type="text" value="请输入院校名称"><img src="{% static 'img/fangda.png' %}" alt="">
+				<button>搜索</button>
+			</div>
+			<div id="shopping" class="shopping clearfix">
+				<img src="{% static 'img/shopping-car.png' %}" alt="">
+				<p>我的购物车</p>
+				<span>0</span>
+				<img class="new" src="{% static 'img/new.png' %}" alt="">
+			</div>
+			<div id="shopping-down" class="shopping-down">
+				<p>最近加入的产品：</p>
+				<p class="chan clearfix"><img class="fl" src="{% static 'img/alogo.png' %}" alt=""><a href="">美国威廉玛丽学院留学申请<br>
+				¥：<span>36000</span>美元/年
+				</a>
+				</p>
+				<div class="sh-foot">
+					<ul class="clearfix">
+						<li class="fl">共1件商品</li>
+						<li class="fr"><a href="">查看购物车</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav-bar">
+		<div class="wrap">
+			<ul class="clearfix">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="shuju.html">院校数据</a></li>
+				<li><a href="pinggu.html">留学评估</a></li>
+				<li><a href="shengqing.html">高端申请</a></li>
+				<li class="contion"><a  target="_self" href="">文书服务</a></li>
+				<li><a href="qianzheng.html">签证服务</a></li>
+				<li id="readyy" class="readyy"><a href="xingcheng.html">行程准备<span><img src="{% static 'img/jiantou.png' %}" alt=""></span></a></li>
+				<li><a href="gonglue.html">留学攻略</a></li>
+			</ul>
+			<div id="ready" class="ready">
+				<ul>
+					<li><a href="">机票预订</a></li>
+					<li><a href="">接机服务</a></li>
+					<li><a href="">机票预订</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="banner_tabs" class="flexslider">
+		<ul class="slides">
+			<li>
+				<a title="" target="_blank" href="#">
+					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+				</a>
+			</li>
+			<li>
+				<a title="" href="#">
+					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+				</a>
+			</li>
+			<li>
+				<a title="" href="#">
+					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+				</a>
+			</li>
+		</ul>
+		<ul class="flex-direction-nav">
+			<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+			<li><a class="flex-next" href="javascript:;">Next</a></li>
+		</ul>
+		<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+			<li><a>1</a></li>
+			<li><a>2</a></li>
+			<li><a>2</a></li>
+		</ol>
+
+       
+        
+    </div>
+<script type="text/javascript">
+
+
+
+			var wode = document.getElementById("wode");
+			var wo = document.getElementById("wo");		
+				wo.onmouseover=function(){
+					wode.style.display = "block";
+					wo.className="hi"
+					wode.onmouseover=function(){
+						wo.className="hi"
+						this.style.display = "block";
+					}
+				}
+				wo.onmouseout=function() {
+					wode.style.display = "none";
+					wo.className=""	
+					wode.onmouseout=function(){
+						this.style.display = "none";
+						wo.className=""
+					}
+			     }
+
+			var guanzhu = document.getElementById("guanzhu");
+			var guan = document.getElementById("guan");		
+				guan.onmouseover=function(){
+					guanzhu.style.display = "block";
+					guan.className="hi"
+					guanzhu.onmouseover=function(){
+						guan.className="hi"
+						this.style.display = "block";
+					}
+				}
+				guan.onmouseout=function() {
+					guanzhu.style.display = "none";
+					guan.className=""	
+					guanzhu.onmouseout=function(){
+						this.style.display = "none";
+						guan.className=""
+					}
+			     }
+
+			var kefu = document.getElementById("kefu");
+			var ke = document.getElementById("ke");		
+				ke.onmouseover=function(){
+					kefu.style.display = "block";
+					ke.className="hi"
+					kefu.onmouseover=function(){
+						ke.className="hi"
+						this.style.display = "block";
+					}
+				}
+				ke.onmouseout=function() {
+					kefu.style.display = "none";
+					ke.className=""	
+					kefu.onmouseout=function(){
+						this.style.display = "none";
+						ke.className=""
+					}
+			     }
+
+			var daohang = document.getElementById("daohang");
+			var dao = document.getElementById("dao");		
+				dao.onmouseover=function(){
+					daohang.style.display = "block";
+					dao.className="hi"
+					daohang.onmouseover=function(){
+						dao.className="hi"
+						this.style.display = "block";
+					}
+				}
+				dao.onmouseout=function() {
+					daohang.style.display = "none";
+					dao.className=""	
+					daohang.onmouseout=function(){
+						this.style.display = "none";
+						dao.className=""
+					}
+			     }
+
+
+
+			var ready = document.getElementById("ready");
+			var readyy = document.getElementById("readyy");		
+				readyy.onmouseover=function(){
+					ready.style.display = "block";
+					readyy.className="hi"
+					ready.onmouseover=function(){
+						readyy.className="hi"
+						this.style.display = "block";
+					}
+				}
+				readyy.onmouseout=function() {
+					ready.style.display = "none";
+					readyy.className=""	
+					ready.onmouseout=function(){
+						this.style.display = "none";
+						readyy.className=""
+					}
+			     }
+
+
+			var shopping = document.getElementById("shopping");
+			var down = document.getElementById("shopping-down");		
+				shopping.onclick=function(ev){
+					var oEven=ev||event;
+				  down.style.display = "block";
+				  oEven.cancelBubble=true;
+				
+				}
+				document.onclick=function(){
+					down.style.display = "none";
+				}
+
+
+
+		$(function() {
+			var bannerSlider = new Slider($('#banner_tabs'), {
+				time: 3000,
+				delay: 400,
+				event: 'hover',
+				auto: true,
+				mode: 'fade',
+				controller: $('#bannerCtrl'),
+				activeControllerCls: 'active'
+			});
+			$('#banner_tabs .flex-prev').click(function() {
+				bannerSlider.prev()
+			});
+			$('#banner_tabs .flex-next').click(function() {
+				bannerSlider.next()
+			});
+		})
+</script>
+
+    <div class="search-box wrap">
+         <h3>文书购买</h3>
+    	<div class="searchbox">
+    	 <dl class="country" >
+	      <dt>文书类型：</dt>
+	      <dd>
+	       <label class="on" >
+	        <a href="javascript:;">全部</a></label>
+	       <label>
+	        <a href="javascript:;">PS（个人陈述）</a></label>
+	       <label>
+	        <a href="javascript:;">CV（个人简历）</a></label>
+	       <label>
+	       <a href="javascript:;">RL（推荐信）</a></label>
+	       <label>
+	       <a href="javascript:;">成绩单翻译</a></label> 
+	       <label>
+	       <a href="javascript:;">毕业证翻译</a></label> 
+	       <label>
+	       <a href="javascript:;">学位证翻译</a></label>
+
+	      </dd>
+	     </dl>
+    	</div>
+    	<div class="ps same clearfix">
+    		<div class="img fl">
+    			<a href="wenshu-xiangqing.html"><img src="{% static 'img/PS.png' %}" alt=""></a>
+    		</div>
+    		<div class="fl detail">
+    		  <div class="top">
+    		  	<h4>个人陈述<span>Personal Statement</span></h4>
+    			<p>个人陈述是一篇充满个性和个人特色（Personal）的简单的自我背景介绍和对未来学习以及工作的计划(Statement)。让你所申请的大学通过这篇陈述了解你。</p>
+    		  </div>
+    		  <div class="bott clearfix">
+    		  	<ul class="fl">
+    		  		<li>价格：<span>¥500.00</span></li>
+    		  		<li class="shc">市场价：<span>¥800.00</span></li>
+    		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
+    		  	</ul>
+    		  	<ul class="fr ff clearfix">
+    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
+    		  		<li class="now">立即购买</li>
+    		  		<li class="down"><span><img src="{% static 'img/down.png' %}"/></span>个人信息表下载</li>
+    		  	</ul>
+    		  </div>
+    		</div>
+        </div>
+        <div class="cv same clearfix">
+    		<div class="img fl">
+    			<img src="{% static 'img/CV.png' %}" alt="">
+    		</div>
+    		<div class="fl detail">
+    		  <div class="top">
+    		  	<h4>个人简历<span>Personal Statement</span></h4>
+    			<p>简明扼要地列出申请者的个人信息、学术背景、荣誉成就、个人重大影响事件、发表著作、参加组织及其他
+能力和爱好，让大学直观地了解你。</p>
+    		  </div>
+    		  <div class="bott clearfix">
+    		  	<ul class="fl">
+    		  		<li>价格：<span>¥300.00</span></li>
+    		  		<li class="shc">市场价：<span>¥500.00</span></li>
+    		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
+    		  	</ul>
+    		  	<ul class="fr ff clearfix">
+    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
+    		  		<li class="now">立即购买</li>
+    		  		<li class="down"><span><img src="{% static 'img/down.png' %}"/></span>个人信息表下载</li>
+    		  	</ul>
+    		  </div>
+    		</div>
+        </div>
+        <div class="rl same clearfix">
+    		<div class="img fl">
+    			<img src="{% static 'img/RL.png' %}" alt="">
+    		</div>
+    		<div class="fl detail">
+    		  <div class="top">
+    		  	<h4>推荐信<span>Reference Letter</span></h4>
+    			<p>推荐信是让大学了解你的科研能力、学习能力、团队合作能力、人际交往能力及英语口语水平等一些正面的素质，
+然后帮助他们做决定要录取还是不录取。</p>
+    		  </div>
+    		  <div class="bott clearfix">
+    		  	<ul class="fl">
+    		  		<li>价格：<span>¥150.00</span></li>
+    		  		<li class="shc">市场价：<span>¥200.00</span></li>
+    		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
+    		  	</ul>
+    		  	<ul class="fl ff clearfix">
+    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
+    		  		<li class="now">立即购买</li>
+    		  		<!--<li class="down"><span><img src="images/down.png"/></span>个人信息表下载</li>-->
+    		  	</ul>
+    		  </div>
+    		</div>
+        </div>
+        <div class="cjd same clearfix">
+    		<div class="img fl">
+    			<img src="{% static 'img/chenji.png' %}" alt="">
+    		</div>
+    		<div class="fl detail">
+    		  <div class="top">
+    		  	<h4>成绩单翻译<span>Transcript Translation</span></h4>
+    			<p>经验丰富的翻译团队为您提供高质量、高效率的翻译服务，我们的翻译完成件统一由专职人员审核，保障质量我们的翻译
+完成件统一由专职人员审核，保障质量.</p>
+    		  </div>
+    		  <div class="bott clearfix">
+    		  	<ul class="fl">
+    		  		<li>价格：<span>¥100.00</span></li>
+    		  		<li class="shc">市场价：<span>¥200.00</span></li>
+    		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
+    		  	</ul>
+    		  	<ul class="fl ff clearfix">
+    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
+    		  		<li class="now">立即购买</li>
+    		  		<!--<li class="down"><span><img src="images/down.png"/></span>个人信息表下载</li>-->
+    		  	</ul>
+    		  </div>
+    		</div>
+        </div>
+        <div class="byz same clearfix">
+    		<div class="img fl">
+    			<img src="{% static 'img/biyezheng.png' %}" alt="">
+    		</div>
+    		<div class="fl detail">
+    		  <div class="top">
+    		  	<h4>毕业证翻译<span>Graduation Certificate Translation</span></h4>
+    			<p>经验丰富的翻译团队为您提供高质量、高效率的翻译服务，我们的翻译完成件统一由专职人员审核，保障质量我们的翻译
+完成件统一由专职人员审核，保障质量.</p>
+    		  </div>
+    		  <div class="bott clearfix">
+    		  	<ul class="fl">
+    		  		<li>价格：<span>¥50.00</span></li>
+    		  		<li class="shc">市场价：<span>¥200.00</span></li>
+    		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
+    		  	</ul>
+    		  	<ul class="fl ff clearfix">
+    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
+    		  		<li class="now">立即购买</li>
+    		  		<!--<li class="down"><span><img src="images/down.png"/></span>个人信息表下载</li>-->
+    		  	</ul>
+    		  </div>
+    		</div>
+        </div>
+        <div class="xwz same clearfix">
+    		<div class="img fl">
+    			<img src="{% static 'img/xueweizhen.png' %}" alt="">
+    		</div>
+    		<div class="fl detail">
+    		  <div class="top">
+    		  	<h4>学位证翻译<span>Degree Certificate Translation</span></h4>
+    			<p>验丰富的翻译团队为您提供高质量、高效率的翻译服务，我们的翻译完成件统一由专职人员审核，保障质量我们的翻译
+完成件统一由专职人员审核，保障质量.</p>
+    		  </div>
+    		  <div class="bott clearfix">
+    		  	<ul class="fl">
+    		  		<li>价格：<span>¥50.00</span></li>
+    		  		<li class="shc">市场价：<span>¥200.00</span></li>
+    		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
+    		  	</ul>
+    		  	<ul class="fl ff clearfix">
+    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
+    		  		<li class="now">立即购买</li>
+    		  		<!--<li class="down"><span><img src="images/down.png"/></span>个人信息表下载</li>-->
+    		  	</ul>
+    		  </div>
+    		</div>
+       </div>
+    </div>
+    <div class="fen">
+    	<ul class="fenye clearfix">
+     			<li><a href="">上一页</a></li>
+     			<li><a href="" class="at">1</a></li>
+     			<li><a href="">下一页</a></li>
+     	</ul>
+    </div>
+    <div class="foot">
+    	<div class="wrap clearfix">
+    		<div class="foot-logo fl"> 
+    			<img src="{% static 'img/logo-foot.png' %}" alt="">
+    		</div>
+    		<div class="line fl">
+    			<img src="{% static 'img/line-foot.png' %}" alt="">
+    		</div>
+    		<div class="foot-con fl">
+    			<p>24小时服务热线：<span>010-62514855</span></p>
+    			<ul class="fenxiang clearfix">
+    			    <li>好友分享：</li>
+    				<li><a href=""><img src="images/weixin.png" alt=""></a></li>
+    				<li><a href=""><img src="images/weibo.png" alt=""></a></li>
+    				<li><a href=""><img src="images/douban.png" alt=""></a></li>
+    				<li><a href=""><img src="images/renren.png" alt=""></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="about">
+    		   <ul class="clearfix">
+    			<li><a href="">关于我们</a></li>
+    			<li><a href="">友情链接</a></li>
+    			<li><a href="">意见反馈</a></li>
+    			<li><a href="">商务合作</a></li>
+    			<li><a href="">联系我们</a></li>
+    		  </ul>	
+    		  <p> Copyright © 2016 西燕留学 All rights reserved.</p>
+    	</div>
+    </div>
+
+  </div>
+  <script language="javascript"> 
+		$('.country label').click(function(){ 
+		$(this).addClass("on").siblings().removeClass();
+		  // 删除其他兄弟元素的样式
+		       // $(this).addClass('selected'); 
+		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
+		// $(".bd > li").hide().eq($('.bb li').index(this)).show(); 
+		}); 
+  </script>
+</body>
+</html>

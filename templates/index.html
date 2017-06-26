@@ -16,12 +16,20 @@
 		<div class="wrap clearfix">
 			<p class="top-header-l">欢迎来到西燕留学网！咨询热线：<span>010-62514855</span></p>
 			<ul class="top-header-r">
-				<li class="deng">您好，请<a href="">登录</a></li>
-				<li class="deng">免费<a href="{% url 'user:register' %}">注册</a></li>
-				<li id="wo"><a href="wode/wode.html">|&nbsp我的西燕</a></li>
-				<li id="guan"><a href="">|&nbsp关注西燕</a></li>
-				<li id="ke"><a href="">|&nbsp客户服务</a></li>
-				<li id="dao"><a href="">|&nbsp网站导航</a></li>
+
+
+                {% if request.user.is_authenticated %}
+                    <li class="deng">您好，</li>
+                     <li class="deng"><a href="{% url 'user:logout' %}">注销</a></li>
+                    <li id="wo"><a href="wode/wode.html">|&nbsp我的西燕</a></li>
+                {% else %}
+                    <li class="deng">您好，请<a href="{% url 'user:login' %}">登录</a></li>
+                    <li class="deng">免费<a href="{% url 'user:register' %}">注册</a></li>
+                {% endif %}
+                    <li id="guan"><a href="">|&nbsp关注西燕</a></li>
+                    <li id="ke"><a href="">|&nbsp客户服务</a></li>
+                    <li id="dao"><a href="">|&nbsp网站导航</a></li>
+
 			</ul>
 			<div id="wode" class="wode">
 				<ul>
@@ -98,8 +106,8 @@
 				<li><a href="shuju.html">院校数据</a></li>
 				<li><a href="pinggu.html">留学评估</a></li>
 				<li><a href="shengqing.html">高端申请</a></li>
-				<li><a href="wenshu.html">文书服务</a></li>
-				<li><a href="qianzheng.html">签证服务</a></li>
+				<li><a href="{% url 'service:doc' %}">文书服务</a></li>
+				<li><a href="{% url 'service:visa' %}">签证服务</a></li>
 				<li id="readyy" class="readyy"><a href="xingcheng.html">行程准备<span><img src="{% static 'img/jiantou.png' %}" alt=""></span></a></li>
 				<li><a href="gonglue.html">留学攻略</a></li>
 			</ul>
@@ -116,17 +124,17 @@
 		<ul class="slides">
 			<li>
 				<a title="" target="_blank" href="#">
-					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner.png' %} no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt=""  src="{% static 'img/banner_04.jpg' %}">
 				</a>
 			</li>
 			<li>
 				<a title="" href="#">
-					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt=""  src="{% static 'img/banner_05.jpg' %}">
 				</a>
 			</li>
 			<li>
 				<a title="" href="#">
-					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt=""  src="{% static 'img/banner_02.jpg' %}">
 				</a>
 			</li>
 		</ul>
