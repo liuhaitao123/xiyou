@@ -21,7 +21,7 @@
                 {% if request.user.is_authenticated %}
                     <li class="deng">您好，</li>
                      <li class="deng"><a href="{% url 'user:logout' %}">注销</a></li>
-                    <li id="wo"><a href="wode/wode.html">|&nbsp我的西燕</a></li>
+                    <li id="wo"><a href="wode/wode.html">|&nbsp{{ request.user.username }}</a></li>
                 {% else %}
                     <li class="deng">您好，请<a href="{% url 'user:login' %}">登录</a></li>
                     <li class="deng">免费<a href="{% url 'user:register' %}">注册</a></li>
@@ -102,14 +102,14 @@
 	<div class="nav-bar">
 		<div class="wrap">
 			<ul class="clearfix">
-				<li class="contion"><a target="_self" href="">首页</a></li>
-				<li><a href="shuju.html">院校数据</a></li>
-				<li><a href="pinggu.html">留学评估</a></li>
-				<li><a href="shengqing.html">高端申请</a></li>
+				<li class="contion"><a target="_self" href="{% url 'user:index' %}">首页</a></li>
+				<li><a href="{% url 'university:university' %}">院校数据</a></li>
+				<li><a href="{% url 'university:estimate' %}">留学评估</a></li>
+				<li><a href="{% url 'user:highapply' %}">高端申请</a></li>
 				<li><a href="{% url 'service:doc' %}">文书服务</a></li>
 				<li><a href="{% url 'service:visa' %}">签证服务</a></li>
 				<li id="readyy" class="readyy"><a href="xingcheng.html">行程准备<span><img src="{% static 'img/jiantou.png' %}" alt=""></span></a></li>
-				<li><a href="gonglue.html">留学攻略</a></li>
+				<li><a href="{% url 'university:strategy' %}">留学攻略</a></li>
 			</ul>
 			<div id="ready" class="ready">
 				<ul>

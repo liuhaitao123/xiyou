@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="{% static 'css/global.css' %}">
 <link rel="stylesheet" href="{% static 'css/public.css' %}">
 <link rel="stylesheet" href="{% static 'css/slider1.css' %}">
-<link rel="stylesheet" href="{% static 'css/wenshu.css' %}">
+<link rel="stylesheet" href="{% static 'css/sq.css' %}">
 <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
 <script src="{% static 'js/slider.js' %}"></script>
 
@@ -96,13 +96,13 @@
 		<div class="wrap">
 			<ul class="clearfix">
 				<li><a href="{% url 'user:index' %}">首页</a></li>
-				<li><a href="shuju.html">院校数据</a></li>
+				<li><a href="{% url 'university:university' %}">院校数据</a></li>
 				<li><a href="pinggu.html">留学评估</a></li>
-				<li><a href="{% url 'user:highapply' %}">高端申请</a></li>
-				<li class="contion"><a  target="_self" href="{% url 'service:doc' %}">文书服务</a></li>
+				<li class="contion"><a href="{% url 'user:highapply' %}">高端申请</a></li>
+				<li class=""><a  target="_self" href="{% url 'service:doc' %}">文书服务</a></li>
 				<li><a href="{% url 'service:visa' %}">签证服务</a></li>
 				<li id="readyy" class="readyy"><a href="xingcheng.html">行程准备<span><img src="{% static 'img/jiantou.png' %}" alt=""></span></a></li>
-				<li><a href="{% url 'university:strategy' %}">留学攻略</a></li>
+				<li><a href="gonglue.html">留学攻略</a></li>
 			</ul>
 			<div id="ready" class="ready">
 				<ul>
@@ -117,17 +117,17 @@
 		<ul class="slides">
 			<li>
 				<a title="" target="_blank" href="#">
-					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
 				</a>
 			</li>
 			<li>
 				<a title="" href="#">
-					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
 				</a>
 			</li>
 			<li>
 				<a title="" href="#">
-					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
 				</a>
 			</li>
 		</ul>
@@ -279,58 +279,52 @@
 		})
 </script>
 
-    <div class="search-box wrap">
-         <h3>文书购买</h3>
-    	<div class="searchbox">
-    	 <dl class="country" >
-	      <dt>文书类型：</dt>
-	      <dd>
-	       <label class="on" >
-	        <a href="?type=">全部</a></label>
-			
-			{% for type in all_types %}
-	       <label>
-	        <a href="?type={{ type.id }}">{{ type.name }}</a></label>
-	       {% endfor %}
+     <div class="wrap sq">
+     	<h2>高端申请流程</h2>
+     	<p>我们专门提供美国前<span>100</span>名，英国前<span>30</span>名，加拿大前<span>10</span>名，澳洲前<span>8</span><br>名本科、硕士、博士申请，私人定制，一对一服务！</p>
+     	<div class="lc">
+     		<ul class="clearfix">
+     			<li><span>1</span>
+     			<h4>确定选校</h4></li>
+     			<li><span>3</span>
+     			<h4>提交申请</h4></li>
+     			<li><span>5</span>
+     			<h4>签证服务</h4></li>
+     			<li><span>7</span>
+     			<h4>预订机票</h4></li>
+     			<li><span>9</span>
+     			<h4>入住宿舍</h4></li>
+     			
+     		</ul>
+     		<ul class="clearfix ou">
+     			<li><span>2</span>
+     			<h4>确定选校</h4></li>
+     			<li><span>4</span>
+     			<h4>提交申请</h4></li>
+     			<li><span>6</span>
+     			<h4>签证服务</h4></li>
+     			<li><span>8</span>
+     			<h4>预订机票</h4></li>
+     			<li class="ten"><span>10</span>
+     			<h4>入住宿舍</h4></li>
+     			
+     		</ul>
+     	</div>
+     	<h2>高端申请系统</h2>
+     	<div class="xt">
+     		<form action="{% url 'user:highapply' %}" method="post">
+			{% csrf_token %}
+     			<ul>
+     				<li class="name"><span>姓名：</span><input type="text" name="realname" placeholder="请输入姓名..."></li>
+     				<li><span>意向国家：</span><input type="text" name="country" placeholder="例：美国，英国"></li>
+     				<li><span>意向层次：</span><input type="text" name="type" placeholder="例：研究生，本科"></li>
+     				<li><span>意向专业：</span><input type="text" name="major" placeholder="例：机械，美术"></li>
+     			</ul>
+     			<button>提交</button>
+     		</form>
+     	</div>
+     </div>
 
-	      </dd>
-	     </dl>
-    	</div>
-		{% for doc in all_docs %}
-    	<div class="ps same clearfix">
-    		<div class="img fl">
-    			<a href="wenshu-xiangqing.html"><img src="{{ MEDIA_URL }}{{ doc.image }}" alt=""></a>
-    		</div>
-    		<div class="fl detail">
-    		  <div class="top">
-    		  	<h4>{{ doc.name}}<span>{{ doc.english_name }}</span></h4>
-    			<p>{{ doc.desc }}</p>
-    		  </div>
-    		  <div class="bott clearfix">
-    		  	<ul class="fl">
-    		  		<li>价格：<span>¥{{ doc.price }}</span></li>
-    		  		<li class="shc">市场价：<span>¥{{ doc.price }}</span></li>
-    		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
-    		  	</ul>
-    		  	<ul class="fr ff clearfix">
-    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
-    		  		<li class="now">立即购买</li>
-    		  		<li class="down"><span><img src="{% static 'img/down.png' %}"/></span>个人信息表下载</li>
-    		  	</ul>
-    		  </div>
-    		</div>
-        </div>
-		{% endfor %}
-
-       </div>
-    </div>
-    <div class="fen">
-    	<ul class="fenye clearfix">
-     			<li><a href="">上一页</a></li>
-     			<li><a href="" class="at">1</a></li>
-     			<li><a href="">下一页</a></li>
-     	</ul>
-    </div>
     <div class="foot">
     	<div class="wrap clearfix">
     		<div class="foot-logo fl"> 
@@ -364,13 +358,13 @@
 
   </div>
   <script language="javascript"> 
-		<!-- $('.country label').click(function(){  -->
-		<!-- $(this).addClass("on").siblings().removeClass(); -->
-		  <!-- // 删除其他兄弟元素的样式 -->
-		       <!-- // $(this).addClass('selected');  -->
-		<!-- //removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除；  -->
-		<!-- // $(".bd > li").hide().eq($('.bb li').index(this)).show();  -->
-		<!-- });  -->
+		$('.list li').click(function(){ 
+		$(this).addClass("on").siblings().removeClass();
+		  // 删除其他兄弟元素的样式
+		       // $(this).addClass('selected'); 
+		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
+		 $(".xc > div").hide().eq($('.list li').index(this)).show(); 
+		}); 
   </script>
 </body>
 </html>

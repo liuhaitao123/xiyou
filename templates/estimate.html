@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>留学数据</title>
+	<title>留学评估</title>
 </head>
 {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'css/global.css' %}">
 <link rel="stylesheet" href="{% static 'css/public.css' %}">
 <link rel="stylesheet" href="{% static 'css/slider1.css' %}">
-<link rel="stylesheet" href="{% static 'css/wenshu.css' %}">
+<link rel="stylesheet" href="{% static 'css/pinggu.css' %}">
 <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
 <script src="{% static 'js/slider.js' %}"></script>
-
 <body>
 	<div class="top-header">
 		<div class="wrap clearfix">
@@ -95,14 +94,14 @@
 	<div class="nav-bar">
 		<div class="wrap">
 			<ul class="clearfix">
-				<li><a href="{% url 'user:index' %}">首页</a></li>
+				<li><a href="index.html">首页</a></li>
 				<li><a href="shuju.html">院校数据</a></li>
-				<li><a href="pinggu.html">留学评估</a></li>
-				<li><a href="{% url 'user:highapply' %}">高端申请</a></li>
-				<li class="contion"><a  target="_self" href="{% url 'service:doc' %}">文书服务</a></li>
-				<li><a href="{% url 'service:visa' %}">签证服务</a></li>
+				<li class="contion"><a href="" target="_self">留学评估</a></li>
+				<li><a href="shengqing.html">高端申请</a></li>
+				<li><a href="wenshu.html">文书服务</a></li>
+				<li><a href="qianzheng.html">签证服务</a></li>
 				<li id="readyy" class="readyy"><a href="xingcheng.html">行程准备<span><img src="{% static 'img/jiantou.png' %}" alt=""></span></a></li>
-				<li><a href="{% url 'university:strategy' %}">留学攻略</a></li>
+				<li><a href="gonglue.html">留学攻略</a></li>
 			</ul>
 			<div id="ready" class="ready">
 				<ul>
@@ -117,17 +116,17 @@
 		<ul class="slides">
 			<li>
 				<a title="" target="_blank" href="#">
-					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
 				</a>
 			</li>
 			<li>
 				<a title="" href="#">
-					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
 				</a>
 			</li>
 			<li>
 				<a title="" href="#">
-					<img width="1920" height="550" alt="" style="background: url(/static/img/banner-shuju.png) no-repeat center;" src="{% static 'img/alpha.png' %}">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
 				</a>
 			</li>
 		</ul>
@@ -279,58 +278,97 @@
 		})
 </script>
 
-    <div class="search-box wrap">
-         <h3>文书购买</h3>
-    	<div class="searchbox">
-    	 <dl class="country" >
-	      <dt>文书类型：</dt>
-	      <dd>
-	       <label class="on" >
-	        <a href="?type=">全部</a></label>
-			
-			{% for type in all_types %}
-	       <label>
-	        <a href="?type={{ type.id }}">{{ type.name }}</a></label>
-	       {% endfor %}
+    <div class="system">
+    	<div class="wrap">
+    		<h1>免费录取率评估系统</h1>
+    		<hr>
+    		<h6>温馨提示:</h6>
+    		<p>1、您提供的信息将提交系统进行自动录取率评估，返回结果仅供参考。<br>2、我们会对您的资料进行保密。<br>3、为能准确评估，带有"<span>*</span>"标志的为必填项。<br>4、您填写的信息越充分，我们为您提供的评估越精准。</p>
+    		<div class="b-box">
+    			<form action="">
+    				<div class="yixiang">
+    					<h3>留学意向</h3>
+    					<ul class="clearfix">
+    						<li><span>*</span>意向留学国家：<input type="radio" name="yx" value="n" />美国<input type="radio" name="yx" value="n" />英国<input type="radio" name="yx" value="n" />加拿大<input type="radio" name="yx" value="n" />澳洲
+    						</li>
+    						<li class="top"><span>*</span>意向留学阶段：<input type="radio" name="jd" value="n" />预科<input type="radio" name="jd" value="n" />本科<input type="radio" name="jd" value="n" />硕士
+    						</li>
 
-	      </dd>
-	     </dl>
+    						<li><span>*</span>意向留学时间：
+    						<select>
+						        <option>选择时间</option>
+						        <option>n</option>
+						        <option>n</option>
+						    </select>
+						    </li>
+    						<li class="top"><span>*</span>意向专业方向：
+    						<select>
+						        <option>选择专业</option>
+						        <option>n</option>
+						        <option>n</option>
+						    </select>
+						    </li>
+    					</ul>
+    				</div>
+    				<div class="xinxi">
+    					<h3>个人信息</h3>
+    					<ul class="clearfix">
+    						<li class="top"><span>*</span>真实姓名：<input type="text"  />
+    						</li>
+    						<li class="top-1"><span>*</span>联系方式：<input type="text"  />
+                             </li>
+    						<li class="bot"><span></span>QQ号码：<input type="text"  />
+    						</li>
+    						<li class="bot-1"><span></span>电子邮箱：<input type="text"  />
+                             </li>
+    					</ul>
+    				</div>
+    				<div class="beijing">
+    					<h3>教育背景</h3>
+    					<ul class="clearfix">
+    						<li class="top"><span>*</span>当前学历：<input type="text"  />
+    						</li>
+    						<li class="top"><span></span>当前专业：<input type="text"  />
+    						</li>
+    						<li class="bott"><span>*</span>毕业院校类型：<input type="radio" name="lx" value="n" />预科<input type="radio" name="lx" value="n" />本科<input type="radio" name="lx" value="n" />硕士
+    						</li>
+    					</ul>
+    				</div>
+    				<div class="chengji">
+    					<h3>考试成绩</h3>
+    					<ul class="clearfix">
+    					    <li class="bott">语言类型考试：<input type="radio" name="ks" value="n" />托福<input type="radio" name="ks" value="n" />雅思 <span class="span"><i>备注：</i>其他考试请换算成雅思或托福成绩</span>
+    						<li class="top"><span></span>考试成绩：<input type="text"  />
+    						</li>
+    						<li class="bott gpa-2"><span>*</span>GPA（平均分）：<input type="radio" name="gpa" value="n" />四分制<input type="radio" name="gpa" value="n" />其他 
+    						<li class="top gpa-1"><span>*</span>GPA考试成绩：<input type="text"  />
+    						</li>
+    						<li class="bott qita"><span></span>其他考试类型：<input type="radio" name="qt" value="n" />SAT<input type="radio" name="qt" value="n" />AP 
+    						<input type="radio" name="qt" value="n" />ALEVEL<input type="radio" name="qt" value="n" />WACE 
+    						<input type="radio" name="qt" value="n" />GRE<input type="radio" name="qt" value="n" />GMAT 
+    						<li class="top"><span></span>考试成绩：<input type="text"  />
+    						</li>
+    						
+    					</ul>
+    				</div>
+                    <div class="tijiao">
+                    	<ul class="clearfix">
+                    		<li class="yan fl"><span>*</span>验证码：<input type="text" /></li>
+                    		<li class="img fl"><img src="{% static 'img/yanzheng.png' %}" alt=""></li>
+                    	</ul>
+                    	<div>
+                    		<input class="ction" type="submit" value="免费评估">
+                    	    <input type="submit" value="重置">
+                    	</div>
+                    	
+                    </div>
+    			</form>
+    		</div>
     	</div>
-		{% for doc in all_docs %}
-    	<div class="ps same clearfix">
-    		<div class="img fl">
-    			<a href="wenshu-xiangqing.html"><img src="{{ MEDIA_URL }}{{ doc.image }}" alt=""></a>
-    		</div>
-    		<div class="fl detail">
-    		  <div class="top">
-    		  	<h4>{{ doc.name}}<span>{{ doc.english_name }}</span></h4>
-    			<p>{{ doc.desc }}</p>
-    		  </div>
-    		  <div class="bott clearfix">
-    		  	<ul class="fl">
-    		  		<li>价格：<span>¥{{ doc.price }}</span></li>
-    		  		<li class="shc">市场价：<span>¥{{ doc.price }}</span></li>
-    		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
-    		  	</ul>
-    		  	<ul class="fr ff clearfix">
-    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
-    		  		<li class="now">立即购买</li>
-    		  		<li class="down"><span><img src="{% static 'img/down.png' %}"/></span>个人信息表下载</li>
-    		  	</ul>
-    		  </div>
-    		</div>
-        </div>
-		{% endfor %}
+    </div>
 
-       </div>
-    </div>
-    <div class="fen">
-    	<ul class="fenye clearfix">
-     			<li><a href="">上一页</a></li>
-     			<li><a href="" class="at">1</a></li>
-     			<li><a href="">下一页</a></li>
-     	</ul>
-    </div>
+
+
     <div class="foot">
     	<div class="wrap clearfix">
     		<div class="foot-logo fl"> 
@@ -363,14 +401,5 @@
     </div>
 
   </div>
-  <script language="javascript"> 
-		<!-- $('.country label').click(function(){  -->
-		<!-- $(this).addClass("on").siblings().removeClass(); -->
-		  <!-- // 删除其他兄弟元素的样式 -->
-		       <!-- // $(this).addClass('selected');  -->
-		<!-- //removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除；  -->
-		<!-- // $(".bd > li").hide().eq($('.bb li').index(this)).show();  -->
-		<!-- });  -->
-  </script>
 </body>
 </html>

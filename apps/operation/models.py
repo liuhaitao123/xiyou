@@ -39,6 +39,7 @@ class UserAsk(models.Model):
 
 class HighApply(models.Model):
     user = models.ForeignKey(UserProfile, verbose_name=u'用户')
+    real_name = models.CharField(verbose_name=u'姓名', max_length=40, null=True)
     country = models.CharField(verbose_name=u'意向国家', max_length=30)
     type = models.CharField(verbose_name=u'意向层次', max_length=30)
     major = models.CharField(verbose_name=u'意向专业', max_length=30)
@@ -49,7 +50,7 @@ class HighApply(models.Model):
         verbose_name_plural = verbose_name
 
     def __unicode__(self):
-        return self.user
+        return self.country
 
 
 class UserCart(models.Model):

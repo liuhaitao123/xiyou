@@ -17,6 +17,17 @@ class Country(models.Model):
     def __unicode__(self):
         return self.name
 
+		
+class Level(models.Model):
+    name = models.CharField(verbose_name=u'学历层次名称', max_length=50)
+    add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)\
+	
+    class Meta:
+        verbose_name = u'学历层次'
+        verbose_name_plural = verbose_name
+
+    def __unicode__(self):
+        return self.name
 
 class University(models.Model):
     name = models.CharField(verbose_name=u'学校名称', max_length=200)
@@ -25,6 +36,7 @@ class University(models.Model):
     country = models.ForeignKey(Country, verbose_name=u'所属国家')
     city = models.CharField(verbose_name=u'所属城市', max_length=100)
     type = models.CharField(choices=(('private',u'私立'), ('public', u'公立')), default='public', max_length=13, verbose_name=u'学校类型')
+    level = models.ForeignKey(Level, verbose_name=u'学历层次', null=True)
     bulid_time = models.DateTimeField(verbose_name=u'建校时间', null=True, blank=True)
     tea_stu = models.CharField(verbose_name=u'师生比', max_length=10)
     students = models.IntegerField(verbose_name=u'学生人数', default=0)

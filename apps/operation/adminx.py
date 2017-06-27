@@ -18,7 +18,7 @@ class UserAskAdmin(object):
 
 
 class HignApplyAdmin(object):
-    list_display = ('id', 'user', 'country', 'type', 'major', 'add_time')
+    list_display = ('id', 'user', 'country','real_name', 'type', 'major', 'add_time')
     list_display_links = ('user', 'country')
     search_fields = ('user', 'country', 'type', 'major')
     list_filter = ('user', 'country', 'type', 'major', 'add_time')

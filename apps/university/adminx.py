@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 import xadmin
-from .models import Country, University, MajorField, Major, Scenery
+from .models import Country, University, MajorField, Major, Scenery, Level
 
 # Register your models here.
 
@@ -11,7 +11,14 @@ class CountryAdmin(object):
     search_fields = ('name',)
     list_filter = ('name',)
 
+	
+class LevelAdmin(object):
+    list_display = ('id', 'name', 'add_time',)
+    list_display_links = ('name',)
+    search_fields = ('name',)
+    list_filter = ('name',)
 
+	
 class UniversityAdmin(object):
     list_display = ('name', 'country', 'type', 'rank',)
     list_display_links = ('name',)
@@ -40,6 +47,7 @@ class SceneryAdmin(object):
     list_filter = ('title', 'add_time',)
 
 xadmin.site.register(Country, CountryAdmin)
+xadmin.site.register(Level, LevelAdmin)
 xadmin.site.register(University, UniversityAdmin)
 xadmin.site.register(MajorField, MajorFieldAdmin)
 xadmin.site.register(Major, MajorAdmin)

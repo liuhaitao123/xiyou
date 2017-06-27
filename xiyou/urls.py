@@ -23,4 +23,6 @@ urlpatterns = [
     url(r'^captche/', include('captcha.urls')),
     url(r'', include('apps.users.urls', namespace='user')),
     url(r'', include('apps.service.urls', namespace='service')),
+    url(r'', include('apps.operation.urls', namespace='operation')),
+    url(r'', include('apps.university.urls', namespace='university')),
 ]

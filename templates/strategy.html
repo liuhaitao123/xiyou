@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留学数据</title>
+</head>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/global.css' %}">
+<link rel="stylesheet" href="{% static 'css/public.css' %}">
+<link rel="stylesheet" href="{% static 'css/slider1.css' %}">
+<link rel="stylesheet" href="{% static 'css/gongl.css' %}">
+<script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+<script src="{% static 'js/slider.js' %}"></script>
+<body>
+	<div class="top-header">
+		<div class="wrap clearfix">
+			<p class="top-header-l">欢迎来到西燕留学网！咨询热线：<span>010-62514855</span></p>
+			<ul class="top-header-r">
+				<li class="deng">您好，请<a href="">登录</a></li>
+				<li class="deng">免费<a href="">注册</a></li>
+				<li id="wo"><a href="">|&nbsp我的西燕</a></li>
+				<li id="guan"><a href="">|&nbsp关注西燕</a></li>
+				<li id="ke"><a href="">|&nbsp客户服务</a></li>
+				<li id="dao"><a href="">|&nbsp网站导航</a></li>
+			</ul>
+			<div id="wode" class="wode">
+				<ul>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">账号管理</a></li>				
+					<li><a href="">我的问答</a></li>
+				</ul>
+			</div>
+			<div id="guanzhu" class="guanzhu">
+				<img src="{% static 'img/weitu.png' %}" alt="">
+			</div>
+			<div id="kefu" class="kefu">
+				<ul>
+					<li><a href="">联系我们</a></li>
+					<li><a href="">帮助中心</a></li>				
+				</ul>
+			</div>
+			<div id="daohang" class="daohang clearfix">
+				<ul class="school">
+					<li><a href="">美国院校</a></li>
+					<li><a href="">英国院校</a></li>
+					<li><a href="">加拿大院校</a></li>
+					<li><a href="">澳洲院校</a></li>
+				</ul>
+				<ul class="news">
+					<li><a href="">留学资讯</a></li>
+					<li><a href="">院校数据</a></li>
+					<li><a href="">院校排行</a></li>
+				</ul>
+				<ul class="server">
+					<li><a href="">特色服务</a></li>
+					<li><a href="">文书服务</a></li>
+					<li><a href="">签证服务</a></li>
+					<li><a href="">行程服务</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="search">
+		<div class="wrap clearfix">
+			<div class="logo-top">
+				<img src="{% static 'img/logo-top.png' %}" alt="">
+			</div>
+			<div class="search-box clearfix">
+				<input type="text" value="请输入院校名称"><img src="{% static 'img/fangda.png' %}" alt="">
+				<button>搜索</button>
+			</div>
+			<div id="shopping" class="shopping clearfix">
+				<img src="{% static 'img/shopping-car.png' %}" alt="">
+				<p>我的购物车</p>
+				<span>0</span>
+				<img class="new" src="{% static 'img/new.png' %}" alt="">
+			</div>
+			<div id="shopping-down" class="shopping-down">
+				<p>最近加入的产品：</p>
+				<p class="chan clearfix"><img class="fl" src="{% static 'img/alogo.png' %}" alt=""><a href="">美国威廉玛丽学院留学申请<br>
+				¥：<span>36000</span>美元/年
+				</a>
+				</p>
+				<div class="sh-foot">
+					<ul class="clearfix">
+						<li class="fl">共1件商品</li>
+						<li class="fr"><a href="">查看购物车</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav-bar">
+		<div class="wrap">
+			<ul class="clearfix">
+				<li><a href="{% url 'user:index' %}">首页</a></li>
+				<li><a href="{% url 'university:university' %}">院校数据</a></li>
+				<li><a href="{% url 'university:estimate' %}">留学评估</a></li>
+				<li><a href="{% url 'user:highapply' %}">高端申请</a></li>
+				<li><a href="{% url 'service:doc' %}">文书服务</a></li>
+				<li><a href="{% url 'service:visa' %}">签证服务</a></li>
+				<li id="readyy" class="readyy"><a href="xingcheng.html">行程准备<span><img src="{% static 'img/jiantou.png' %}" alt=""></span></a></li>
+				<li  class="contion"><a href="{% url 'university:strategy' %}">留学攻略</a></li>
+			</ul>
+			<div id="ready" class="ready">
+				<ul>
+					<li><a href="">机票预订</a></li>
+					<li><a href="">接机服务</a></li>
+					<li><a href="">机票预订</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="banner_tabs" class="flexslider">
+		<ul class="slides">
+			<li>
+				<a title="" target="_blank" href="#">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
+				</a>
+			</li>
+			<li>
+				<a title="" href="#">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
+				</a>
+			</li>
+			<li>
+				<a title="" href="#">
+					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
+				</a>
+			</li>
+		</ul>
+		<ul class="flex-direction-nav">
+			<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+			<li><a class="flex-next" href="javascript:;">Next</a></li>
+		</ul>
+		<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+			<li><a>1</a></li>
+			<li><a>2</a></li>
+			<li><a>2</a></li>
+		</ol>
+
+       
+        
+    </div>
+<script type="text/javascript">
+
+
+
+			var wode = document.getElementById("wode");
+			var wo = document.getElementById("wo");		
+				wo.onmouseover=function(){
+					wode.style.display = "block";
+					wo.className="hi"
+					wode.onmouseover=function(){
+						wo.className="hi"
+						this.style.display = "block";
+					}
+				}
+				wo.onmouseout=function() {
+					wode.style.display = "none";
+					wo.className=""	
+					wode.onmouseout=function(){
+						this.style.display = "none";
+						wo.className=""
+					}
+			     }
+
+			var guanzhu = document.getElementById("guanzhu");
+			var guan = document.getElementById("guan");		
+				guan.onmouseover=function(){
+					guanzhu.style.display = "block";
+					guan.className="hi"
+					guanzhu.onmouseover=function(){
+						guan.className="hi"
+						this.style.display = "block";
+					}
+				}
+				guan.onmouseout=function() {
+					guanzhu.style.display = "none";
+					guan.className=""	
+					guanzhu.onmouseout=function(){
+						this.style.display = "none";
+						guan.className=""
+					}
+			     }
+
+			var kefu = document.getElementById("kefu");
+			var ke = document.getElementById("ke");		
+				ke.onmouseover=function(){
+					kefu.style.display = "block";
+					ke.className="hi"
+					kefu.onmouseover=function(){
+						ke.className="hi"
+						this.style.display = "block";
+					}
+				}
+				ke.onmouseout=function() {
+					kefu.style.display = "none";
+					ke.className=""	
+					kefu.onmouseout=function(){
+						this.style.display = "none";
+						ke.className=""
+					}
+			     }
+
+			var daohang = document.getElementById("daohang");
+			var dao = document.getElementById("dao");		
+				dao.onmouseover=function(){
+					daohang.style.display = "block";
+					dao.className="hi"
+					daohang.onmouseover=function(){
+						dao.className="hi"
+						this.style.display = "block";
+					}
+				}
+				dao.onmouseout=function() {
+					daohang.style.display = "none";
+					dao.className=""	
+					daohang.onmouseout=function(){
+						this.style.display = "none";
+						dao.className=""
+					}
+			     }
+
+
+
+			var ready = document.getElementById("ready");
+			var readyy = document.getElementById("readyy");		
+				readyy.onmouseover=function(){
+					ready.style.display = "block";
+					readyy.className="hi"
+					ready.onmouseover=function(){
+						readyy.className="hi"
+						this.style.display = "block";
+					}
+				}
+				readyy.onmouseout=function() {
+					ready.style.display = "none";
+					readyy.className=""	
+					ready.onmouseout=function(){
+						this.style.display = "none";
+						readyy.className=""
+					}
+			     }
+
+
+			var shopping = document.getElementById("shopping");
+			var down = document.getElementById("shopping-down");		
+				shopping.onclick=function(ev){
+					var oEven=ev||event;
+				  down.style.display = "block";
+				  oEven.cancelBubble=true;
+				
+				}
+				document.onclick=function(){
+					down.style.display = "none";
+				}
+
+
+
+		$(function() {
+			var bannerSlider = new Slider($('#banner_tabs'), {
+				time: 3000,
+				delay: 400,
+				event: 'hover',
+				auto: true,
+				mode: 'fade',
+				controller: $('#bannerCtrl'),
+				activeControllerCls: 'active'
+			});
+			$('#banner_tabs .flex-prev').click(function() {
+				bannerSlider.prev()
+			});
+			$('#banner_tabs .flex-next').click(function() {
+				bannerSlider.next()
+			});
+		})
+</script>
+
+
+	<div class="wrap xiangqing clearfix">
+	    
+		<div class="fl left">
+		     <span class="gj">国家：</span>
+			<ul class="clearfix jack">
+			    
+				<li  class="on"><img src="{% static 'img/jack-a.png' %}" alt=""><span>美国</span></li>
+				<li><img src="{% static 'img/jack-b.png' %}" alt=""><span>英国</span></li>
+				<li><img src="{% static 'img/jack-c.png' %}" alt=""><span>加拿大</span></li>
+				<li><img src="{% static 'img/jack-d.png' %}" alt=""><span>澳洲</span></li>
+			</ul>
+			<div class="gl">
+				<div class="am clearfix">
+					<h2>攻略留学</h2>
+					<div class="lxgl fl"> 
+					   <p>留学攻略<a href="gonglue-list.html">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxlt fr"> 
+					   <p>留学论坛<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxzx fl"> 
+					   <p>留学咨询<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxwd fr"> 
+					   <p>留学问答<a href="">更多></a></p>
+						<div class="">
+							
+							<ul>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
+								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
+								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li><p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="en clearfix">
+					<h2>攻略留学</h2>
+					<div class="lxgl fl"> 
+					   <p>留学攻略<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxlt fr"> 
+					   <p>留学论坛<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxzx fl"> 
+					   <p>留学咨询<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxwd fr"> 
+					   <p>留学问答<a href="">更多></a></p>
+						<div class="">
+							
+							<ul>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
+								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
+								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li><p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="ca clearfix">
+					<h2>攻略留学</h2>
+					<div class="lxgl fl"> 
+					   <p>留学攻略<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxlt fr"> 
+					   <p>留学论坛<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxzx fl"> 
+					   <p>留学咨询<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxwd fr"> 
+					   <p>留学问答<a href="">更多></a></p>
+						<div class="">
+							
+							<ul>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
+								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
+								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li><p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="ao clearfix">
+					<h2>攻略留学</h2>
+					<div class="lxgl fl"> 
+					   <p>留学攻略<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxlt fr"> 
+					   <p>留学论坛<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxzx fl"> 
+					   <p>留学咨询<a href="">更多></a></p>
+						<div class="clearfix">
+							<img src="{% static 'img/tu11.png' %}" alt="">
+							<ul>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lxwd fr"> 
+					   <p>留学问答<a href="">更多></a></p>
+						<div class="">
+							
+							<ul>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
+								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
+								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li><p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="anli">
+				<h2>成功案例</h2>
+				   <a href="">更多案例></a>
+				<ul class="list clearfix">
+				    <li><img src="{% static 'img/std-1.png' %}" alt="">
+				    <h4>张同学</h4>
+				    <h5>拿到英国班戈大学硕士offer</h5>
+				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
+				    </li>
+				    <li><img src="{% static 'img/std-1.png' %}" alt="">
+				    <h4>张同学</h4>
+				    <h5>拿到英国班戈大学硕士offer</h5>
+				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
+				    </li>
+				    <li><img src="{% static 'img/std-1.png' %}" alt="">
+				    <h4>张同学</h4>
+				    <h5>拿到英国班戈大学硕士offer</h5>
+				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
+				    </li>
+				    <li><img src="{% static 'img/std-1.png' %}" alt="">
+				    <h4>张同学</h4>
+				    <h5>拿到英国班戈大学硕士offer</h5>
+				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
+				    </li>
+				    <li><img src="{% static 'img/std-1.png' %}" alt="">
+				    <h4>张同学</h4>
+				    <h5>拿到英国班戈大学硕士offer</h5>
+				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
+				    </li>
+				    <li><img src="{% static 'img/std-1.png' %}" alt="">
+				    <h4>张同学</h4>
+				    <h5>拿到英国班戈大学硕士offer</h5>
+				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
+				    </li>
+
+
+				</ul>
+		    </div>	
+	    </div>
+		<div class="fr right">
+			<div class="other">
+				<h4>中国留学服务中心信息平台</h4>
+				
+	    		<ul>
+	    			<li><a href=""><img src="{% static 'img/byrz.png' %}" alt=""></a></li>
+	    			<li><a href=""><img src="{% static 'img/yxrz.png' %}" alt=""></a></li>
+	    			<li><a href=""><img src="{% static 'img/jykh.png' %}" alt=""></a></li>
+	    			<li><a href=""><img src="{% static 'img/lxda.png' %}" alt=""></a></li>
+	    		</ul>	
+			</div>
+			<div class="tuijian">
+				<h4>推荐院校</h4>
+				<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+			</div>
+		</div>
+
+	</div>
+
+    <div class="foot">
+    	<div class="wrap clearfix">
+    		<div class="foot-logo fl"> 
+    			<img src="{% static 'img/logo-foot.png' %}" alt="">
+    		</div>
+    		<div class="line fl">
+    			<img src="{% static 'img/line-foot.png' %}" alt="">
+    		</div>
+    		<div class="foot-con fl">
+    			<p>24小时服务热线：<span>010-62514855</span></p>
+    			<ul class="fenxiang clearfix">
+    			    <li>好友分享：</li>
+    				<li><a href=""><img src="{% static 'img/weixin.png' %}" alt=""></a></li>
+    				<li><a href=""><img src="{% static 'img/weibo.png' %}" alt=""></a></li>
+    				<li><a href=""><img src="{% static 'img/douban.png' %}" alt=""></a></li>
+    				<li><a href=""><img src="{% static 'img/renren.png' %}" alt=""></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class="about">
+    		   <ul class="clearfix">
+    			<li><a href="">关于我们</a></li>
+    			<li><a href="">友情链接</a></li>
+    			<li><a href="">意见反馈</a></li>
+    			<li><a href="">商务合作</a></li>
+    			<li><a href="">联系我们</a></li>
+    		  </ul>	
+    		  <p> Copyright © 2016 西燕留学 All rights reserved.</p>
+    	</div>
+    </div>
+
+  </div>
+ <script language="javascript"> 
+		$('.jack li').click(function(){ 
+		$(this).addClass("on").siblings().removeClass();
+		  // 删除其他兄弟元素的样式
+		       // $(this).addClass('selected'); 
+		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
+		$(".gl > div").hide().eq($('.jack li').index(this)).show(); 
+		}); 
+		</script>
+</body>
+</html>
