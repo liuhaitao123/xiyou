@@ -285,31 +285,29 @@
     	 <dl class="country" >
 	      <dt>签证类型：</dt>
 	      <dd>
-	       <label class="on" >
-	        <a href="javascript:;">全部</a></label>
-	       <label>
-	        <a href="javascript:;">学生签证</a></label>
-	       <label>
-	        <a href="javascript:;">旅游签证</a></label>
-	       <label>
-	       <a href="javascript:;">1+2套餐</a></label>
-	       <label>
-	       <a href="javascript:;">保过套餐</a></label> 
+	       <label {% ifequal type_id '' %}class="on"{% endifequal %} >
+	        <a href="?type=">全部</a></label>
+
+	        {% for type in all_types %}
+	       <label {% ifequal type_id type.id|stringformat:'i' %}class="on"{% endifequal %}>
+	        <a href="?type={{ type.id }}">{{ type.name }}</a></label>
+			{% endfor %}
 	      </dd>
 	     </dl>
     	</div>
+    	{% for visa in all_visas %}
     	<div class="sv same clearfix">
     		<div class="img fl">
-    			<a href="javascript:;"><img src="{%  static 'img/sv.png' %}" alt=""></a>
+    			<a href="javascript:;"><img src="{{ MEDIA_URL }}{{ visa.image }}" alt=""></a>
     		</div>
     		<div class="fl detail">
     		  <div class="top">
-    		  	<h4>学生签证<span>Student Visa</span></h4>
+    		  	<h4>{{ visa.name }}<span>{{ visa.english_name }}</span></h4>
     		  </div>
     		  <div class="bott">	
     		    <ul>
-    		  		<li>价格：<span>¥500.00</span></li>
-    		  		<li class="shc">市场价：<span>¥800.00</span></li>
+    		  		<li>价格：<span>¥{{ visa.price }}</span></li>
+    		  		<li class="shc">市场价：<span>¥{{ visa.price }}</span></li>
     		  		
     		  	</ul>
     		  </div>
@@ -330,7 +328,8 @@
     		  </div>
     		</div>
         </div>
-        <div class="tv same clearfix">
+		{% endfor %}
+        <!-- <div class="tv same clearfix">
     		<div class="img fl">
     			<a href="javascript:;"><img src="{%  static 'img/tv.png' %}" alt=""></a>
     		</div>
@@ -424,7 +423,7 @@
     		  	</ul>
     		  </div>
     		</div>
-        </div>
+        </div> -->
     </div>
     <div class="fen">
     	<ul class="fenye clearfix">

@@ -22,7 +22,7 @@
 }
 .sq .lc ul li{
 	float: left;
-	background: url(../images/yuan1.png) no-repeat;
+	background: url(/static/img/yuan1.png) no-repeat;
 	color: #666;
 	width: 116px;
 	height: 110px;
@@ -51,12 +51,12 @@
 }
 .sq .lc .ou li{
 	float: left;
-	background: url(../images/yuan2.png) no-repeat;
+	background: url(/static/img/yuan2.png) no-repeat;
 	
 }
 .sq .lc .ou .ten{
 	float: left;
-	background: url(../images/yuan4.png) no-repeat;
+	background: url(/static/img/yuan4.png) no-repeat;
 	
 }
 .sq .lc ul .ten span{

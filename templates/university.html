@@ -283,37 +283,37 @@
     	 <dl class="country clearfix" >
 	      <dt>所属国家：</dt>
 	      <dd>
-	       <label class="action">
-	        <a  href="?country=">不限</a></label>
-			
+	       <label {% ifequal country_id '' %}class="action" {% endifequal %}>
+	        <a href="?country=&type={{ type }}&level={{ level_id }}">不限</a></label>
+
 			{% for country in all_country %}
-	       <label>
-	        <a href="?country={{ country.id }}">{{ country.name }}</a></label>
+	       <label {% ifequal country_id country.id|stringformat:'i' %}class="action"{% endifequal %}>
+	        <a href="?country={{ country.id }}&type={{ type }}&level={{ level_id }}">{{ country.name }}</a></label>
 	      {% endfor %}
 	      </dd>
 	     </dl>
 	     <dl class="country clearfix" >
 	      <dt>学校类型：</dt>
 	      <dd>
-	       <label class="action">
-	        <a  href="?type=">不限</a></label>
-	       <label>
-	        <a href="?type=public">公立大学</a></label>
-	       <label>
-	        <a href="?type=private">私立大学</a></label>
+	       <label {% ifequal type '' %}class="action" {% endifequal %}>
+	        <a  href="?country={{ country_id }}&type=&level={{ level_id }}">不限</a></label>
+	       <label {% ifequal type 'public' %}class="action" {% endifequal %}>
+	        <a href="?country={{ country_id }}&type=public&level={{ level_id }}">公立大学</a></label>
+	       <label {% ifequal type 'private' %}class="action" {% endifequal %}>
+	        <a href="?country={{ country_id }}&type=private&level={{ level_id }}">私立大学</a></label>
 	      
 	      </dd>
 	     </dl>
 	         <dl class="country clearfix" >
 	      <dt>学历层次：</dt>
 	      <dd>
-	       <label class="action">
-	        <a  href="?level=">不限</a></label>
+	       <label {% ifequal level_id '' %}class="action" {% endifequal %}>
+	        <a  href="?country={{ country_id }}&type={{ type }}&level=">不限</a></label>
 			
 			{% for level in all_level %}
-	       <label>
-	        <a href="?level={{ level.id }}">{{ level.name }}</a></label>
-	       <label>
+	       <label {% ifequal level_id level.id|stringformat:'i' %}class="action" {% endifequal %}>
+	        <a href="?country={{ country_id }}&type={{ type }}&level={{ level.id }}">{{ level.name }}</a></label>
+
 			{% endfor %}
 
 	      </dd>
@@ -364,7 +364,7 @@
 			
 			{% for university in all_university %}
      		<div class="school-li-box clearfix">
-     		   <img src="{% static 'img/mali-logo.png' %}" alt="">
+     		   <img width="137px;" height="180px" src="{{ MEDIA_URL }}{{ university.image }}" alt="">
      			<ul>
      				<li class="sc-logo">
      				
@@ -387,11 +387,11 @@
      				<li class="paiming"><p>综合排名</p>
      				<h2>34</h2>
      				</li>
-     				<li class="bnt">
+     				<!-- <li class="bnt">
      					<a href="" class="duibi">加入对比</a>
      					<a href="" class="luqu">评估录取率</a>
      					<a href="" class="shenqing">立即申请</a>
-     				</li>
+     				</li> -->
      			</ul>
      		</div>
 

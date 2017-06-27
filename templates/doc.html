@@ -285,11 +285,11 @@
     	 <dl class="country" >
 	      <dt>文书类型：</dt>
 	      <dd>
-	       <label class="on" >
+	       <label {% ifequal type_id '' %}class="on"{% endifequal %}>
 	        <a href="?type=">全部</a></label>
 			
 			{% for type in all_types %}
-	       <label>
+	       <label {% ifequal type_id type.id|stringformat:'i' %}class="on"{% endifequal %}>
 	        <a href="?type={{ type.id }}">{{ type.name }}</a></label>
 	       {% endfor %}
 

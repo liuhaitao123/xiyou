@@ -1,11 +1,18 @@
 # -*- coding:utf-8 -*-
 
 import xadmin
-from .models import WriteType, Writer, Visa
+from .models import WriteType, Writer, Visa, VisaType
 
 
 class WriteTypeAdmin(object):
-    list_display = ('name', 'desc', 'add_time')
+    list_display = ('name', 'add_time')
+    list_display_links = ('name',)
+    search_fields = ('name',)
+    list_filter = ('name', 'add_time')
+
+
+class VisaTypeAdmin(object):
+    list_display = ('name', 'add_time')
     list_display_links = ('name',)
     search_fields = ('name',)
     list_filter = ('name', 'add_time')
@@ -25,5 +32,6 @@ class VisaAdmin(object):
     list_filter = ('name', 'type', 'price', 'add_time')
 
 xadmin.site.register(WriteType, WriteTypeAdmin)
+xadmin.site.register(VisaType, VisaTypeAdmin)
 xadmin.site.register(Writer, WriteAdmin)
 xadmin.site.register(Visa, VisaAdmin)
