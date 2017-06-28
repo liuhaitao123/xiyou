@@ -22,6 +22,7 @@ class Article(models.Model):
     content = models.TextField(verbose_name=u'内容', null=True, blank=True)
     status = models.IntegerField(verbose_name=u'状态', choices=((0, u'草稿'), (1, u'发布')), default=0)
     country = models.ForeignKey(Country, verbose_name=u'相关国家')
+    category = models.CharField(choices=(('gl', u'留学攻略'),('lt', u'留学论坛'),('zx', u'留学咨询')), verbose_name=u'分类', max_length=6, null=True)
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u'添加时间')
 
     class Meta:

@@ -3,7 +3,10 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.views.generic.base import View
-from .models import WriteType, Writer, VisaType, Visa
+
+from service.models import WriteType, Writer, VisaType, Visa
+from university.models import Country
+
 
 # Create your views here.
 
@@ -24,6 +27,7 @@ class DocView(View):
 
 class VisaView(View):
     def get(self, request):
+        all_country = Country.objects.all()
         all_types = VisaType.objects.all()
         all_visas = Visa.objects.all()
 
@@ -33,4 +37,5 @@ class VisaView(View):
         return render(request, 'visa.html', {'all_types': all_types,
                                              'all_visas': all_visas,
                                              'type_id': type_id,
+											 'all_country':all_country,
                                              })

@@ -7,7 +7,7 @@ from datetime import datetime
 
 class Country(models.Model):
     name = models.CharField(verbose_name=u'国家名称', max_length=150)
-    desc = models.CharField(verbose_name=u'描述', max_length=150)
+    image = models.ImageField(upload_to=u'university/country/%y/%m', verbose_name=u'logo', max_length=150, null=True)
     add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)
 
     class Meta:
@@ -53,6 +53,8 @@ class University(models.Model):
     graduate_gpa = models.FloatField(verbose_name=u'研究生GPA', default=75)
     graduate_toefl = models.FloatField(verbose_name=u'研究生托福', default=110.00)
     graduate_ielts = models.FloatField(verbose_name=u'研究生雅思', default=6.00)
+    click_num = models.IntegerField(verbose_name=u'点击数', default=0)
+    show_index = models.IntegerField(verbose_name=u'是否首页显示', choices=((1, u'首页显示'),(0, u'首页不显示')), default=0)
     add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)
 
     class Meta:
@@ -61,6 +63,9 @@ class University(models.Model):
 
     def __unicode__(self):
         return self.name
+		
+    def get_all_major(self):
+        return self.major_set.all()
 
 
 class MajorField(models.Model):
@@ -73,7 +78,7 @@ class MajorField(models.Model):
         verbose_name_plural = verbose_name
 
     def __unicode__(self):
-        return self.name
+        return self.name		
 
 
 class Major(models.Model):

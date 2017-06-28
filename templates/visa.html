@@ -314,9 +314,18 @@
     		  
     		  <div class="bottom">
     		  	<ul class="ee">
-    		  		<li>签证国家：<span class="onn">美国</span><span>英国</span><span>加拿大</span><span>澳洲</span></li>
-    		  		<li>签证培训：<span class="onn">参加</span><span>不参加</span></li>
-    		  		<li>是否陪签：<span class="onn">是</span><span>否</span></li>
+    		  		<li>
+						签证国家：
+						{% for country in all_country %}
+						<span><input type="radio" name="country" value="{{ country.id }}">    {{ country.name }}</span>
+						{% endfor %}
+					</li>
+    		  		<li>签证培训：
+						<span><input type="radio" name="train" value="1">   参加</span>				
+						<span><input type="radio" name="train" value="0">   不参加</span></li>
+    		  		<li>是否陪签：
+						<span><input type="radio" name="visa" value="1">是</span>
+						<span><input type="radio" name="visa" value="0">否</span></li>
     		  	</ul>
     		  	<div class="gg">数量：<a href="javascript:;">-</a><span>1</span><a href="javascript:;">+</a>
     		  	</div>
@@ -329,101 +338,7 @@
     		</div>
         </div>
 		{% endfor %}
-        <!-- <div class="tv same clearfix">
-    		<div class="img fl">
-    			<a href="javascript:;"><img src="{%  static 'img/tv.png' %}" alt=""></a>
-    		</div>
-    		<div class="fl detail">
-    		  <div class="top">
-    		  	<h4>旅游签证<span>Tourist Visa</span></h4>
-    		  </div>
-    		  <div class="bott">	
-    		    <ul>
-    		  		<li>价格：<span>¥500.00</span></li>
-    		  		<li class="shc">市场价：<span>¥800.00</span></li>
-    		  		
-    		  	</ul>
-    		  </div>
-    		  
-    		  <div class="bottom">
-    		  	<ul class="ee">
-    		  		<li>签证国家：<span class="onn">美国</span><span>英国</span><span>加拿大</span><span>澳洲</span></li>
-    		  		<li>签证培训：<span class="onn">参加</span><span>不参加</span></li>
-    		  		<li>是否陪签：<span class="onn">是</span><span>否</span></li>
-    		  	</ul>
-    		  	<div class="gg">数量：<a href="javascript:;">-</a><span>1</span><a href="javascript:;">+</a>
-    		  	</div>
-    		  	<ul class="ff clearfix">
-    		  		<li class="car"><span><img src="{%  static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
-    		  		<li class="now">立即购买</li>
-    		  		<li class="down"><span><img src="{%  static 'img/down.png' %}"/></span>个人信息表下载</li>
-    		  	</ul>
-    		  </div>
-    		</div>
-        </div>
-        <div class="12 same clearfix">
-    		<div class="img fl">
-    			<a href="javascript:;"><img src="{%  static 'img/1+2.png' %}" alt=""></a>
-    		</div>
-    		<div class="fl detail">
-    		  <div class="top">
-    		  	<h4>签证套餐<span>Visa Package</span><i>（1个学生证+两个旅游证）</i></h4>
-    		  </div>
-    		  <div class="bott">	
-    		    <ul>
-    		  		<li>价格：<span>¥500.00</span></li>
-    		  		<li class="shc">市场价：<span>¥800.00</span></li>
-    		  		
-    		  	</ul>
-    		  </div>
-    		  
-    		  <div class="bottom">
-    		  	<ul class="ee">
-    		  		<li>签证国家：<span class="onn">美国</span><span>英国</span><span>加拿大</span><span>澳洲</span></li>
-    		  		<li>签证培训：<span class="onn">参加</span><span>不参加</span></li>
-    		  		<li>是否陪签：<span class="onn">是</span><span>否</span></li>
-    		  	</ul>
-    		  	<div class="gg">数量：<a href="javascript:;">-</a><span>1</span><a href="javascript:;">+</a>
-    		  	</div>
-    		  	<ul class="ff clearfix">
-    		  		<li class="car"><span><img src="{%  static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
-    		  		<li class="now">立即购买</li>
-    		  		<li class="down"><span><img src="{%  static 'img/down.png' %}"/></span>个人信息表下载</li>
-    		  	</ul>
-    		  </div>
-    		</div>
-        </div>
-        <div class="vip same clearfix">
-    		<div class="img fl">
-    			<a href="javascript:;"><img src="{%  static 'img/vip.png' %}" alt=""></a>
-    		</div>
-    		<div class="fl detail">
-    		  <div class="top">
-    		  	<h4>VIP套餐<span>VIP Package</span><i>（材料+翻译+培训+约签+陪签）</i></h4>
-    		  </div>
-    		  <div class="bott">	
-    		    <ul>
-    		        <li>套餐内容：<i>此套餐包含材料、翻译、培训、约签、陪签，不含交第三方的公证、签证等费用、代刷卡手续费。客户拒签后我方<br>&nbsp&nbsp&nbsp&nbsp&nbsp免费提供二签服务（签证费等第三方费用需客户自理）。若客户选择终止我方服务，我方承诺退换三级全部费用。</i></li>
-    		  		<li>价格：<span>¥500.00</span></li>
-    		  		<li class="shc">市场价：<span>¥800.00</span></li>
-    		  		
-    		  	</ul>
-    		  </div>
-    		  
-    		  <div class="bottom">
-    		  	<ul class="ee">
-    		  		<li>签证国家：<span class="onn">美国</span><span>英国</span><span>加拿大</span><span>澳洲</span></li>
-    		  	</ul>
-    		  	<div class="gg">数量：<a href="javascript:;">-</a><span>1</span><a href="javascript:;">+</a>
-    		  	</div>
-    		  	<ul class="ff clearfix">
-    		  		<li class="car"><span><img src="{%  static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
-    		  		<li class="now">立即购买</li>
-    		  		<li class="down"><span><img src="{%  static 'img/down.png' %}"/></span>个人信息表下载</li>
-    		  	</ul>
-    		  </div>
-    		</div>
-        </div> -->
+        
     </div>
     <div class="fen">
     	<ul class="fenye clearfix">

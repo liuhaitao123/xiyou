@@ -34,7 +34,7 @@ class MajorFieldAdmin(object):
 
 
 class MajorAdmin(object):
-    list_display = ('name', 'desc', 'type', 'field', 'add_time')
+    list_display = ('name', 'university', 'type', 'field', 'add_time')
     list_display_links = ('name',)
     search_fields = ('name',)
     list_filter = ('name', 'field', 'type', 'add_time',)

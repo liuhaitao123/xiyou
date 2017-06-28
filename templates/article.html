@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="{% static 'css/global.css' %}">
 <link rel="stylesheet" href="{% static 'css/public.css' %}">
 <link rel="stylesheet" href="{% static 'css/slider1.css' %}">
-<link rel="stylesheet" href="{% static 'css/shuju.css' %}">
+<link rel="stylesheet" href="{% static 'css/gongl-gl.css' %}">
 <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
 <script src="{% static 'js/slider.js' %}"></script>
 <body>
@@ -94,14 +94,14 @@
 	<div class="nav-bar">
 		<div class="wrap">
 			<ul class="clearfix">
-				<li><a href="{% url 'user:index' %}">首页</a></li>
-				<li  class="contion"><a target="_self" href="{% url 'university:university' %}">院校数据</a></li>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="shuju.html">院校数据</a></li>
 				<li><a href="pinggu.html">留学评估</a></li>
-				<li><a href="{% url 'user:highapply' %}">高端申请</a></li>
-				<li><a href="{% url 'service:doc' %}">文书服务</a></li>
-				<li><a href="{% url 'service:visa' %}">签证服务</a></li>
+				<li><a href="shengqing.html">高端申请</a></li>
+				<li><a href="wenshu.html">文书服务</a></li>
+				<li><a href="qianzheng.html">签证服务</a></li>
 				<li id="readyy" class="readyy"><a href="xingcheng.html">行程准备<span><img src="{% static 'img/jiantou.png' %}" alt=""></span></a></li>
-				<li><a href="gonglue.html">留学攻略</a></li>
+				<li  class="contion"><a>留学攻略</a></li>
 			</ul>
 			<div id="ready" class="ready">
 				<ul>
@@ -278,196 +278,97 @@
 		})
 </script>
 
-    <div class="search-box">
-    	<div class="searchbox">
-    	 <dl class="country clearfix" >
-	      <dt>所属国家：</dt>
-	      <dd>
-	       <label {% ifequal country_id '' %}class="action" {% endifequal %}>
-	        <a href="?country=&type={{ type }}&level={{ level_id }}">不限</a></label>
 
-			{% for country in all_country %}
-	       <label {% ifequal country_id country.id|stringformat:'i' %}class="action"{% endifequal %}>
-	        <a href="?country={{ country.id }}&type={{ type }}&level={{ level_id }}">{{ country.name }}</a></label>
-	      {% endfor %}
-	      </dd>
-	     </dl>
-	     <dl class="country clearfix" >
-	      <dt>学校类型：</dt>
-	      <dd>
-	       <label {% ifequal type '' %}class="action" {% endifequal %}>
-	        <a  href="?country={{ country_id }}&type=&level={{ level_id }}">不限</a></label>
-	       <label {% ifequal type 'public' %}class="action" {% endifequal %}>
-	        <a href="?country={{ country_id }}&type=public&level={{ level_id }}">公立大学</a></label>
-	       <label {% ifequal type 'private' %}class="action" {% endifequal %}>
-	        <a href="?country={{ country_id }}&type=private&level={{ level_id }}">私立大学</a></label>
-	      
-	      </dd>
-	     </dl>
-	         <dl class="country clearfix" >
-	      <dt>学历层次：</dt>
-	      <dd>
-	       <label {% ifequal level_id '' %}class="action" {% endifequal %}>
-	        <a  href="?country={{ country_id }}&type={{ type }}&level=">不限</a></label>
+	<div class="wrap xiangqing clearfix">
+	    
+		<div class="fl left">
+			<!-- <ul class="clearfix jack"> -->
+				<!-- <li  class="on"><a href="gonglue-list.html">留学攻略</a></li> -->
+				<!-- <li><a href="gonglue-list.html">留学论坛</a></li> -->
+				<!-- <li><a href="gonglue-list.html">留学资讯</a></li> -->
+				<!-- <li><a href="gonglue-list.html">留学问答</a></li> -->
+				<!-- <li><a href="gonglue-list.html">成功案例</a></li> -->
+			<!-- </ul> -->
+		
 			
-			{% for level in all_level %}
-	       <label {% ifequal level_id level.id|stringformat:'i' %}class="action" {% endifequal %}>
-	        <a href="?country={{ country_id }}&type={{ type }}&level={{ level.id }}">{{ level.name }}</a></label>
-
-			{% endfor %}
-
-	      </dd>
-	     </dl>
-	      <dl class="country clearfix" >
-	      <dt>本国排名：</dt>
-	      <dd>
-	       <label class="action">
-	        <a  href="?rank=">不限</a></label>
-	       <label>
-	        <a href="?rank=1-20">1-20</a></label>
-	       <label>
-	        <a href="?rank=21-50">21-50</a></label>
-	       <label>
-	       <a href="?rank=51-100">51-100</a></label>
-	       <label>
-	       <a href="?rank=其他">其他</a></label> 
-
-	      </dd>
-	     </dl>
-	      <dl class="country  major clearfix" >
-	      <dt>院校专业：</dt>
-	      <dd>
-	       <label class="clearfix">
-	        <input class="name" type="text" value="请输入院校名称"><img src="{% static 'img/fangda.png' %}" alt=""></label>
-	       <label class="clearfix">
-	        <input class="name" type="text" value="请输入专业名称"><img src="{% static 'img/fangda.png' %}" alt=""></label>
-	       <label class="clearfix">
-	        <input  class="ti" type="button" value="搜索"></label>
-	      </dd>
-	     </dl>
-    	</div>
-    </div>
-  <script language="javascript"> 
-		$('dd label').click(function(){ 
-		$(this).addClass("action").siblings().removeClass();
-		  // 删除其他兄弟元素的样式
-		       // $(this).addClass('selected'); 
-		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
-		// $(".bd > li").hide().eq($('.bb li').index(this)).show(); 
-		});
-		</script>
-    <div class="school-li">
-     	<div class="wrap">
-     		<hr>
+			<div class="gl">
+			<h3>{{ article.title }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span></span></h3>
+			<h6>来源：西柚留学网&nbsp&nbsp&nbsp&nbsp&nbsp 时间：{{ article.add_time }}</h6>
 			
-			
-			
-			{% for university in all_university %}
-     		<div class="school-li-box clearfix">
-     		   <a href="{% url 'university:univer-detail' university.id %}"><img width="137px;" height="180px" src="{{ MEDIA_URL }}{{ university.image }}" alt=""></a>
-     			<ul>
-     				<li class="sc-logo">
-     				
-     				<h3>{{ university.name }}</h3>
-     				<h4>{{ university.english_name }}</h4>
-     				<p>学校所在地：{{ university.address }}</p>
-     				<p>所在大学类型：公立大学</p>
-     				<p>申请截止日期：{{ university.end_time }}</p>
-     				</li>
-     				<li class="time">
-     				<p>建校时间：{{ university.bulid_time }}</p>
-     				<p>学生人数：{{ university.students }}人</p>
-     				<p>学费：{{ university.tuition }}美元/年</p>
-     				</li>
-     				<li class="time">
-     				<p>录取率：{{ university.accept_rate }}</p>
-     				<p>师生比例：{{ university.tea_stu }}</p>
-     				<p>住宿费：15000美元/年</p>	
-     				</li>
-     				<li class="paiming"><p>综合排名</p>
-     				<h2>34</h2>
-     				</li>
-     				<!-- <li class="bnt">
-     					<a href="" class="duibi">加入对比</a>
-     					<a href="" class="luqu">评估录取率</a>
-     					<a href="" class="shenqing">立即申请</a>
-     				</li> -->
-     			</ul>
-     		</div>
+				
+			<div class="qk">
+				<img src="{% static 'img/gl-tu1.png' %}" alt="">
+				<p>{{ article.content }}</p>
+			</div>
+            
+			</div>
+	
+	    </div>
+		<div class="fr right">
+			<div class="other">
+				<h4>中国留学服务中心信息平台</h4>
+				
+	    		<ul>
+	    			<li><a href=""><img src="{% static 'img/byrz.png' %}" alt=""></a></li>
+	    			<li><a href=""><img src="{% static 'img/yxrz.png' %}" alt=""></a></li>
+	    			<li><a href=""><img src="{% static 'img/jykh.png' %}" alt=""></a></li>
+	    			<li><a href=""><img src="{% static 'img/lxda.png' %}" alt=""></a></li>
+	    		</ul>	
+			</div>
+			<div class="tuijian">
+				<h4>推荐院校</h4>
+				<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		
+	    		
+	    		
+			</div>
+		</div>
 
-			{% endfor %}
-			
-     		 
-     	</div>
-     		<ul class="fenye clearfix">
-     			<li><a href="">上一页</a></li>
-     			<li><a href="" class="at">1</a></li>
-     			<li><a href="">2</a></li>
-     			<li><a href="">3</a></li>
-     			<li>...</li>
-     			<li><a href="">下一页</a></li>
-     		</ul>
-     	</div>
-    </div>
+	</div>
 
-
-
-    <div class="duibikuang">
-    	<div class="kuang-head cleafix">
-    		<p>学校对比</p>
-    		<a href="">隐藏</a>
-    	</div>
-    	<div class="kuang-con cleafix">
-    		<div class="sc-list cleafix">
-    			<div class="img-tu fl">
-    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
-    			</div>
-    			<div class="img-con fl">
-    					<h3>波士顿学院</h3>
-    					<h4>Boston College</h4>
-    					<p>综合排名：38</p>
-    					<p>学历层次：硕士</p>
-    		   </div>
-    		</div>
-    		<div class="sc-list cleafix">
-    			<div class="img-tu fl">
-    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
-    			</div>
-    			<div class="img-con fl">
-    					<h3>波士顿学院</h3>
-    					<h4>Boston College</h4>
-    					<p>综合排名：38</p>
-    					<p>学历层次：硕士</p>
-    		   </div>
-    		</div>
-    		<div class="sc-list cleafix">
-    			<div class="img-tu fl">
-    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
-    			</div>
-    			<div class="img-con fl">
-    					<h3>波士顿学院</h3>
-    					<h4>Boston College</h4>
-    					<p>综合排名：38</p>
-    					<p>学历层次：硕士</p>
-    		   </div>
-    		</div>
-    		<div class="sc-list cleafix">
-    			<div class="img-tu fl">
-    				<img src="{% static 'img/boshidun-logo.png' %}" alt="">
-    			</div>
-    			<div class="img-con fl">
-    					<h3>波士顿学院</h3>
-    					<h4>Boston College</h4>
-    					<p>综合排名：38</p>
-    					<p>学历层次：硕士</p>
-    		   </div>
-    		</div>
-    		<ul class="contrast fr">
-    			<li class="first"><a href="">对比</a></li>
-    			<li class="sen"><a href="">清空</a></li>
-    		</ul>
-    	</div>
-    </div>
     <div class="foot">
     	<div class="wrap clearfix">
     		<div class="foot-logo fl"> 
@@ -500,5 +401,21 @@
     </div>
 
   </div>
+ <script language="javascript"> 
+		$('.jack li').click(function(){ 
+		$(this).addClass("on").siblings().removeClass();
+		  // 删除其他兄弟元素的样式
+		       // $(this).addClass('selected'); 
+		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
+		$(".left > div").hide().eq($('.jack li').index(this)).show(); 
+		}); 
+		$('.gl li').click(function(){ 
+		$(this).addClass("on").siblings().removeClass();
+		  // 删除其他兄弟元素的样式
+		       // $(this).addClass('selected'); 
+		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
+		// $(".gl > div").hide().eq($('.jack li').index(this)).show(); 
+		 }); 
+		</script>
 </body>
 </html>

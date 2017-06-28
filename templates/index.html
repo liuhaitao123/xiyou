@@ -122,21 +122,13 @@
 	</div>
 	<div id="banner_tabs" class="flexslider">
 		<ul class="slides">
+		{% for banner in banner_list%}
 			<li>
 				<a title="" target="_blank" href="#">
-					<img width="1920" height="550" alt=""  src="{% static 'img/banner_04.jpg' %}">
+					<img width="1920" height="550" alt=""  src="{{ MEDIA_URL }}{{ banner.image }}">
 				</a>
 			</li>
-			<li>
-				<a title="" href="#">
-					<img width="1920" height="550" alt=""  src="{% static 'img/banner_05.jpg' %}">
-				</a>
-			</li>
-			<li>
-				<a title="" href="#">
-					<img width="1920" height="550" alt=""  src="{% static 'img/banner_02.jpg' %}">
-				</a>
-			</li>
+		{% endfor %}
 		</ul>
 		<ul class="flex-direction-nav">
 			<li><a class="flex-prev" href="javascript:;">Previous</a></li>

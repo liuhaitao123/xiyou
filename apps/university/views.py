@@ -8,6 +8,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.core.urlresolvers import reverse
 
 from university.models import Country, Level, University, MajorField, Major, Scenery
+from information.models import Article
 
 
 # Create your views here.
@@ -39,6 +40,12 @@ class UniversityView(View):
                                                    'type': type,
                                                    'level_id': level_id,
                                                    })
+												   
+
+class UniversityDetailView(View):
+    def get(self, request, university_id):
+        university = University.objects.get(pk=int(university_id))
+        return render(request, 'university-detail.html', {'university': university})
 
 
 class EstimateView(View):
@@ -48,4 +55,43 @@ class EstimateView(View):
 
 class StrategyView(View):
     def get(self, request):
-        return render(request, 'strategy.html')
+        all_country = Country.objects.all()
+        country_id = request.GET.get('country', '1')
+        all_article = Article.objects.all().filter(status=1)
+
+        if country_id:
+            all_article = all_article.filter(country=int(country_id))	
+            art_strategy = 	all_article.filter(category='gl')[:5]
+            art_forum = 	all_article.filter(category='lt')[:5]
+            art_counsel = 	all_article.filter(category='zx')[:5]			
+
+        return render(request, 'strategy.html', {'all_country': all_country, 'art_strategy': art_strategy, 'art_forum': art_forum, 'art_counsel': art_counsel, 'country_id': country_id})
+		
+		
+		
+class StrategyListView(View):
+    def get(self, request):
+        type = request.GET.get('type', 'gl')
+        all_article = Article.objects.all()
+		
+        if type:
+            all_article = all_article.filter(category=type)
+		
+        return render(request, 'strategy-list.html', {'all_article': all_article, 'type': type})
+
+class ArticleView(View):
+    def get(self, request, article_id):
+        article = Article.objects.get(pk=int(article_id))
+        return render(request, 'article.html', {'article': article})
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

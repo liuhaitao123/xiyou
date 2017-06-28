@@ -38,7 +38,7 @@
 	margin-top: 30px;
 	width: 240px;
 	height: 240px;
-	background: url(../images/paihang.png) no-repeat center top;
+	background: url(/static/img/paihang.png) no-repeat center top;
 }
 .xiangqing .mian .zhph p{
 	font-size: 16px;
@@ -191,7 +191,7 @@
 	border-bottom: 1px dashed #ccc;
 }
 .xiangqing .left .shengqing span{
-  margin: 20px 50px 20px 40px;
+  margin: 20px 10px 20px 10px;
   display: inline-block;
   font-size: 14px;
   color: #666;
@@ -205,7 +205,7 @@
   background: #f80;
   text-align: center;
   display: inline-block;
-  margin-left: 180px;
+  margin-left: 20px;
 }
 .xiangqing .fenye {
     margin-top: 20px;

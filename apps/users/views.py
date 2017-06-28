@@ -6,8 +6,10 @@ from django.shortcuts import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import View
 from django.contrib.auth import login, authenticate, logout
 from django.core.urlresolvers import reverse
+
 from forms import RegisterForm, LoginForm
 from operation.models import HighApply
+from users.models import BannerIndex
 
 # Create your views here.
 
@@ -45,7 +47,9 @@ class LogoutView(View):
 
 class IndexView(View):
 	def get(self, request):
-		return render(request, 'index.html')
+		banner_list = BannerIndex.objects.all().order_by('index')[:3]
+		
+		return render(request, 'index.html', {'banner_list': banner_list})
 		
 		
 class HighApplyView(View):

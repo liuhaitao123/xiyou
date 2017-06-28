@@ -70,7 +70,7 @@
 }
 
 .flex-control-paging li a {
-	background: url(../images/dot.png) no-repeat 0 -16px;
+	background: url(/static/img/dot.png) no-repeat 0 -16px;
 	display: block;
 	height: 16px;
 	overflow: hidden;

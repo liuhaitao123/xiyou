@@ -284,207 +284,43 @@
 		<div class="fl left">
 		     <span class="gj">国家：</span>
 			<ul class="clearfix jack">
-			    
-				<li  class="on"><img src="{% static 'img/jack-a.png' %}" alt=""><span>美国</span></li>
-				<li><img src="{% static 'img/jack-b.png' %}" alt=""><span>英国</span></li>
-				<li><img src="{% static 'img/jack-c.png' %}" alt=""><span>加拿大</span></li>
-				<li><img src="{% static 'img/jack-d.png' %}" alt=""><span>澳洲</span></li>
+			    {% for country in all_country %}
+				<a href="?country={{ country.id }}"><li {% ifequal country_id country.id|stringformat:'i' %}class="on" {% endifequal %}><img src="{{ MEDIA_URL }}{{ country.image }}" alt=""><span>{{ country.name }}</span></li></a>
+				{% endfor %}
 			</ul>
 			<div class="gl">
 				<div class="am clearfix">
 					<h2>攻略留学</h2>
 					<div class="lxgl fl"> 
-					   <p>留学攻略<a href="gonglue-list.html">更多></a></p>
+					   <p>留学攻略<a href="{% url 'university:strategy-list' %}">更多></a></p>
 						<div class="clearfix">
 							<img src="{% static 'img/tu11.png' %}" alt="">
 							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							{% for article in art_strategy %}
+								<li><span></span><a href="{% url 'university:article' article.id %}">{{ article.title }}</a>   {{ article.add_time|date:"Y-m-d" }}</li>
+							{% endfor %}
 							</ul>
 						</div>
 					</div>
 					<div class="lxlt fr"> 
-					   <p>留学论坛<a href="">更多></a></p>
+					   <p>留学论坛<a href="{% url 'university:strategy-list' %}">更多></a></p>
 						<div class="clearfix">
 							<img src="{% static 'img/tu11.png' %}" alt="">
 							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							{% for article in art_forum %}
+								<li><span></span><a href="{% url 'university:article' article.id %}">{{ article.title }}</a>  {{ article.add_time|date:"Y-m-d" }}</li>
+                            {% endfor %}
 							</ul>
 						</div>
 					</div>
 					<div class="lxzx fl"> 
-					   <p>留学咨询<a href="">更多></a></p>
+					   <p>留学咨询<a href="{% url 'university:strategy-list' %}">更多></a></p>
 						<div class="clearfix">
 							<img src="{% static 'img/tu11.png' %}" alt="">
 							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxwd fr"> 
-					   <p>留学问答<a href="">更多></a></p>
-						<div class="">
-							
-							<ul>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
-								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
-								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li><p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="en clearfix">
-					<h2>攻略留学</h2>
-					<div class="lxgl fl"> 
-					   <p>留学攻略<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxlt fr"> 
-					   <p>留学论坛<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxzx fl"> 
-					   <p>留学咨询<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxwd fr"> 
-					   <p>留学问答<a href="">更多></a></p>
-						<div class="">
-							
-							<ul>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
-								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
-								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li><p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="ca clearfix">
-					<h2>攻略留学</h2>
-					<div class="lxgl fl"> 
-					   <p>留学攻略<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxlt fr"> 
-					   <p>留学论坛<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxzx fl"> 
-					   <p>留学咨询<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxwd fr"> 
-					   <p>留学问答<a href="">更多></a></p>
-						<div class="">
-							
-							<ul>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
-								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
-								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li><p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="ao clearfix">
-					<h2>攻略留学</h2>
-					<div class="lxgl fl"> 
-					   <p>留学攻略<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxlt fr"> 
-					   <p>留学论坛<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lxzx fl"> 
-					   <p>留学咨询<a href="">更多></a></p>
-						<div class="clearfix">
-							<img src="{% static 'img/tu11.png' %}" alt="">
-							<ul>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
-								<li><span></span>申请赴美国读研究生的六大步骤<a>2小时前</a></li>
+							{% for article in art_counsel %}
+								<li><span></span><a href="{% url 'university:article' article.id %}">{{ article.title }}</a>  {{ article.add_time|date:"Y-m-d" }} </li>
+							{% endfor %}
 							</ul>
 						</div>
 					</div>
