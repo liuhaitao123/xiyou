@@ -344,37 +344,13 @@
 				<h2>成功案例</h2>
 				   <a href="">更多案例></a>
 				<ul class="list clearfix">
-				    <li><img src="{% static 'img/std-1.png' %}" alt="">
-				    <h4>张同学</h4>
-				    <h5>拿到英国班戈大学硕士offer</h5>
-				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
+				{% for case in win_case %}
+				    <li><img width="255px;" height="195px;" src="{{ MEDIA_URL }}{{ case.image }}" alt="">
+						<h4>{{ case.name }}</h4>
+						<h5>拿到{{ case.university }}{{ case.get_education_apply_display }}offer</h5>
+						<h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
 				    </li>
-				    <li><img src="{% static 'img/std-1.png' %}" alt="">
-				    <h4>张同学</h4>
-				    <h5>拿到英国班戈大学硕士offer</h5>
-				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
-				    </li>
-				    <li><img src="{% static 'img/std-1.png' %}" alt="">
-				    <h4>张同学</h4>
-				    <h5>拿到英国班戈大学硕士offer</h5>
-				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
-				    </li>
-				    <li><img src="{% static 'img/std-1.png' %}" alt="">
-				    <h4>张同学</h4>
-				    <h5>拿到英国班戈大学硕士offer</h5>
-				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
-				    </li>
-				    <li><img src="{% static 'img/std-1.png' %}" alt="">
-				    <h4>张同学</h4>
-				    <h5>拿到英国班戈大学硕士offer</h5>
-				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
-				    </li>
-				    <li><img src="{% static 'img/std-1.png' %}" alt="">
-				    <h4>张同学</h4>
-				    <h5>拿到英国班戈大学硕士offer</h5>
-				    <h6>西燕留学网，方便快捷的为我打开留学之旅！</h6>
-				    </li>
-
+				{% endfor %}
 
 				</ul>
 		    </div>	

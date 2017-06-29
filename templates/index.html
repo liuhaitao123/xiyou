@@ -12,6 +12,8 @@
 <script src="{% static 'js/slider.js' %}"></script>
 <script src="{% static 'js/ScrollPicLeft.js' %}"></script>
 <body>
+
+
 	<div class="top-header">
 		<div class="wrap clearfix">
 			<p class="top-header-l">欢迎来到西燕留学网！咨询热线：<span>010-62514855</span></p>
@@ -68,6 +70,7 @@
 			</div>
 		</div>
 	</div>
+	
 
 	<div class="search">
 		<div class="wrap clearfix">
@@ -99,6 +102,8 @@
 			</div>
 		</div>
 	</div>
+	
+	
 	<div class="nav-bar">
 		<div class="wrap">
 			<ul class="clearfix">
@@ -120,6 +125,8 @@
 			</div>
 		</div>
 	</div>
+	
+	
 	<div id="banner_tabs" class="flexslider">
 		<ul class="slides">
 		{% for banner in banner_list%}
@@ -316,64 +323,67 @@
 			});
 		})
 </script>
+
+
+
     <div class="recom">
-    <p class="tit">推荐院校<span>Recommended Universities</span></p>
-    <a class="more" href="javascirpt:;">更多院校&nbsp></a>
+		<p class="tit">推荐院校<span>Recommended Universities</span></p>
+		<a class="more" href="javascirpt:;">更多院校&nbsp></a>
     	<div class="wrap slideTxtBox">
 	    	<div class="hd">
-	    	<hr>
-    		<ul class="school-tit clearfix">
-	    		<li class="on">美国院校</li>
-	    		<li>英国院校</li>
-	    		<li>加拿大院校</li>
-	    		<li>澳洲院校</li>
-	    		
-    	   </ul>
+				<hr>
+				<ul class="school-tit clearfix">
+					<li class="on">美国院校</li>
+					<li>英国院校</li>
+					<li>加拿大院校</li>
+					<li>澳洲院校</li>
+					
+				</ul>
 	    	</div>
     		
-          <div class="bd">
-          	<ul class="clearfix">
-    	   		<li><a href=""><img src="{% static 'img/01.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/03.png' %}" alt=""></a></li>
-    	   		<li class="right"><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/05.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
-    	   		<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-    	   </ul>
-            <ul class="clearfix ht">
-    	   		<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
-    	   		<li class="right"><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li class="right"><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   </ul>
-    	    <ul class="clearfix ht">
-    	   		<li><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li class="right"><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-    	   		<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-    	   </ul>
-    	   <ul class="clearfix ht">
-    	   		<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-    	   		<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
-    	   		<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
-    	   		<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-    	   </ul>
-    	    
-        </div>
+			<div class="bd">
+				<ul class="clearfix">
+					<li><a href=""><img src="{% static 'img/01.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/03.png' %}" alt=""></a></li>
+					<li class="right"><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/05.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
+					<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+				</ul>
+				<ul class="clearfix ht">
+					<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
+					<li class="right"><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li class="right"><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+				</ul>
+				<ul class="clearfix ht">
+					<li><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li class="right"><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+					<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+				</ul>
+				<ul class="clearfix ht">
+					<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+					<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
+					<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
+					<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+				</ul>
+				
+			</div>
     	   
     	</div>
     	<script language="javascript"> 
@@ -389,16 +399,16 @@
     	   	   <li class="car-left"><a href=""></a></li>
     	   	   <li class="car-right"><a href=""></a></li>
     	</ul> -->
-</div>
+	</div>
     <div class="process">
     	<div class="wrap">
     		<p class="tit">申请流程<span>Application Process</span>
     		</p>
     		<ul class="pro clearfix">
     			<li><a href=""><img src="{% static 'img/免费评估.png' %}" alt=""></a><p>免费评估</p></li>
-    			<li><a href=""><img src="{% static 'img/选择学校.png' %}" alt=""></a><p>选择学校</p></li>
+    			<li><a href="{% url 'university:university' %}"><img src="{% static 'img/选择学校.png' %}" alt=""></a><p>选择学校</p></li>
     			<li><a href=""><img src="{% static 'img/提交申请材料.png' %}" alt=""></a><p>提交申请材料</p></li>
-    			<li><a href=""><img src="{% static 'img/文书和签证服务.png' %}" alt=""></a><p>文书和签证服务</p></li>
+    			<li><a href="{% url 'service:doc' %}"><img src="{% static 'img/文书和签证服务.png' %}" alt=""></a><p>文书和签证服务</p></li>
     			<li><a href=""><img src="{% static 'img/留学服务.png' %}" alt=""></a><p>行程准备</p></li>
     		</ul>
     		<h3>西燕留学评估系统，快速匹配，优选方案！</h3>
@@ -409,7 +419,7 @@
     		</div>
     		<div class="pro-banner">
     			<div class="pro-banner-btn">
-    				<a href="">点击进入 ></a>
+    				<a href="{% url 'user:highapply' %}">点击进入 ></a>
     			</div>
     		</div>
     		
@@ -422,24 +432,14 @@
     		</p>
     		<div id="img-sc" class="suc-stu">
     			<ul class="stu-img clearfix">
-    				<li><a href=""><img src="{% static 'img/1.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/2.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/3.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li class="right"><a href=""><img src="{% static 'img/4.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/5.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/6.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/7.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li class="right"><a href=""><img src="{% static 'img/8.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></a></li>
+				{% for case in win_case_one %}
+    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span>{{ case.name}}<br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
+				{% endfor %}
     			</ul>
     			<ul class="stu-img clearfix">
-    				<li><a href=""><img src="{% static 'img/2.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/2.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/2.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li class="right"><a href=""><img src="{% static 'img/4.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/5.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/6.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li><a href=""><img src="{% static 'img/7.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
-    				<li class="right"><a href=""><img src="{% static 'img/8.png' %}" alt=""></a><span>张同学<br>英国班戈大学<br>西燕教育让我实现了梦想！</span></li>
+				{% for case in win_case_two %}
+    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span>{{ case.name}}<br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
+				{% endfor %}
     			</ul>
     		</div>
     		 <ul class="carousel">

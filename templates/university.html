@@ -368,7 +368,7 @@
      			<ul>
      				<li class="sc-logo">
      				
-     				<h3>{{ university.name }}</h3>
+     				<h3><a href="{% url 'university:univer-detail' university.id %}">{{ university.name }}</a></h3>
      				<h4>{{ university.english_name }}</h4>
      				<p>学校所在地：{{ university.address }}</p>
      				<p>所在大学类型：公立大学</p>

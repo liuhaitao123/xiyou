@@ -8,7 +8,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.core.urlresolvers import reverse
 
 from university.models import Country, Level, University, MajorField, Major, Scenery
-from information.models import Article
+from information.models import Article, WinCase
 
 
 # Create your views here.
@@ -58,6 +58,7 @@ class StrategyView(View):
         all_country = Country.objects.all()
         country_id = request.GET.get('country', '1')
         all_article = Article.objects.all().filter(status=1)
+        win_case = WinCase.objects.all()[:6]
 
         if country_id:
             all_article = all_article.filter(country=int(country_id))	
@@ -65,7 +66,7 @@ class StrategyView(View):
             art_forum = 	all_article.filter(category='lt')[:5]
             art_counsel = 	all_article.filter(category='zx')[:5]			
 
-        return render(request, 'strategy.html', {'all_country': all_country, 'art_strategy': art_strategy, 'art_forum': art_forum, 'art_counsel': art_counsel, 'country_id': country_id})
+        return render(request, 'strategy.html', {'all_country': all_country, 'art_strategy': art_strategy, 'art_forum': art_forum, 'art_counsel': art_counsel, 'country_id': country_id, 'win_case': win_case})
 		
 		
 		

@@ -19,7 +19,7 @@
 	overflow: hidden;
 	margin: -35px 0 0;
 	display: block;
-	background: url(../images/ad_ctr.png) no-repeat;
+	background: url(/static/img/ad_ctr.png) no-repeat;
 	position: absolute;
 	top: 50%;
 	z-index: 10;

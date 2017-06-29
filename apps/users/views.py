@@ -10,6 +10,7 @@ from django.core.urlresolvers import reverse
 from forms import RegisterForm, LoginForm
 from operation.models import HighApply
 from users.models import BannerIndex
+from information.models import WinCase
 
 # Create your views here.
 
@@ -48,8 +49,10 @@ class LogoutView(View):
 class IndexView(View):
 	def get(self, request):
 		banner_list = BannerIndex.objects.all().order_by('index')[:3]
+		win_case_one = WinCase.objects.filter(show_index=1)[:8]
+		win_case_two = WinCase.objects.filter(show_index=1)[8:15]
 		
-		return render(request, 'index.html', {'banner_list': banner_list})
+		return render(request, 'index.html', {'banner_list': banner_list, 'win_case_one': win_case_one, 'win_case_two': win_case_two})
 		
 		
 class HighApplyView(View):
