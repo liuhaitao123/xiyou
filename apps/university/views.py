@@ -7,8 +7,9 @@ from django.views.generic.base import View
 from django.contrib.auth import login, authenticate, logout
 from django.core.urlresolvers import reverse
 
-from university.models import Country, Level, University, MajorField, Major, Scenery
+from university.models import Country, Level, University
 from information.models import Article, WinCase
+from users.models import BannerOther
 
 
 # Create your views here.
@@ -19,6 +20,7 @@ class UniversityView(View):
         all_country = Country.objects.all()
         all_level = Level.objects.all()
         all_university = University.objects.all()
+        banner_list = BannerOther.objects.all()[:3]
 
         country_id = request.GET.get('country', '')
         type = request.GET.get('type', '')
@@ -39,8 +41,9 @@ class UniversityView(View):
                                                    'country_id': country_id,
                                                    'type': type,
                                                    'level_id': level_id,
+                                                   'banner_list': banner_list
                                                    })
-												   
+
 
 class UniversityDetailView(View):
     def get(self, request, university_id):
@@ -67,32 +70,20 @@ class StrategyView(View):
             art_counsel = 	all_article.filter(category='zx')[:5]			
 
         return render(request, 'strategy.html', {'all_country': all_country, 'art_strategy': art_strategy, 'art_forum': art_forum, 'art_counsel': art_counsel, 'country_id': country_id, 'win_case': win_case})
-		
-		
-		
+
+
 class StrategyListView(View):
     def get(self, request):
         type = request.GET.get('type', 'gl')
         all_article = Article.objects.all()
-		
+
         if type:
             all_article = all_article.filter(category=type)
-		
+
         return render(request, 'strategy-list.html', {'all_article': all_article, 'type': type})
+
 
 class ArticleView(View):
     def get(self, request, article_id):
         article = Article.objects.get(pk=int(article_id))
         return render(request, 'article.html', {'article': article})
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		

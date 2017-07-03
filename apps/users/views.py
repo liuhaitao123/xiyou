@@ -56,14 +56,16 @@ class IndexView(View):
 		univer_eng = University.objects.filter(show_index=1).filter(country=2)[:8]
 		univer_can = University.objects.filter(show_index=1).filter(country=3)[:8]
 		univer_aus = University.objects.filter(show_index=1).filter(country=4)[:8]
-		
+		ask_list = UserAsk.objects.all()[:3]
+
 		return render(request, 'index.html', {'banner_list': banner_list, 
 											  'win_case_one': win_case_one,
 											  'win_case_two': win_case_two,
 											  'univer_ame': univer_ame,
 											  'univer_eng': univer_eng,
 											  'univer_can': univer_can,
-											  'univer_aus': univer_aus
+											  'univer_aus': univer_aus,
+                                              'ask_list': ask_list,
 											  })
 		
 		

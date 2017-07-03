@@ -52,7 +52,7 @@ class Visa(models.Model):
     name = models.CharField(verbose_name=u'签证名称', max_length=50)
     english_name = models.CharField(verbose_name=u'英文名', max_length=50)
     image = models.ImageField(upload_to=u'visa', verbose_name=u'封面')
-    type = models.ForeignKey(VisaType, verbose_name=u'签证类型')
+    type = models.ForeignKey(VisaType, verbose_name=u'签证类型', null=True, blank=True)
     desc = models.CharField(verbose_name=u'描述', max_length=300, null=True, blank=True)
     price = models.FloatField(verbose_name=u'价格', default=0)
     add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)

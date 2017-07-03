@@ -8,39 +8,11 @@
 
 {% endblock %}
 
-{% block content %}
-	
-	<div id="banner_tabs" class="flexslider">
-		<ul class="slides">
-			<li>
-				<a title="" target="_blank" href="#">
-					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
-				</a>
-			</li>
-			<li>
-				<a title="" href="#">
-					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
-				</a>
-			</li>
-			<li>
-				<a title="" href="#">
-					<img width="1920" height="550" alt="" style="background: url({% static 'img/banner-shuju.png' %}) no-repeat center;" src="{% static 'img/alpha.png' %}">
-				</a>
-			</li>
-		</ul>
-		<ul class="flex-direction-nav">
-			<li><a class="flex-prev" href="javascript:;">Previous</a></li>
-			<li><a class="flex-next" href="javascript:;">Next</a></li>
-		</ul>
-		<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
-			<li><a>1</a></li>
-			<li><a>2</a></li>
-			<li><a>2</a></li>
-		</ol>
+{% block banner %}
+    {% include 'banner.html' %}
+{% endblock %}
 
-       
-        
-    </div>
+{% block content %}
 <script type="text/javascript">
 
 
