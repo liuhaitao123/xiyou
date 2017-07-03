@@ -545,6 +545,20 @@ body{
 	color: #333;
 	padding-top: 13px;
 }
+
+.TTSliderPicList span {
+	display: block;
+	position: absolute;
+	width:279px;
+	height: 50px;
+	line-height: 50px;
+	background: black;
+	color: #fff;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+}
+
 .process .an-pinggu{
 	width: 100px;
 	height: 26px;
@@ -624,7 +638,7 @@ body{
 }
 .successful .suc-stu .stu-img li{
 	float: left;
-	margin-right: 28px;
+	margin-left: 16px;
 	margin-bottom: 28px;
 	position: relative;
 	overflow: hidden;

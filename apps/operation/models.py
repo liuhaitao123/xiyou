@@ -26,7 +26,7 @@ class UserAsk(models.Model):
     problem = models.CharField(max_length=300, verbose_name=u'问题')
     answer = models.CharField(max_length=300, verbose_name=u'回答', null=True, blank=True)
     teacher = models.CharField(verbose_name=u'回答者', max_length=30, null=True, blank=True)
-    status = models.IntegerField(verbose_name=u'状态', default=0)
+    status = models.IntegerField(choices=((1, u'已解决'),(0, u'未解决')), default=0)
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u'提问时间')
 
     class Meta:

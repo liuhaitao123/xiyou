@@ -1,0 +1,32 @@
+{% extends 'usercenter-base.html' %}
+{% block title %}我要提问|西柚留学网{% endblock %}
+{% block css %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/wode-wen.css' %}">
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block content %} 
+	<div class="fr con">
+	  
+		 <h4>我要提问</h4> 
+		 <div class="tw">
+			<!-- <img src="../images/tiwen.png" alt=""><a href="../gonglue-tw.html">我要提问</a> -->
+		   </div>
+		 <div class="gl-list clearfix">
+				
+			<div class="gl-list-con"> 
+				<form action="{% url 'user:myquestion' %}" method="post">
+				{% csrf_token %}
+					<textarea name="problem" id="" cols="80" rows="10"></textarea></br></br></br></br>
+					<button>提交问题</button>
+				 </form>
+			</div>
+		</div>
+
+	
+	</div>
+{% endblock %}
+   

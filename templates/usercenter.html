@@ -1,0 +1,39 @@
+{% extends 'usercenter-base.html' %}
+{% block title %}账号管理|西柚留学网{% endblock %}
+{% block css %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/wode-zhgl.css' %}">
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block content %}
+	<div class="fr con">
+	  <form action="">
+		  <ul>
+			<li class="one sex">
+				<label for=""><span>*</span>昵称：</label><input type="text" value="xiyan">
+			</li>
+			<li class="two sex">
+				<label for=""><span>*</span>性别：</label><input type="radio" name="sex" checked="">男<input type="radio" name="sex">女
+			</li>
+			<li class="ph three">
+				<label for="">手机号：</label>198****2345 <a href="">修改</a><span>已验证</span>	
+			</li>
+			<li class="em three">
+				<label for="">邮箱：</label>198****2@163.com <a href="">修改</a><span>已验证</span>	
+			</li>
+			<li class="one qq">
+				<label for="">QQ号：</label><input type="text">
+			</li>
+			<li class="one">
+				<label for="">真实姓名：</label><input type="text">
+			</li>
+
+			
+		  </ul>
+		  <button>提交</button>
+	  </form>
+	</div>
+{% endblock %}

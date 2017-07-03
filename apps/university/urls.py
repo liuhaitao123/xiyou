@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^estimate/$', EstimateView.as_view(), name='estimate'),
 	url(r'^strategy/$', StrategyView.as_view(), name='strategy'),
 	url(r'^strategy-list/$', StrategyListView.as_view(), name='strategy-list'),
-	url(r'^article/(?P<article_id>\d+)$', ArticleView.as_view(), name='article'),
+	url(r'^strategy/article/(?P<article_id>\d+)$', ArticleView.as_view(), name='article'),
 ]

@@ -1,0 +1,70 @@
+{% extends 'usercenter-base.html' %}
+{% block title %}我的订单|西柚留学网{% endblock %}
+{% block css %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/wode-dd.css' %}">
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block content %} 
+	<div class="fr con">
+	  
+		 <h4>我的订单</h4> 
+		 <div class="up">
+			<ul class="clearfix">
+				<li>订单号：<input type="text"></li>
+				<li>商品名称：<input type="text"></li>
+				<li>订单时间：<input type="text"></li>
+				<li class="ss"><a href="">搜索</a></li>
+			</ul>
+		 </div>
+		 <div class="list">
+			<ul class="clearfix">  
+				<li class="mc">商品名称</li>
+				<li>数量</li>
+				<li>金额</li>
+				<li>订单状态</li>
+				<li>操作</li>
+			</ul>
+		 </div>
+		 <div class="time">
+			 <ul class="clearfix"> 
+				<li>订单时间：<a href="">2016-08-12</a></li>
+				<li>订单号：<a href="">1234567</a></li>
+			 </ul>
+		 </div>
+		 <div class="sp">
+			<ul class="clearfix">  
+				<li class="mc"><img src="/static/img/ps-1.png" alt=""><span>PS(个人陈述)</span></li>
+				<li class="num"><a href="">-</a><span>1</span><a href="">+</a></li>
+				<li>¥500.00</li>
+				<li>等待买家付款</li>
+				<li class="fk"><a href="wode-ddxq.html" class="sq">订单详情</a><a href="">删除</a>
+				<button>付款</button></li>
+			</ul>
+		 </div>
+		 <div class="sp sp1">
+			<ul class="clearfix">  
+				<li class="mc"><img src="/static/img/ps-1.png" alt=""><span>PS(个人陈述)</span></li>
+				<li class="num"><a href="">-</a><span>1</span><a href="">+</a></li>
+				<li class="mj">¥500.00
+		 
+				</li>
+				<li class="mj">等待买家付款</li>
+				<li class="fk"><a href="wode-ddxq.html" class="sq">订单详情</a><a href="">删除</a>
+				<button>定金付款</button></li>
+			</ul>
+			<ul class="clearfix wk">
+				<li class="mj">¥500.00
+				</li>
+				<li class="mj">等待买家付款</li>
+				<li class="fk">
+				<button>尾款付款</button></li>
+			</ul>
+		 </div>
+
+    </div>
+{% endblock %}
+    

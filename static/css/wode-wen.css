@@ -381,7 +381,7 @@ body{
 	margin-bottom: 0;
 }
 .about .con .gl-list .p1{
-	background: url(../images/dh1.png) no-repeat ;
+	background: url(/static/img/dh1.png) no-repeat ;
 	font-size: 14px;
 	line-height: 40px;
 	font-family: '微软雅黑';
@@ -394,7 +394,7 @@ body{
 	padding-bottom: 10px;
 }
 .about .con .gl-list .p2{
-	background: url(../images/dh2.png) no-repeat ;
+	background: url(/static/img/dh2.png) no-repeat ;
 	font-size: 14px;
 	line-height: 50px;
 	font-family: '微软雅黑';

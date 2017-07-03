@@ -16,7 +16,7 @@ class DocView(View):
         all_types = WriteType.objects.all()
         all_docs = Writer.objects.all()
 		
-        type_id = request.GET.get('type')
+        type_id = request.GET.get('type', '')
         if type_id:
             all_docs = Writer.objects.filter(type=int(type_id))
         return render(request, 'doc.html', {'all_types': all_types,
@@ -31,7 +31,7 @@ class VisaView(View):
         all_types = VisaType.objects.all()
         all_visas = Visa.objects.all()
 
-        type_id = request.GET.get('type')
+        type_id = request.GET.get('type', '')
         if type_id:
             all_visas = Visa.objects.filter(type=int(type_id))
         return render(request, 'visa.html', {'all_types': all_types,
@@ -39,3 +39,9 @@ class VisaView(View):
                                              'type_id': type_id,
 											 'all_country':all_country,
                                              })
+											 
+
+class DocDetailView(View):
+	def get(self, request, doc_id):
+		doc = Writer.objects.get(pk=int(doc_id))
+		return render(request, 'doc-detail.html', {'doc': doc})

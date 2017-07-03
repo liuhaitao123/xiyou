@@ -122,7 +122,7 @@
 	margin-left: 80px;
 }
 .school-li .school-li-box .paiming{
-	background: url(../images/pai-bg.png);
+	background: url(/static/img/pai-bg.png);
 	width: 136px;
 	height: 154px;
 	margin-top: 13px;

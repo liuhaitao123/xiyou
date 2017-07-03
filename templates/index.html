@@ -1,132 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>西燕留学</title>
-</head>
+{% extends 'base.html' %}
+{% block title %}首页|西柚留学网{% endblock %}
+{% block css %}
 {% load staticfiles %}
-<link rel="stylesheet" href="{% static 'css/global.css' %}">
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 <link rel="stylesheet" href="{% static 'css/slider.css' %}">
-<script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
-<script src="{% static 'js/slider.js' %}"></script>
+{% endblock %}
+{% block js %}
 <script src="{% static 'js/ScrollPicLeft.js' %}"></script>
-<body>
-
-
-	<div class="top-header">
-		<div class="wrap clearfix">
-			<p class="top-header-l">欢迎来到西燕留学网！咨询热线：<span>010-62514855</span></p>
-			<ul class="top-header-r">
-
-
-                {% if request.user.is_authenticated %}
-                    <li class="deng">您好，</li>
-                     <li class="deng"><a href="{% url 'user:logout' %}">注销</a></li>
-                    <li id="wo"><a href="wode/wode.html">|&nbsp{{ request.user.username }}</a></li>
-                {% else %}
-                    <li class="deng">您好，请<a href="{% url 'user:login' %}">登录</a></li>
-                    <li class="deng">免费<a href="{% url 'user:register' %}">注册</a></li>
-                {% endif %}
-                    <li id="guan"><a href="">|&nbsp关注西燕</a></li>
-                    <li id="ke"><a href="">|&nbsp客户服务</a></li>
-                    <li id="dao"><a href="">|&nbsp网站导航</a></li>
-
-			</ul>
-			<div id="wode" class="wode">
-				<ul>
-					<li><a href="">我的订单</a></li>
-					<li><a href="">账号管理</a></li>				
-					<li><a href="">我的问答</a></li>
-				</ul>
-			</div>
-			<div id="guanzhu" class="guanzhu">
-				<img src="{% static 'img/weitu.png' %}" alt="">
-			</div>
-			<div id="kefu" class="kefu">
-				<ul>
-					<li><a href="">联系我们</a></li>
-					<li><a href="">帮助中心</a></li>				
-				</ul>
-			</div>
-			<div id="daohang" class="daohang clearfix">
-				<ul class="school">
-					<li><a href="">美国院校</a></li>
-					<li><a href="">英国院校</a></li>
-					<li><a href="">加拿大院校</a></li>
-					<li><a href="">澳洲院校</a></li>
-				</ul>
-				<ul class="news">
-					<li><a href="">留学资讯</a></li>
-					<li><a href="">院校数据</a></li>
-					<li><a href="">院校排行</a></li>
-				</ul>
-				<ul class="server">
-					<li><a href="">特色服务</a></li>
-					<li><a href="">文书服务</a></li>
-					<li><a href="">签证服务</a></li>
-					<li><a href="">行程服务</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-
-	<div class="search">
-		<div class="wrap clearfix">
-			<div class="logo-top">
-				<img src="{% static 'img/logo-top.png' %}" alt="">
-			</div>
-			<div class="search-box clearfix">
-				<input type="text" value="请输入院校名称"><img src="{% static 'img/fangda.png' %}" alt="">
-				<button>搜索</button>
-			</div>
-			<div id="shopping" class="shopping clearfix">
-				<img src="{% static 'img/shopping-car.png' %}" alt="">
-				<p>我的购物车</p>
-				<span>0</span>
-				<img class="new" src="{% static 'img/new.png' %}" alt="">
-			</div>
-			<div id="shopping-down" class="shopping-down">
-				<p>最近加入的产品：</p>
-				<p class="chan clearfix"><img class="fl" src="{% static 'img/alogo.png' %}" alt=""><a href="">美国威廉玛丽学院留学申请<br>
-				¥：<span>36000</span>美元/年
-				</a>
-				</p>
-				<div class="sh-foot">
-					<ul class="clearfix">
-						<li class="fl">共1件商品</li>
-						<li class="fr"><a href="gouwuche/gouwuche.html">查看购物车</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-	<div class="nav-bar">
-		<div class="wrap">
-			<ul class="clearfix">
-				<li class="contion"><a target="_self" href="{% url 'user:index' %}">首页</a></li>
-				<li><a href="{% url 'university:university' %}">院校数据</a></li>
-				<li><a href="{% url 'university:estimate' %}">留学评估</a></li>
-				<li><a href="{% url 'user:highapply' %}">高端申请</a></li>
-				<li><a href="{% url 'service:doc' %}">文书服务</a></li>
-				<li><a href="{% url 'service:visa' %}">签证服务</a></li>
-				<li id="readyy" class="readyy"><a href="xingcheng.html">行程准备<span><img src="{% static 'img/jiantou.png' %}" alt=""></span></a></li>
-				<li><a href="{% url 'university:strategy' %}">留学攻略</a></li>
-			</ul>
-			<div id="ready" class="ready">
-				<ul>
-					<li><a href="">机票预订</a></li>
-					<li><a href="">接机服务</a></li>
-					<li><a href="">机票预订</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-	
+{% endblock %}
+{% block content %}
 	<div id="banner_tabs" class="flexslider">
 		<ul class="slides">
 		{% for banner in banner_list%}
@@ -328,7 +210,7 @@
 
     <div class="recom">
 		<p class="tit">推荐院校<span>Recommended Universities</span></p>
-		<a class="more" href="javascirpt:;">更多院校&nbsp></a>
+		<a class="more" href="{% url 'university:university' %}">更多院校&nbsp></a>
     	<div class="wrap slideTxtBox">
 	    	<div class="hd">
 				<hr>
@@ -342,45 +224,26 @@
 	    	</div>
     		
 			<div class="bd">
-				<ul class="clearfix">
-					<li><a href=""><img src="{% static 'img/01.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/03.png' %}" alt=""></a></li>
-					<li class="right"><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/05.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
-					<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+				<ul class="clearfix TTSliderPicList">
+				{% for univer in univer_ame %}
+					<li class="{% if forloop.counter|divisibleby:4 %}right{% endif %}"><a href="{% url 'university:univer-detail' univer.id %}"><img src="{{ MEDIA_URL }}{{ univer.image }}" alt=""></a></li>
+					
+				{% endfor %}
 				</ul>
 				<ul class="clearfix ht">
-					<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/02.png' %}" alt=""></a></li>
-					<li class="right"><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li class="right"><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
+				{% for univer in univer_eng %}
+					<li class="{% if forloop.counter|divisibleby:4 %}right{% endif %}"><a href="{% url 'university:univer-detail' univer.id %}"><img src="{{ MEDIA_URL }}{{ univer.image }}" alt=""></a></li>
+				{% endfor %}
 				</ul>
 				<ul class="clearfix ht">
-					<li><a href=""><img src="{% static 'img/04.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li class="right"><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/06.png' %}" alt=""></a></li>
-					<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+				{% for univer in univer_can %}
+					<li class="{% if forloop.counter|divisibleby:4 %}right{% endif %}"><a href="{% url 'university:univer-detail' univer.id %}"><img src="{{ MEDIA_URL }}{{ univer.image }}" alt=""></a></li>
+				{% endfor %}
 				</ul>
 				<ul class="clearfix ht">
-					<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-					<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
-					<li><a href=""><img src="{% static 'img/07.png' %}" alt=""></a></li>
-					<li class="right"><a href=""><img src="{% static 'img/08.png' %}" alt=""></a></li>
+				{% for univer in univer_aus %}
+					<li class="{% if forloop.counter|divisibleby:4 %}right{% endif %}"><a href="{% url 'university:univer-detail' univer.id %}"><img src="{{ MEDIA_URL }}{{ univer.image }}" alt=""></a></li>
+				{% endfor %}
 				</ul>
 				
 			</div>
@@ -530,35 +393,4 @@
     	    
     	</div>
     </div>
-    <div class="foot">
-    	<div class="wrap clearfix">
-    		<div class="foot-logo fl"> 
-    			<img src="{% static 'img/logo-foot.png' %}" alt="">
-    		</div>
-    		<div class="line fl">
-    			<img src="{% static 'img/line-foot.png' %}" alt="">
-    		</div>
-    		<div class="foot-con fl">
-    			<p>24小时服务热线：<span>010-62514855</span></p>
-    			<ul class="fenxiang clearfix">
-    			    <li>好友分享：</li>
-    				<li><a href=""><img src="{% static 'img/weixin.png' %}" alt=""></a></li>
-    				<li><a href=""><img src="{% static 'img/weibo.png' %}" alt=""></a></li>
-    				<li><a href=""><img src="{% static 'img/douban.png' %}" alt=""></a></li>
-    				<li><a href=""><img src="{% static 'img/renren.png' %}" alt=""></a></li>
-    			</ul>
-    		</div>
-    	</div>
-    	<div class="about">
-    		   <ul class="clearfix">
-    			<li><a href="">关于我们</a></li>
-    			<li><a href="">友情链接</a></li>
-    			<li><a href="">意见反馈</a></li>
-    			<li><a href="">商务合作</a></li>
-    			<li><a href="">联系我们</a></li>
-    		  </ul>	
-    		  <p> Copyright © 2016 西燕留学 All rights reserved.</p>
-    	</div>
-    </div>
-</body>
-</html>
+{% endblock %}

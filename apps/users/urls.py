@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from users.views import RegisterView, LoginView, LogoutView, IndexView, HighApplyView
+from users.views import RegisterView, LoginView, LogoutView, IndexView, HighApplyView, UsercenterView, MyApplyView, MyOrderView, MyAskView, MyQstView
 
 urlpatterns = [
     url(r'^register/$', RegisterView.as_view(), name='register'),
@@ -7,4 +7,9 @@ urlpatterns = [
     url(r'logout/$', LogoutView.as_view(), name='logout'),
     url(r'^$', IndexView.as_view(), name='index'),
 	url(r'^highapply/$', HighApplyView.as_view(), name='highapply'),
+	url(r'^usercenter/$', UsercenterView.as_view(), name='usercenter'),
+	url(r'^myapply/$', MyApplyView.as_view(), name='myapply'),
+	url(r'^myorder/$', MyOrderView.as_view(), name='myorder'),
+	url(r'^myask/$', MyAskView.as_view(), name='myask'),
+	url(r'^myquestion/$', MyQstView.as_view(), name='myquestion'),
 ]

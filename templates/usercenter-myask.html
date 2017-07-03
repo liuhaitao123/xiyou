@@ -1,0 +1,32 @@
+{% extends 'usercenter-base.html' %}
+{% block title %}我的问答|西柚留学网{% endblock %}
+{% block css %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/wode-wen.css' %}">
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block content %} 
+	<div class="fr con">
+	  
+		<h4>我的问答</h4> 
+		<div class="tw">
+			<img src="/static/img/tiwen.png" alt=""><a href="{% url 'user:myquestion' %}">我要提问</a>
+		</div>
+		{% for question in question_list %}
+		<div class="gl-list clearfix">	
+			<div class="gl-list-con"> 
+				<h6>学员{{ request.user.username }} <span>{{ question.add_time }}</span></h6>
+				<p class="p1">{{ question.problem }}</p>
+				{% if question.answer %}
+				<h5>{{ question.teacher }}</h5>
+				<p class="p2">{{ question.answer }}</p>
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+	
+	</div>
+{% endblock %}

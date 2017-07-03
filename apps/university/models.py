@@ -31,7 +31,8 @@ class Level(models.Model):
 
 class University(models.Model):
     name = models.CharField(verbose_name=u'学校名称', max_length=200)
-    image = models.ImageField(verbose_name=u'logo', upload_to=u'university', max_length=200)
+    image = models.ImageField(verbose_name=u'首页展示图', upload_to=u'university', max_length=200)
+    logo = models.ImageField(verbose_name=u'校徽', upload_to=u'university/logo', max_length=200, default='university/logo/logo.jpg')
     english_name = models.CharField(verbose_name=u'英文名', max_length=200)
     country = models.ForeignKey(Country, verbose_name=u'所属国家')
     city = models.CharField(verbose_name=u'所属城市', max_length=100)
