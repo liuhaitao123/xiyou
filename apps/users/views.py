@@ -10,7 +10,7 @@ from django.core.urlresolvers import reverse
 from forms import RegisterForm, LoginForm
 from operation.models import HighApply, UserAsk
 from users.models import BannerIndex
-from information.models import WinCase
+from information.models import WinCase, Article
 from university.models import University
 
 # Create your views here.
@@ -57,6 +57,7 @@ class IndexView(View):
 		univer_can = University.objects.filter(show_index=1).filter(country=3)[:8]
 		univer_aus = University.objects.filter(show_index=1).filter(country=4)[:8]
 		ask_list = UserAsk.objects.all()[:3]
+		infor_zx = Article.objects.filter(category='zx')[:6]
 
 		return render(request, 'index.html', {'banner_list': banner_list, 
 											  'win_case_one': win_case_one,
@@ -66,6 +67,7 @@ class IndexView(View):
 											  'univer_can': univer_can,
 											  'univer_aus': univer_aus,
                                               'ask_list': ask_list,
+											  'infor_zx': infor_zx
 											  })
 		
 		
@@ -124,5 +126,11 @@ class MyQstView(View):
 		ask.save()
 		
 		return HttpResponseRedirect(reverse('user:myask'))
+		
+		
+class CaseView(View):
+	def get(self, request, case_id):
+		wincase = WinCase.objects.get(id=int(case_id))
+		return render(request, 'wincase.html', {'wincase': wincase})
 		
 			

@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% block title %}签证服务|西柚留学网{% endblock %}
+{% block css %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/gongl-al.css' %}">
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block banner %}
+    {% include 'banner.html' %}
+{% endblock %}
+{% block content %}
+
+<script type="text/javascript">
+
+
+
+			var wode = document.getElementById("wode");
+			var wo = document.getElementById("wo");		
+				wo.onmouseover=function(){
+					wode.style.display = "block";
+					wo.className="hi"
+					wode.onmouseover=function(){
+						wo.className="hi"
+						this.style.display = "block";
+					}
+				}
+				wo.onmouseout=function() {
+					wode.style.display = "none";
+					wo.className=""	
+					wode.onmouseout=function(){
+						this.style.display = "none";
+						wo.className=""
+					}
+			     }
+
+			var guanzhu = document.getElementById("guanzhu");
+			var guan = document.getElementById("guan");		
+				guan.onmouseover=function(){
+					guanzhu.style.display = "block";
+					guan.className="hi"
+					guanzhu.onmouseover=function(){
+						guan.className="hi"
+						this.style.display = "block";
+					}
+				}
+				guan.onmouseout=function() {
+					guanzhu.style.display = "none";
+					guan.className=""	
+					guanzhu.onmouseout=function(){
+						this.style.display = "none";
+						guan.className=""
+					}
+			     }
+
+			var kefu = document.getElementById("kefu");
+			var ke = document.getElementById("ke");		
+				ke.onmouseover=function(){
+					kefu.style.display = "block";
+					ke.className="hi"
+					kefu.onmouseover=function(){
+						ke.className="hi"
+						this.style.display = "block";
+					}
+				}
+				ke.onmouseout=function() {
+					kefu.style.display = "none";
+					ke.className=""	
+					kefu.onmouseout=function(){
+						this.style.display = "none";
+						ke.className=""
+					}
+			     }
+
+			var daohang = document.getElementById("daohang");
+			var dao = document.getElementById("dao");		
+				dao.onmouseover=function(){
+					daohang.style.display = "block";
+					dao.className="hi"
+					daohang.onmouseover=function(){
+						dao.className="hi"
+						this.style.display = "block";
+					}
+				}
+				dao.onmouseout=function() {
+					daohang.style.display = "none";
+					dao.className=""	
+					daohang.onmouseout=function(){
+						this.style.display = "none";
+						dao.className=""
+					}
+			     }
+
+
+
+			var ready = document.getElementById("ready");
+			var readyy = document.getElementById("readyy");		
+				readyy.onmouseover=function(){
+					ready.style.display = "block";
+					readyy.className="hi"
+					ready.onmouseover=function(){
+						readyy.className="hi"
+						this.style.display = "block";
+					}
+				}
+				readyy.onmouseout=function() {
+					ready.style.display = "none";
+					readyy.className=""	
+					ready.onmouseout=function(){
+						this.style.display = "none";
+						readyy.className=""
+					}
+			     }
+
+
+			var shopping = document.getElementById("shopping");
+			var down = document.getElementById("shopping-down");		
+				shopping.onclick=function(ev){
+					var oEven=ev||event;
+				  down.style.display = "block";
+				  oEven.cancelBubble=true;
+				
+				}
+				document.onclick=function(){
+					down.style.display = "none";
+				}
+
+
+
+		$(function() {
+			var bannerSlider = new Slider($('#banner_tabs'), {
+				time: 3000,
+				delay: 400,
+				event: 'hover',
+				auto: true,
+				mode: 'fade',
+				controller: $('#bannerCtrl'),
+				activeControllerCls: 'active'
+			});
+			$('#banner_tabs .flex-prev').click(function() {
+				bannerSlider.prev()
+			});
+			$('#banner_tabs .flex-next').click(function() {
+				bannerSlider.next()
+			});
+		})
+</script>
+
+
+	<div class="wrap xiangqing clearfix">
+	    
+		<div class="fl left">
+			<ul class="clearfix jack">
+				<li><a href="gonglue-list.html">留学攻略</a></li>
+				<li><a href="gonglue-list.html">留学论坛</a></li>
+				<li><a href="gonglue-list.html">留学资讯</a></li>
+				<li><a href="gonglue-list.html">留学问答</a></li>
+				<li class="on"><a href="gonglue-list.html">成功案例</a></li>
+			</ul>
+		
+			
+			<div class="gl">
+			<h3>{{ wincase.name }}斩获{{ wincase.university }}{{ wincase.major_apply }}offer</h3>
+			<h2>学员情况</h2>	
+				
+			<div class="clearfix qk">
+				<img width="212px" height="302px" src="{{ MEDIA_URL }}{{ wincase.image }}" alt="">
+				<ul class="clearfix">
+					<li>学员姓名：{{ wincase.name }}</li>
+					<li>申请国家：{{ wincase.country }}</li>
+					<li>当前学历：{{ wincase.get_education_now_display }}</li>
+					<li>申请学历：{{ wincase.get_education_apply_display }}</li>
+					<li>毕业院校：{{ wincase.academy }}</li>
+					<li>申请学校：{{ wincase.university }}</li>
+					<li>当前专业：{{ wincase.major_now }}</li>
+					<li>申请专业：{{ wincase.major_apply }}</li>
+					
+					
+					<li class="but">GPA（平均分）：91.00</li>
+					<li class="but">获得offer日期：{{ wincase.time }}</li>
+				</ul>
+			</div>
+			<h2>案例分析</h2>
+			<p>张同学本科就读于国内一本学校，本科院校知名度高，和其他申请者竞争处于优势，再加上 GPA 成绩也不错，托福成绩也非常优异达到了英国德蒙福特大学的录取要求。</p>	
+            <h2>专家点评</h2>
+            <p>张同学是大三下加入我们的，她是我5年来指导过的学生中最刻苦努力的学生之一。“汗水是不会背叛你的” 是我最近非常喜欢的一句话，这句话用来形容张同学非常合适。</p>
+            <p>出身自一本学院，本科专业是金融，这让张同学的申请之路看起来占据优势，但张同学并没有就此满足，而是在其他方面不断寻求进步，而且一次又一次地不断刷新分数，张同学的每一次进步都付出了自己的努力。</p>
+            <p>到了9月份、10月份的时候，张同学每天的状态还是白天实习，晚上复习两个考试。为了让张同学能更安心地实习和准备考试，我们尽量帮她准备各种申请材料和文书，让她没有后顾之忧；选校部分也是，我们做了充分的研究，研究出哪些学校更适合张同学，张同学的课程是否满足，在大量研究后，我们选出了我们的目标校，这大大提高了我们申请的针对性。</p>
+            <p>张同学的努力、我们的精准定校加上我们的文书包装使我们的申请非常成功，德蒙福特大学是我们定校的时候就确定的最有希望录取的名校，张同学的出色面试表现也使她如愿拿到了该校的录取。张同学向我们表达她的感激之情，但我想说的是汗水不会背叛你，正是有了你的努力才有这样的结果，希望你在以后的学习和工作中能继续保持这种态度，加油!</p>
+            <h2>学子心声</h2>
+            <p>“在这么短的时间里，老师从准备到完成申请一气呵成，从我薄弱的背景中找亮点，最终成功申请到梦想的学校，给老师点赞，太棒了。”</p>
+            <h2>申请攻略：</h2>
+            <p>1、专业词汇到专业文书</p>
+            <p>在写文书的时候，用专业的词汇造就一篇专业的文书。</p>
+            <p>2、从学生背景出发，展现一个有社会责任感，心智成熟的申请者</p>
+            <p>学生写职业规划的时候，以在北京的所见所闻和自己的实习经历出发，找到了一条适合自己的职业发展道路。在写自己的成功的经历的时候，学生因为有过相关的成功和失败的经历，有过很真切的感受，所以在引导之后，更合理完成了文书。</p>
+			</div>
+	
+	    </div>
+		<div class="fr right">
+			<div class="other">
+				<h4>中国留学服务中心信息平台</h4>
+				
+	    		<ul>
+	    			<li><a href=""><img src="images/byrz.png" alt=""></a></li>
+	    			<li><a href=""><img src="images/yxrz.png" alt=""></a></li>
+	    			<li><a href=""><img src="images/jykh.png" alt=""></a></li>
+	    			<li><a href=""><img src="images/lxda.png" alt=""></a></li>
+	    		</ul>	
+			</div>
+			<div class="tuijian">
+				<h4>推荐院校</h4>
+				<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="images/boshidun-logo.png" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="images/boshidun-logo.png" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		<div class="sc-list cleafix">
+	    			<div class="img-tu fl">
+	    				<img src="images/boshidun-logo.png" alt="">
+	    			</div>
+	    			<div class="img-con fl">
+	    					<p>波士顿学院</p>
+	    					<p>Princeton University</p>
+	    					<p>综合排名：38</p>
+	    					<p>学历层次：硕士</p>
+	    		   </div>
+	    		</div>
+	    		
+	    		
+	    		
+			</div>
+		</div>
+
+	</div>
+{% endblock %}
+

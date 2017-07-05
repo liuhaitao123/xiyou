@@ -164,9 +164,9 @@
 			 
 			   {% for article in all_article %}
 				<div class="gl-list clearfix">
-					<img src="{% static 'img/gl-tu.png' %}" alt="">
+					<a href="{% url 'university:article' article.id %}"><img src="{% static 'img/gl-tu.png' %}" alt=""></a>
 					<div class="gl-list-con"> 
-						<h6>{{ article.title }}<span>{{ article.add_time|date:"Y/m/d" }}</span></h6>
+						<h6><a href="{% url 'university:article' article.id %}">{{ article.title }}</a><span>{{ article.add_time|date:"Y/m/d" }}</span></h6>
 					<p>{{ article.content }}……</p>
 					</div>
 				</div>

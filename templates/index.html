@@ -296,7 +296,7 @@
     		<div id="img-sc" class="suc-stu">
     			<ul class="stu-img clearfix">
 				{% for case in win_case_one %}
-    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span>{{ case.name}}<br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
+    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span><a href="{% url 'user:wincase' case.id %}">{{ case.name}}</a><br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
 				{% endfor %}
     			</ul>
     			<ul class="stu-img clearfix">
@@ -346,23 +346,24 @@
     		<div class="wenda fl">
     			<p>留学问答<a href="">更多 ></a></p>
     			<ul class="wenda-list">
-    				<li><span></span>userlicy问：初中没有毕业,可以留学吗？<br><a href="">朱老师答：最好是有中国的高考成绩去申请法国的本科，这样你申请……</a></li>
-    				<li><span></span>userlicy问：初中没有毕业,可以留学吗？<br><a href="">朱老师答：最好是有中国的高考成绩去申请法国的本科，这样你申请……</a></li>
-    				<li><span></span>userlicy问：初中没有毕业,可以留学吗？<br><a href="">朱老师答：最好是有中国的高考成绩去申请法国的本科，这样你申请……</a></li>
+				{% for ask in ask_list %}
+    				<li><span></span>{{ ask.user.username }} 问：{{ ask.problem }}<br>
+					<a href="">{{ ask.teacher }} 答：{{ ask.answer }}</a></li>
+    			{% endfor %}	
     			</ul>
     			<a class="btn" href="">我要提问</a>
     		</div>
     		<div class="zixun fr">
     			<p>留学资讯<a href="">更多 ></a></p>
-    			<ul class="zixun-con">
-    				<li class="clearfix"><img src="{% static 'img/Australia.png' %}" alt=""><p>	澳大利亚的地理历史和政治制度、教育体制、赴澳前的准备工作以及在澳的学习和生活等方面进行了介绍，尤其详细介绍了澳大利亚的各主要大学、大学开设的主要课程以及如何……</p></li>
-    				<li class="clearfix"><img src="{% static 'img/Australia1.png' %}" alt=""><p>	澳大利亚的地理历史和政治制度、教育体制、赴eeee备工作以及在澳的学习和生活等方面进行了介程以及如何……</p></li>
-    				<li class="clearfix"><img src="{% static 'img/Australia.png' %}" alt=""><p>	澳大利亚的地理历史和政治制度、教育体制、赴澳前的准66666666的学习和生活等方面进行了介绍，开设的主要课程以及如何……</p></li>
-    			</ul>
+    			<!-- <ul class="zixun-con"> -->
+    				<!-- <li class="clearfix"><img src="{% static 'img/Australia.png' %}" alt=""><p>	澳大利亚的地理历史和政治制度、教育体制、赴澳前的准备工作以及在澳的学习和生活等方面进行了介绍，尤其详细介绍了澳大利亚的各主要大学、大学开设的主要课程以及如何……</p></li> -->
+    				<!-- <li class="clearfix"><img src="{% static 'img/Australia1.png' %}" alt=""><p>	澳大利亚的地理历史和政治制度、教育体制、赴eeee备工作以及在澳的学习和生活等方面进行了介程以及如何……</p></li> -->
+    				<!-- <li class="clearfix"><img src="{% static 'img/Australia.png' %}" alt=""><p>	澳大利亚的地理历史和政治制度、教育体制、赴澳前的准66666666的学习和生活等方面进行了介绍，开设的主要课程以及如何……</p></li> -->
+    			<!-- </ul> -->
     			<ul class="zixun-list">
-    				<li class="cleafix nn"><a href="javescirpt:;">2017年出国留学准备流程表</a><span>08-10</span></li>
-    				<li class="cleafix"><a href="javescirpt:;">澳洲留学陪读条件是什么</a><span>08-10</span></li>
-    				<li class="cleafix"><a href="javescirpt:;">英国留学读研条件都有哪些</a><span>08-10</span></li>
+				{% for info in infor_zx %}
+    				<li class="cleafix nn"><a href="javescirpt:;">{{ info.title }}</a><span>08-10</span></li>
+    			{% endfor %}
     			</ul>
     <script language="javascript"> 
 		$('.zixun-list li').click(function(){ 
