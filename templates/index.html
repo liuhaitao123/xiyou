@@ -30,34 +30,34 @@
 		</ol>
 
        
-        	<div id="ass" class="ass">
-				<p>免费留学评估</p>
-				<form action="">
-					<input type="text" value="学员姓名">
-					<input type="text" value="手机号">
-					<br>
-					<select class="" id="" name="">
-	                     <option value="">留学阶段</option>
-	                     <option value="北京市">北京市</option>
-	                     <option value="天津市">天津市</option>
-	                 </select>
-	                 <br>
-	                 <select class="" id="" name="">
-	                     <option value="">意向国家</option>
-	                     <option value="北京市">北京市</option>
-	                     <option value="天津市">天津市</option>
-	                 </select>
-	                 <br>
-	                 <select class="" id="" name="">
-	                     <option value="">留学时间</option>
-	                     <option value="北京市">北京市</option>
-	                     <option value="天津市">天津市</option>
-	                 </select>
-	                 <input class="btn" type="button" value="立即评估">
-                 </form>
-                <div id="colse" class="colse"><img src="{% static 'img/close.png' %}" alt="">
-                </div>
-		    </div>
+        	<!-- <div id="ass" class="ass"> -->
+				<!-- <p>免费留学评估</p> -->
+				<!-- <form action=""> -->
+					<!-- <input type="text" value="学员姓名"> -->
+					<!-- <input type="text" value="手机号"> -->
+					<!-- <br> -->
+					<!-- <select class="" id="" name=""> -->
+	                     <!-- <option value="">留学阶段</option> -->
+	                     <!-- <option value="北京市">北京市</option> -->
+	                     <!-- <option value="天津市">天津市</option> -->
+	                 <!-- </select> -->
+	                 <!-- <br> -->
+	                 <!-- <select class="" id="" name=""> -->
+	                     <!-- <option value="">意向国家</option> -->
+	                     <!-- <option value="北京市">北京市</option> -->
+	                     <!-- <option value="天津市">天津市</option> -->
+	                 <!-- </select> -->
+	                 <!-- <br> -->
+	                 <!-- <select class="" id="" name=""> -->
+	                     <!-- <option value="">留学时间</option> -->
+	                     <!-- <option value="北京市">北京市</option> -->
+	                     <!-- <option value="天津市">天津市</option> -->
+	                 <!-- </select> -->
+	                 <!-- <input class="btn" type="button" value="立即评估"> -->
+                 <!-- </form> -->
+                <!-- <div id="colse" class="colse"><img src="{% static 'img/close.png' %}" alt=""> -->
+                <!-- </div> -->
+		    <!-- </div> -->
     </div>
 <script type="text/javascript">
 	window.onload=function(){
@@ -296,7 +296,7 @@
     		<div id="img-sc" class="suc-stu">
     			<ul class="stu-img clearfix">
 				{% for case in win_case_one %}
-    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span><a href="{% url 'user:wincase' case.id %}">{{ case.name}}</a><br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
+    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span><a style="color:white" href="{% url 'user:wincase' case.id %}">{{ case.name}}</a><br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
 				{% endfor %}
     			</ul>
     			<ul class="stu-img clearfix">
@@ -362,7 +362,7 @@
     			<!-- </ul> -->
     			<ul class="zixun-list">
 				{% for info in infor_zx %}
-    				<li class="cleafix nn"><a href="javescirpt:;">{{ info.title }}</a><span>08-10</span></li>
+    				<li class="cleafix nn"><a href="{% url 'university:article' info.id %}">{{ info.title }}</a><span>{{ info.add_time|date:'d/m/Y' }}</span></li>
     			{% endfor %}
     			</ul>
     <script language="javascript"> 
@@ -380,15 +380,11 @@
     			<video src="==" controls="controls">
     		</div>
     		<div class="dongtai fr">
-    			<p>西燕动态<a href="">更多 ></a></p>
+    			<p>留学攻略<a href="">更多 ></a></p>
     			<ul class="dongtai-list"> 
-    				<li class="cleafix"><span></span>流泉学生说：在这里找到了实现梦想的入口……<a>11小时前</a></li>
-    				<li class="cleafix"><span></span>流泉学生说：在这里找到了实现梦想的入口……<a>11小时前</a></li>
-    				<li class="cleafix"><span></span>流泉学生说：在这里找到了实现梦想的入口……<a>11小时前</a></li>
-    				<li class="cleafix"><span></span>流泉学生说：在这里找到了实现梦想的入口……<a>11小时前</a></li>
-    				<li class="cleafix"><span></span>流泉学生说：在这里找到了实现梦想的入口……<a>11小时前</a></li>
-    				<li class="cleafix"><span></span>流泉学生说：在这里找到了实现梦想的入口……<a>11小时前</a></li>
-    				<li class="cleafix"><span></span>流泉学生说：在这里找到了实现梦想的入口……<a>11小时前</a></li>
+				{% for info in infor_gl %}
+    				<li class="cleafix"><span></span>{{ info.title }}<a>{{ info.add_time|date:'d/m/Y' }}</li>
+    			{% endfor %}	
     			</ul>
     		</div>
     	    

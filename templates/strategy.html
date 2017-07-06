@@ -199,12 +199,10 @@
 						<div class="">
 							
 							<ul>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
-								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li>
-								<p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								<li><span></span>userlicy 问：初中没有毕业，可以留学吗？</li><p>朱老师答：最好是有中国的高考成绩去申请法国……</p>
-								
+							{% for ask in ask_list %}
+								<li><span></span>{{ ask.user.username }} 问：{{ ask.problem }}</li>
+								<p>{{ ask.teacher }}答：{{ ask.answer }}</p>
+							{% endfor %}
 							</ul>
 						</div>
 					</div>

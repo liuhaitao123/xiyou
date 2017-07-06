@@ -10,6 +10,7 @@ from django.core.urlresolvers import reverse
 from university.models import Country, Level, University
 from information.models import Article, WinCase
 from users.models import BannerOther
+from operation.models import UserAsk
 
 
 # Create your views here.
@@ -62,6 +63,7 @@ class StrategyView(View):
         country_id = request.GET.get('country', '1')
         all_article = Article.objects.all().filter(status=1)
         win_case = WinCase.objects.all()[:6]
+        ask_list =  UserAsk.objects.all()[:3]
 
         if country_id:
             all_article = all_article.filter(country=int(country_id))	
@@ -69,7 +71,7 @@ class StrategyView(View):
             art_forum = 	all_article.filter(category='lt')[:5]
             art_counsel = 	all_article.filter(category='zx')[:5]			
 
-        return render(request, 'strategy.html', {'all_country': all_country, 'art_strategy': art_strategy, 'art_forum': art_forum, 'art_counsel': art_counsel, 'country_id': country_id, 'win_case': win_case})
+        return render(request, 'strategy.html', {'all_country': all_country, 'art_strategy': art_strategy, 'art_forum': art_forum, 'art_counsel': art_counsel, 'country_id': country_id, 'win_case': win_case, 'ask_list': ask_list})
 
 
 class StrategyListView(View):
@@ -77,8 +79,11 @@ class StrategyListView(View):
         type = request.GET.get('type', 'gl')
         all_article = Article.objects.all()
 
-        if type:
+        if type and type != 'al':
             all_article = all_article.filter(category=type)
+			
+        if type == 'al':
+            all_article = WinCase.objects.all()
 
         return render(request, 'strategy-list.html', {'all_article': all_article, 'type': type})
 

@@ -15,6 +15,14 @@
 
 }
 
+a {
+	color: black;
+}
+
+a:hover{
+	color:red;
+}
+
 .xiangqing .left .jack li{
 	float: left;
 	margin-right: 13px;

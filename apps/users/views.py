@@ -58,6 +58,7 @@ class IndexView(View):
 		univer_aus = University.objects.filter(show_index=1).filter(country=4)[:8]
 		ask_list = UserAsk.objects.all()[:3]
 		infor_zx = Article.objects.filter(category='zx')[:6]
+		infor_gl = Article.objects.filter(category='gl')[:6]
 
 		return render(request, 'index.html', {'banner_list': banner_list, 
 											  'win_case_one': win_case_one,
@@ -67,7 +68,8 @@ class IndexView(View):
 											  'univer_can': univer_can,
 											  'univer_aus': univer_aus,
                                               'ask_list': ask_list,
-											  'infor_zx': infor_zx
+											  'infor_zx': infor_zx,
+											  'infor_gl': infor_gl,
 											  })
 		
 		

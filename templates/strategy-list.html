@@ -157,7 +157,7 @@
 				<a href="?type=lt"><li {% ifequal type 'lt' %}class="on"{% endifequal %}>留学论坛</li></a>
 				<a href="?type=zx"><li {% ifequal type 'zx' %}class="on"{% endifequal %}>留学资讯</li></a>
 				<a href="?type=wd"><li>留学问答</li></a>
-				<a href="?type=al"><li>成功案例</li></a>
+				<a href="?type=al"><li {% ifequal type 'al' %}class="on"{% endifequal %}>成功案例</li></a>
 			</ul>
 		
 			<div class="gl">
@@ -165,10 +165,17 @@
 			   {% for article in all_article %}
 				<div class="gl-list clearfix">
 					<a href="{% url 'university:article' article.id %}"><img src="{% static 'img/gl-tu.png' %}" alt=""></a>
+					{% ifequal type 'al' %}
+					<div class="gl-list-con"> 
+						<h6><a href="{% url 'user:wincase' article.id %}">{{ article.name }}{{ article.university }}{{ article.major_now}}{{ article.get_education_apply_display }}留学申请案例</a><span>{{ article.add_time|date:"Y/m/d" }}</span></h6>
+					<p>{{ article.content }}……</p>
+					</div>
+					{% else %}
 					<div class="gl-list-con"> 
 						<h6><a href="{% url 'university:article' article.id %}">{{ article.title }}</a><span>{{ article.add_time|date:"Y/m/d" }}</span></h6>
 					<p>{{ article.content }}……</p>
 					</div>
+					{% endifequal %}
 				</div>
 				{% endfor %}
 
