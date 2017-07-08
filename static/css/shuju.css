@@ -285,3 +285,11 @@
 	display: block;
 
 }
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}

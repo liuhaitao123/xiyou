@@ -3,6 +3,7 @@
 {% block css %}
 {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'css/wenshu.css' %}">
+<script src="{% static 'js/layer.js' %}"></script>
 {% endblock %}
 {% block js %}
 
@@ -178,11 +179,11 @@
     		  <div class="bott clearfix">
     		  	<ul class="fl">
     		  		<li>价格：<span>¥{{ doc.price }}</span></li>
-    		  		<li class="shc">市场价：<span>¥{{ doc.price }}</span></li>
+    		  		<li class="shc">市场价：<span>¥{{ doc.price|add:100 }}</span></li>
     		  		<li class="num">数量<a class="one">-</a><span>1</span><a>+</a></li>
     		  	</ul>
     		  	<ul class="fr ff clearfix">
-    		  		<li class="car"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
+    		  		<li class="car" doc="{{ doc.id }}"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
     		  		<li class="now">立即购买</li>
     		  		<li class="down"><span><img src="{% static 'img/down.png' %}"/></span>个人信息表下载</li>
     		  	</ul>
@@ -199,4 +200,34 @@
      			<li><a href="">下一页</a></li>
      	</ul>
     </div>
+    <script>
+        $('.car').on('click', function () {
+            var doc_id = $(this).attr('doc');
+
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url:"{% url 'service:doc' %}",
+                data:{'doc_id':doc_id, 'store_type':1},
+                async: true,
+                beforeSend:function(xhr, settings){
+                    xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                },
+                success: function(data) {
+                    if(data.status == 'fail'){
+                        layer.open({
+                          title: '西柚留学网提示'
+                          ,content: '加入购物车失败，请稍后再试！'
+                        });
+                    }else if(data.status == 'success'){
+                        layer.open({
+                          title: '西柚留学网提示'
+                          ,content: '成功加入购物车！'
+                        });
+                    }
+                },
+            });
+        })
+
+    </script>
 {% endblock %}
