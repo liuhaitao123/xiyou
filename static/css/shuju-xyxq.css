@@ -110,7 +110,7 @@
 .rollBox .LeftBotton{
 	height:40px;
 	width:21px;
-	background:url(../images/sl.png) no-repeat 0px 5px;
+	background:url(/static/img/sl.png) no-repeat 0px 5px;
 	overflow:hidden;
 	float:left;
 	display:inline;
@@ -119,7 +119,7 @@
 .rollBox .RightBotton{
 	height:40px;
 	width:21px;
-	background:url(../images/sr.png) no-repeat 0px 5px;
+	background:url(/static/img/sr.png) no-repeat 0px 5px;
 	overflow:hidden;
 	float:left;
 	display:inline;

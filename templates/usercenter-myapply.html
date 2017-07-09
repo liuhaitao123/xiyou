@@ -12,39 +12,46 @@
 	<div class="fr con">
 	  
 		 <h4>我的申请</h4> 
-		 <div class="up">
-			<ul class="clearfix">
-				<li>申请号：<input type="text"></li>
-				<li>商品名称：<input type="text"></li>
-				<li>申请时间：<input type="text"></li>
-				<li class="ss"><a href="">搜索</a></li>
-			</ul>
-		 </div>
+{#		 <div class="up">#}
+{#			<ul class="clearfix">#}
+{#				<li>申请号：<input type="text"></li>#}
+{#				<li>商品名称：<input type="text"></li>#}
+{#				<li>申请时间：<input type="text"></li>#}
+{#				<li class="ss"><a href="">搜索</a></li>#}
+{#			</ul>#}
+{#		 </div>#}
 		 <div class="list">
 			<ul class="clearfix">  
-				<li class="mc">商品名称</li>
-				<li>数量</li>
-				<li>金额</li>
-				<li>申请状态</li>
-				<li>操作</li>
+				<li style="width: 180px;">用户</li>
+				<li style="width: 300px;">申请大学</li>
+				<li style="width: 230px;">申请专业</li>
+{#				<li>意向专业</li>#}
+				<li style="width: 150px;">操作</li>
 			</ul>
 		 </div>
+
+
+        {% for apply in apply_list %}
 		 <div class="time">
 			 <ul class="clearfix"> 
-				<li>申请时间：<a href="">2016-08-12</a></li>
-				<li>申请号：<a href="">1234567</a></li>
+				<li>申请时间：{{ apply.add_time }}</li>
+				<li>申请号：{{ apply.add_time|date:'Ymdhms' }}</li>
 			 </ul>
 		 </div>
 		 <div class="sp">
 			<ul class="clearfix">  
-				<li class="mc"><img src="/static/img/ps-1.png" alt=""><span>PS(个人陈述)</span></li>
-				<li class="num"><a href="">-</a><span>1</span><a href="">+</a></li>
-				<li>¥500.00</li>
-				<li>申请待审核</li>
-				<li class="fk"><a href="wode-sqxq.html" class="sq">申请详情</a><a href="">删除</a>
-				<button>付款</button></li>
+				<li style="width: 180px;"><span>{{ apply.user.username }}</span></li>
+				<li style="width: 300px;"><span>{{ apply.university }}</span></li>
+{#				<li>{{ apply.type }}</li>#}
+				<li style="width: 230px;">{{ apply.major }}</li>
+				<li style="width: 150px;" class="fk">
+{#                    <a href="wode-sqxq.html" class="sq">申请详情</a>#}
+{#                    <a href="">删除</a>#}
+				<button>删除</button>
+                </li>
 			</ul>
 		 </div>
+        {% endfor %}
 
 	</div>
 {% endblock %}

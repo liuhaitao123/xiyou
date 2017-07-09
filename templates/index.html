@@ -289,7 +289,7 @@
     	</div>
     </div>
     <div class="successful">
-    <a class="more1" href="javascirpt:;">更多案例&nbsp></a>
+    <a class="more1" href="{% url 'university:strategy-list' %}">更多案例&nbsp></a>
     	<div class="wrap">
     		<p class="tit">成功案例<span>Successful Cases</span>
     		</p>
@@ -354,7 +354,7 @@
     			<a class="btn" href="">我要提问</a>
     		</div>
     		<div class="zixun fr">
-    			<p>留学资讯<a href="">更多 ></a></p>
+    			<p>留学资讯<a href="{% url 'university:strategy-list' %}">更多 ></a></p>
     			<!-- <ul class="zixun-con"> -->
     				<!-- <li class="clearfix"><img src="{% static 'img/Australia.png' %}" alt=""><p>	澳大利亚的地理历史和政治制度、教育体制、赴澳前的准备工作以及在澳的学习和生活等方面进行了介绍，尤其详细介绍了澳大利亚的各主要大学、大学开设的主要课程以及如何……</p></li> -->
     				<!-- <li class="clearfix"><img src="{% static 'img/Australia1.png' %}" alt=""><p>	澳大利亚的地理历史和政治制度、教育体制、赴eeee备工作以及在澳的学习和生活等方面进行了介程以及如何……</p></li> -->
@@ -376,11 +376,11 @@
     </script> 
     		</div>
     		<div class="shenghuo fr">
-    			<p>留学生活<a href="">更多 ></a></p>
+    			<p>留学生活<a href="{% url 'university:strategy-list' %}">更多 ></a></p>
     			<video src="==" controls="controls">
     		</div>
     		<div class="dongtai fr">
-    			<p>留学攻略<a href="">更多 ></a></p>
+    			<p>留学攻略<a href="{% url 'university:strategy-list' %}">更多 ></a></p>
     			<ul class="dongtai-list"> 
 				{% for info in infor_gl %}
     				<li class="cleafix"><span></span>{{ info.title }}<a>{{ info.add_time|date:'d/m/Y' }}</li>

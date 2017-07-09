@@ -6,11 +6,12 @@ from django.shortcuts import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import View
 from django.contrib.auth import login, authenticate, logout
 from django.core.urlresolvers import reverse
+import json
 
-from university.models import Country, Level, University
+from university.models import Country, Level, University, Major
 from information.models import Article, WinCase
 from users.models import BannerOther
-from operation.models import UserAsk
+from operation.models import UserAsk, UserMajor
 
 
 # Create your views here.
@@ -81,7 +82,7 @@ class StrategyListView(View):
 
         if type and type != 'al':
             all_article = all_article.filter(category=type)
-			
+
         if type == 'al':
             all_article = WinCase.objects.all()
 
@@ -92,3 +93,29 @@ class ArticleView(View):
     def get(self, request, article_id):
         article = Article.objects.get(pk=int(article_id))
         return render(request, 'article.html', {'article': article})
+
+
+class MajorApplyView(View):
+    def post(self, request):
+        if not request.user.is_authenticated():
+            return HttpResponseRedirect(reverse('user:login'))
+
+        major = UserMajor.objects.filter(user=request.user).filter(major_id=int(request.POST.get('major_id', '')))
+
+        if major:
+            json_data = {'status': 'fail', 'msg': '您已申请该专业！'}
+            return HttpResponse(json.dumps(json_data), content_type="application/json")
+
+        all_apply_majors = UserMajor.objects.filter(user=request.user)
+        if len(all_apply_majors) >= 5:
+            json_data = {'status': 'fail', 'msg': '申请的专业不能多于5个！'}
+            return HttpResponse(json.dumps(json_data), content_type="application/json")
+        else:
+            major_id = request.POST.get('major_id', '')
+            user_major = UserMajor()
+            user_major.user = request.user
+            user_major.university = University.objects.get(id=int(Major.objects.get(id=int(major_id)).university_id))
+            user_major.major_id = int(major_id)
+            user_major.save()
+            json_data = {'status': 'success', 'msg': '申请成功'}
+            return HttpResponse(json.dumps(json_data), content_type="application/json")

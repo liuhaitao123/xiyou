@@ -17,17 +17,19 @@ class Country(models.Model):
     def __unicode__(self):
         return self.name
 
-		
+
 class Level(models.Model):
     name = models.CharField(verbose_name=u'学历层次名称', max_length=50)
     add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)\
-	
+
+
     class Meta:
         verbose_name = u'学历层次'
         verbose_name_plural = verbose_name
 
     def __unicode__(self):
         return self.name
+
 
 class University(models.Model):
     name = models.CharField(verbose_name=u'学校名称', max_length=200)
@@ -64,7 +66,7 @@ class University(models.Model):
 
     def __unicode__(self):
         return self.name
-		
+
     def get_all_major(self):
         return self.major_set.all()
 

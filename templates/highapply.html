@@ -3,6 +3,7 @@
 {% block css %}
 {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'css/sq.css' %}">
+<script src="{% static 'js/layer.js' %}"></script>
 {% endblock %}
 {% block js %}
 
@@ -181,7 +182,7 @@
      	</div>
      	<h2>高端申请系统</h2>
      	<div class="xt">
-     		<form action="{% url 'user:highapply' %}" method="post">
+     		<form action="" method="post">
 			{% csrf_token %}
      			<ul>
      				<li class="name"><span>姓名：</span><input type="text" name="realname" placeholder="请输入姓名..."></li>
@@ -189,9 +190,45 @@
      				<li><span>意向层次：</span><input type="text" name="type" placeholder="例：研究生，本科"></li>
      				<li><span>意向专业：</span><input type="text" name="major" placeholder="例：机械，美术"></li>
      			</ul>
-     			<button>提交</button>
+     			<button class="car">提交</button>
 
      		</form>
      	</div>
     </div>
+    <script>
+        $('.car').on('click', function () {
+
+            var real_name = $('input[name="realname"]').val();
+            var country = $('input[name="country"]').val();
+            var type = $('input[name="type"]').val();
+            var major = $('input[name="major"]').val();
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url:"{% url 'user:highapply' %}",
+                data:{'real_name':real_name, 'country':country, 'type':type, 'major':major},
+                async: true,
+                beforeSend:function(xhr, settings){
+                    xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                },
+                success: function(data) {
+                    if(data.status == 'fail'){
+                        layer.open({
+                          title: '西柚留学网提示'
+                          ,content: '申请失败，请稍后再试！'
+                        });
+                    }else if(data.status == 'success'){
+                        layer.open({
+                          title: '西柚留学网提示'
+                          ,content: '申请成功，稍后工作人员会与您联系！'
+                        });
+                    }
+                },
+            });
+
+            return false;
+
+        })
+
+    </script>
 {% endblock %}

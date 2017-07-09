@@ -6,9 +6,10 @@ from django.shortcuts import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import View
 from django.contrib.auth import login, authenticate, logout
 from django.core.urlresolvers import reverse
+import json
 
 from forms import RegisterForm, LoginForm
-from operation.models import HighApply, UserAsk
+from operation.models import HighApply, UserAsk, UserMajor
 from users.models import BannerIndex
 from information.models import WinCase, Article
 from university.models import University
@@ -82,18 +83,19 @@ class HighApplyView(View):
             return HttpResponseRedirect(reverse('user:login'))
         else:
             user_id = request.user.id
-            realname = request.POST.get('realname', '')
+            real_name = request.POST.get('real_name', '')
             country = request.POST.get('country', '')
             type = request.POST.get('type', '')
             major = request.POST.get('major', '')
             high_apply = HighApply()
             high_apply.user_id = user_id
-            high_apply.real_name = realname
+            high_apply.real_name = real_name
             high_apply.type = type
             high_apply.country = country
             high_apply.major = major
             high_apply.save()
-            return HttpResponseRedirect(reverse('user:highapply'))
+            json_data = {'status': 'success'}
+            return HttpResponse(json.dumps(json_data), content_type="application/json")
 
 
 class UsercenterView(View):
@@ -103,7 +105,8 @@ class UsercenterView(View):
 
 class MyApplyView(View):
     def get(self, request):
-        return render(request, 'usercenter-myapply.html')
+        apply_list = UserMajor.objects.filter(user=request.user)
+        return render(request, 'usercenter-myapply.html', {'apply_list': apply_list})
 
 
 class MyOrderView(View):
