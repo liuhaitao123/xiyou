@@ -36,6 +36,10 @@ a{
 	text-decoration:none;/*大部分页面中的链接没有下划线*/
 }
 
+/* .nav-bar { */
+	/* border-bottom:1px solid #f80; */
+/* } */
+
 .clearfix:after{
 		height:0;
 		content:" ";

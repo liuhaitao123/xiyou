@@ -270,7 +270,7 @@
     		<ul class="pro clearfix">
     			<li><a href=""><img src="{% static 'img/免费评估.png' %}" alt=""></a><p>免费评估</p></li>
     			<li><a href="{% url 'university:university' %}"><img src="{% static 'img/选择学校.png' %}" alt=""></a><p>选择学校</p></li>
-    			<li><a href=""><img src="{% static 'img/提交申请材料.png' %}" alt=""></a><p>提交申请材料</p></li>
+    			<li><a href="{% url 'operation:upload' %}"><img src="{% static 'img/提交申请材料.png' %}" alt=""></a><p>提交申请材料</p></li>
     			<li><a href="{% url 'service:doc' %}"><img src="{% static 'img/文书和签证服务.png' %}" alt=""></a><p>文书和签证服务</p></li>
     			<li><a href=""><img src="{% static 'img/留学服务.png' %}" alt=""></a><p>行程准备</p></li>
     		</ul>
@@ -296,7 +296,9 @@
     		<div id="img-sc" class="suc-stu">
     			<ul class="stu-img clearfix">
 				{% for case in win_case_one %}
-    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span><a style="color:white" href="{% url 'user:wincase' case.id %}">{{ case.name}}</a><br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
+    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a>
+					<span>
+					<a style="color:white" href="{% url 'user:wincase' case.id %}">{{ case.name}}</a><br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
 				{% endfor %}
     			</ul>
     			<ul class="stu-img clearfix">
@@ -351,7 +353,7 @@
 					<a href="">{{ ask.teacher }} 答：{{ ask.answer }}</a></li>
     			{% endfor %}	
     			</ul>
-    			<a class="btn" href="">我要提问</a>
+    			<a class="btn" href="{% url 'user:myquestion' %}">我要提问</a>
     		</div>
     		<div class="zixun fr">
     			<p>留学资讯<a href="{% url 'university:strategy-list' %}">更多 ></a></p>

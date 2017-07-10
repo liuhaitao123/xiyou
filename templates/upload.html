@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}文件提交|西柚留学网{% endblock %}
+{% block css %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/shuju-tj.css' %}">
+<script src="{% static 'js/common.js' %}"></script>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block banner %}
+    {% include 'banner.html' %}
+{% endblock %}
+{% block content %} 
+    <div class="wrap up">
+       <h4>文件提交</h4>
+       <ul>
+       		<li class="list"><a>PS（个人陈述）（英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i><button>去购买</button>
+            </li>
+            <li class="list"><a>CV（个人简历）（英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i><button>去购买</button>
+            </li>
+            <li class="list"><a>RL（推荐信）（英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i><button>去购买</button>
+            </li>
+            <li class="list"><a>成绩单（中英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
+            </li>
+             <li class="list"><a>在读证明/毕业证（中英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
+            </li>
+             <li class="list"><a>资金证明（中英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
+            </li>
+             <li class="list"><a>护照扫描件</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
+            </li>
+             <li class="list"><a>语言成绩单</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
+            </li>
+             <li class="list"><a>其他附加文件（SAT、AP、IB等）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
+            </li>
+             <li class="list"><a>照片</a><span></span><input type="text" value="硕士需要工作证明（中英文）"><i>浏览</i>
+            </li>
+             <li class="list"><a>留学生个人信息表</a><span></span><input type="text" value=""><i>浏览</i>
+            </li>
+
+             <li class="list"><a>硕士需要工作证明（中英文）</a><span></span><input type="text" value=""><i>浏览</i>
+            </li>
+       </ul>
+       <input class="tj" value="提交" type="submit">  	
+    </div>
+    <div class="wrap sm">
+    	<h2>国家申请文书递交说明</h2>
+    	<h3>留学文书(也称为留学文书写作\申请文书\留学申请文书\留学文案)</h3>
+    	<p>留学文书主要以个人陈述、推荐信、个人简历及Essay短文材料构成。留学文书是出国留学申请中的重要材料，海外院校招生官通过留学文书了解申请者是否符合申请条件。学生在申请海外名校时，绝大多数的学校都要求申请人提交申请文书，尤其是所有的香港大学和美国的顶尖大学的本科录取，及部分研究生的录取。申请文书写作好坏对录取结果的影响非常大。</p>
+    	<h3>美国本科文书都包括哪几种类型</h3>
+    	<h4>申请美国本科文书之简历(Curriculum Vitae,CV)</h4>
+    	<p>CV，即个人简历，录取委员会会通过CV中学生对自己个人信息、教育背景、所获荣誉、个人重大影响事件、发表著作、参加组织及其他能力和爱好来了解申请者，给申请者打个印象分。</p>
+    	<h4>申请美国本科文书之个人陈述(Personal Statement,PS)</h4>
+    	<p>学生主要通过PS体现自己的申请动机此外，还需要填充自身经历、经验，表明你是一个合格的MASTER或PHD的申请者，并完全有能力胜任研究生阶段的研究工作。美国本科申请文书学校也借此来考察申请人的能力、专业认识、专业经历、学术背景及研究能力。学生在撰写时，需注意学校官网上的要求，如数量、字数…………</p>
+    	<h3>美国留学文书写作实用技巧技巧</h3>
+    	<p>用美国留学文书写作描绘一个真实的你，而不是你认为名校希望你是什么样的。很多申请人有这样一个误区，认为甲大学喜欢录取有领袖潜力的学生丶乙大学喜欢有特殊经历的学生，因此他们就会根据自己调查到的“学校特色”来写作不同风格的文书，认为投其所好就可以获得更大的成功机会。试想一下，如果所有的学生都是一个样的，你还愿意进入这样的大学去学习吗?在此给大家的建议是，一定要保持真实的自我，在美国留学申请文书里写出一个有特色的自我…………</p>
+    </div>
+     <div class="line">
+     	
+     </div>
+{% endblock %}
+    

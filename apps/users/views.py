@@ -125,6 +125,8 @@ class MyQstView(View):
         return render(request, 'usercenter-myquestion.html')
 
     def post(self, request):
+        if not request.user.authenticated():
+            return HttpResponseRedirect(reverse('user:login'))
         ask = UserAsk()
         ask.user = request.user
         ask.problem = request.POST.get('problem', '')

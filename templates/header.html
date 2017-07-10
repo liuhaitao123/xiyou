@@ -94,7 +94,7 @@
 		<ul class="clearfix">
 			<li {% if request.path ==  '/' %}class="contion"{% endif %}><a target="_self" href="{% url 'user:index' %}">首页</a></li>
 			<li {% if request.path|slice:'7' ==  '/univer' %}class="contion"{% endif %}><a href="{% url 'university:university' %}">院校数据</a></li>
-			<li><a href="{% url 'university:estimate' %}">留学评估</a></li>
+			<li {% if request.path|slice:'7' ==  '/estima' %}class="contion"{% endif %}><a href="{% url 'university:estimate' %}">留学评估</a></li>
 			<li {% if request.path|slice:'7' ==  '/highap' %}class="contion"{% endif %}><a href="{% url 'user:highapply' %}">高端申请</a></li>
 			<li {% if request.path|slice:'4' ==  '/doc' %}class="contion"{% endif %}><a href="{% url 'service:doc' %}">文书服务</a></li>
 			<li {% if request.path|slice:'5' ==  '/visa' %}class="contion"{% endif %}><a href="{% url 'service:visa' %}">签证服务</a></li>

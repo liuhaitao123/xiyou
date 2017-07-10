@@ -130,9 +130,14 @@ body{
 
 }
 .search{
-	border-bottom:1px solid #f80;
+	border-bottom:1px solid pink;
 	position: relative;
 }
+
+.nav-bar { 
+	border-bottom:1px solid pink;
+} 
+
 .search .logo-top{
 	float: left;
 }

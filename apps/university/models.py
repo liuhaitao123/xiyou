@@ -58,6 +58,7 @@ class University(models.Model):
     graduate_ielts = models.FloatField(verbose_name=u'研究生雅思', default=6.00)
     click_num = models.IntegerField(verbose_name=u'点击数', default=0)
     show_index = models.IntegerField(verbose_name=u'是否首页显示', choices=((1, u'首页显示'),(0, u'首页不显示')), default=0)
+    recommend = models.IntegerField(verbose_name=u'是否推荐', choices=((1, u'推荐'),(0, u'不推荐')), default=0)
     add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)
 
     class Meta:
