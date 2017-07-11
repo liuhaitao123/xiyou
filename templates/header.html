@@ -20,9 +20,9 @@
 		</ul>
 		<div id="wode" class="wode">
 			<ul>
-				<li><a href="">我的订单</a></li>
-				<li><a href="">账号管理</a></li>				
-				<li><a href="">我的问答</a></li>
+				<li><a href="{% url 'user:myorder' %}">我的订单</a></li>
+				<li><a href="{% url 'user:usercenter' %}">账号管理</a></li>				
+				<li><a href="{% url 'user:myask' %}">我的问答</a></li>
 			</ul>
 		</div>
 		<div id="guanzhu" class="guanzhu">
@@ -30,8 +30,9 @@
 		</div>
 		<div id="kefu" class="kefu">
 			<ul>
-				<li><a href="">联系我们</a></li>
-				<li><a href="">帮助中心</a></li>				
+				<li><a href="{% url 'operation:about' %}">公司简介</a></li>
+				<li><a href="{% url 'operation:about' %}">帮助中心</a></li>
+				<li><a href="{% url 'operation:about' %}">联系我们</a></li>				
 			</ul>
 		</div>
 		<div id="daohang" class="daohang clearfix">

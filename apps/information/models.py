@@ -45,3 +45,17 @@ class Article(models.Model):
 
     def __unicode__(self):
         return self.title
+
+
+class HelpCenter(models.Model):
+    title = models.CharField(verbose_name=u'标题', max_length=300)
+    content = models.TextField(verbose_name=u'内容', null=True, blank=True)
+    status = models.IntegerField(verbose_name=u'状态', choices=((0, u'草稿'), (1, u'发布')), default=0)
+    add_time = models.DateTimeField(default=datetime.now, verbose_name=u'添加时间')
+
+    class Meta:
+        verbose_name = u'帮助中心'
+        verbose_name_plural = verbose_name
+
+    def __unicode__(self):
+        return self.title

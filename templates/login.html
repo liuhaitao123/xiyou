@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="{% static 'css/global.css' %}">
 <link rel="stylesheet" href="{% static 'css/denglu.css' %}">
 <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+<script src="{% static 'js/layer.js' %}"></script>
+
 
 <body>
 	<div class="header">
@@ -45,12 +47,12 @@
 {#                     <input class="" type="text" value="" placeholder="请输入图片验证码"/> #}
 {#                     <div><img src="{% static 'img/yanzheng.png' %}" alt=""></div>#}
 {#                     </div>#}
-                {% if login_form.errors.items %}
-                    <div style="width: 418px;height: 40px;line-height:40px;text-align: center;margin-left: 18px;border-radius: 3px;
+               
+                    <!-- <div style="width: 418px;height: 40px;line-height:40px;text-align: center;margin-left: 18px;border-radius: 3px;
                      margin-bottom: 18px;font-size: 20px; background: pink; color: red">
-                    	{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}
-                    </div>
-                {% endif %}
+                    	
+                    </div> -->
+                
                     <div class="now">
                     	<input type="submit" value="立即登录" >
                     </div>
@@ -82,6 +84,28 @@
 		   </ul>
 		</div>
 	  </div>
+	  <script type="text/javascript">
+	  	var username = $('input[name="username"]').val();
+	  	var password = $('input[name="password"]').val();
+
+	  	if (username == ''){
+	  		layer.open({
+              title: '西柚留学网提示'
+              ,content: '手机号/邮箱为必填项！'
+            });
+
+	  	}
+
+	  	if (password == ''){
+	  		layer.open({
+              title: '西柚留学网提示'
+              ,content: '密码为必填项！'
+            });
+	  	}
+
+	  
+	  	
+	  </script>
 	  <script language="javascript"> 
 		$('.bb li').click(function(){ 
 		$(this).addClass("on").siblings().removeClass();

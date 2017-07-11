@@ -7,6 +7,8 @@ from django.views.generic.base import View
 from django.core.urlresolvers import reverse
 import json
 
+from information.models import HelpCenter
+
 # Create your views here.
 
 
@@ -17,4 +19,5 @@ class UploadView(View):
 	
 class AboutView(View):
 	def get(self, request):
-		return render(request, 'about.html')
+		all_articles = HelpCenter.objects.all()
+		return render(request, 'about.html', {'all_articles': all_articles})

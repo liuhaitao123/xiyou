@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import View
 from django.core.urlresolvers import reverse
+from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 
 from service.models import WriteType, Writer, VisaType, Visa
 from university.models import Country
@@ -23,8 +25,18 @@ class DocView(View):
         type_id = request.GET.get('type', '')
         if type_id:
             all_docs = Writer.objects.filter(type=int(type_id))
+
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+
+        p = Paginator(all_docs, 2, request=request)
+
+        docs = p.page(page)
+
         return render(request, 'doc.html', {'all_types': all_types,
-                                             'all_docs': all_docs,
+                                             'all_docs': docs,
                                              'type_id': type_id,
                                              })
 
@@ -53,8 +65,18 @@ class VisaView(View):
         type_id = request.GET.get('type', '')
         if type_id:
             all_visas = Visa.objects.filter(type=int(type_id))
+
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+
+        p = Paginator(all_visas, 2, request=request)
+
+        visas = p.page(page)
+
         return render(request, 'visa.html', {'all_types': all_types,
-                                             'all_visas': all_visas,
+                                             'all_visas': visas,
                                              'type_id': type_id,
                                              'all_country':all_country,
                                              })

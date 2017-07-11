@@ -31,7 +31,7 @@
 	      </dd>
 	     </dl>
     	</div>
-		{% for doc in all_docs %}
+		{% for doc in all_docs.object_list %}
     	<div class="ps same clearfix">
     		<div class="img fl">
     			<a href="{% url 'service:doc-detail' doc.id %}"><img src="{{ MEDIA_URL }}{{ doc.image }}" alt=""></a>
@@ -60,9 +60,23 @@
     </div>
     <div class="fen">
     	<ul class="fenye clearfix">
-     			<li><a href="">上一页</a></li>
-     			<li><a href="" class="at">1</a></li>
-     			<li><a href="">下一页</a></li>
+     			 {% if all_docs.has_previous %}
+                <li><a href="?{{ all_docs.previous_page_number.querystring }}">上一页</a></li>
+                {% endif %}
+                {% for page in all_docs.pages %}
+                    {% if page %}
+                        {% ifequal page all_docs.number %}
+                        <li><a href="?{{ page.querystring }}" class="at">{{ page }}</a></li>
+                        {% else %}
+                        <li><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                        {% endifequal %}
+                    {% else %}  
+                        <li>...</li>
+                    {% endif %}
+                {% endfor %}
+                {% if all_docs.has_next %}
+                        <li><a href="?{{ all_docs.next_page_number.querystring }}">下一页</a></li>
+                {% endif %}
      	</ul>
     </div>
 	<script>

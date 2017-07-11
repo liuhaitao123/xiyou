@@ -6,6 +6,8 @@ from django.shortcuts import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import View
 from django.contrib.auth import login, authenticate, logout
 from django.core.urlresolvers import reverse
+from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 import json
 
 from university.models import Country, Level, University, Major
@@ -37,9 +39,18 @@ class UniversityView(View):
         if level_id:
             all_university = all_university.filter(level=int(level_id))
 
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+
+        p = Paginator(all_university, 2, request=request)
+
+        universities = p.page(page)
+
         return render(request, 'university.html', {'all_country': all_country,
                                                    'all_level': all_level,
-                                                   'all_university': all_university,
+                                                   'all_university': universities,
                                                    'country_id': country_id,
                                                    'type': type,
                                                    'level_id': level_id,
@@ -49,9 +60,14 @@ class UniversityView(View):
 
 class UniversityDetailView(View):
     def get(self, request, university_id):
+        
         university = University.objects.get(pk=int(university_id))
+
+        university.click_num += 1
+        university.save()
+        view_other_list = University.objects.order_by('-click_num')[:4]
         recommend_list = University.objects.filter(recommend=1)[:6]
-        return render(request, 'university-detail.html', {'university': university, 'recommend_list': recommend_list})
+        return render(request, 'university-detail.html', {'university': university, 'recommend_list': recommend_list,'view_other_list': view_other_list})
 
 
 class EstimateView(View):

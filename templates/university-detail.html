@@ -166,60 +166,30 @@
 		<div class="fr right">
 			<div class="other">
 				<h4>别人在看</h4>
+
+				{% for university in view_other_list %}
 				<div class="sc-list cleafix">
 	    			<div class="img-tu fl">
-	    				<img src="{% static  'img/boshidun-logo.png' %}" alt="">
+	    				<a href="{% url 'university:univer-detail' university.id %}"><img src="{{ MEDIA_URL }}{{ university.logo }}" alt=""></a>
 	    			</div>
 	    			<div class="img-con fl">
-	    					<p>波士顿学院</p>
-	    					<p>Princeton University</p>
-	    					<p>综合排名：38</p>
-	    					<p>学历层次：硕士</p>
+	    					<a href="{% url 'university:univer-detail' university.id %}"><p>{{ university.name }}</p></a>
+	    					<p>类型：{{ university.get_type_display }}</p>
+	    					<p>综合排名：{{ university.rank }}</p>
+	    					<p>学历层次：{{ university.level }}</p>
 	    		   </div>
 	    		</div>
-	    		<div class="sc-list cleafix">
-	    			<div class="img-tu fl">
-	    				<img src="{% static  'img/boshidun-logo.png' %}" alt="">
-	    			</div>
-	    			<div class="img-con fl">
-	    					<p>波士顿学院</p>
-	    					<p>Princeton University</p>
-	    					<p>综合排名：38</p>
-	    					<p>学历层次：硕士</p>
-	    		   </div>
-	    		</div>
-	    		<div class="sc-list cleafix">
-	    			<div class="img-tu fl">
-	    				<img src="{% static  'img/boshidun-logo.png' %}" alt="">
-	    			</div>
-	    			<div class="img-con fl">
-	    					<p>波士顿学院</p>
-	    					<p>Princeton University</p>
-	    					<p>综合排名：38</p>
-	    					<p>学历层次：硕士</p>
-	    		   </div>
-	    		</div>
-	    		<div class="sc-list cleafix">
-	    			<div class="img-tu fl">
-	    				<img src="{% static  'img/boshidun-logo.png' %}" alt="">
-	    			</div>
-	    			<div class="img-con fl">
-	    					<p>波士顿学院</p>
-	    					<p>Princeton University</p>
-	    					<p>综合排名：38</p>
-	    					<p>学历层次：硕士</p>
-	    		   </div>
-	    		</div>
+				{% endfor %}
 			</div>
 			<div class="tuijian">
 				<h4>推荐院校</h4>
 				{% for university in recommend_list %}
 				<div class="sc-list cleafix">
 	    			<div class="img-tu fl">
-	    				<img src="{{ MEDIA_URL }}{{ university.logo }}" alt="">
+	    				<a href="{% url 'university:univer-detail' university.id %}"><img src="{{ MEDIA_URL }}{{ university.logo }}" alt=""></a>
 	    			</div>
 	    			<div class="img-con fl">
-	    					<p>{{ university.name }}</p>
+	    					<a href="{% url 'university:univer-detail' university.id %}"><p>{{ university.name }}</p></a>
 	    					<p>类型：{{ university.get_type_display }}</p>
 	    					<p>综合排名：{{ university.rank }}</p>
 	    					<p>学历层次：{{ university.level }}</p>

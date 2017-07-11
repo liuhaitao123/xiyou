@@ -44,7 +44,7 @@ body{
 .zckuang-box{
 	/*width: 960px;*/
 	height: 520px;
-	background: url(../images/bg-dl.jpg) no-repeat center top;
+	background: url(/static/img/bg-dl.jpg) no-repeat center top;
 	margin: 0 auto;
 	border-top: 1px solid #fff;	
 

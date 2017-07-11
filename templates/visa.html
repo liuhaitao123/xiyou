@@ -28,7 +28,7 @@
 	      </dd>
 	     </dl>
     	</div>
-    	{% for visa in all_visas %}
+    	{% for visa in all_visas.object_list %}
     	<div class="sv same clearfix">
     		<div class="img fl">
     			<a href="javascript:;"><img src="{{ MEDIA_URL }}{{ visa.image }}" alt=""></a>
@@ -75,9 +75,23 @@
     </div>
     <div class="fen">
     	<ul class="fenye clearfix">
-     			<li><a href="javascript:;">上一页</a></li>
-     			<li><a href="javascript:;" class="at">1</a></li>
-     			<li><a href="javascript:;">下一页</a></li>
+ 			 {% if all_visas.has_previous %}
+            <li><a href="?{{ all_visas.previous_page_number.querystring }}">上一页</a></li>
+            {% endif %}
+            {% for page in all_visas.pages %}
+                {% if page %}
+                    {% ifequal page all_visas.number %}
+                    <li><a href="?{{ page.querystring }}" class="at">{{ page }}</a></li>
+                    {% else %}
+                    <li><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                    {% endifequal %}
+                {% else %}  
+                    <li>...</li>
+                {% endif %}
+            {% endfor %}
+            {% if all_visas.has_next %}
+                    <li><a href="?{{ all_visas.next_page_number.querystring }}">下一页</a></li>
+            {% endif %}
      	</ul>
     </div>
 {% endblock %}

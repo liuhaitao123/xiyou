@@ -96,7 +96,7 @@
 			
 			
 			
-			{% for university in all_university %}
+			{% for university in all_university.object_list %}
      		<div class="school-li-box clearfix">
      		   <a href="{% url 'university:univer-detail' university.id %}"><img width="137px;" height="180px" src="{{ MEDIA_URL }}{{ university.logo }}" alt=""></a>
      			<ul>
@@ -134,12 +134,23 @@
      		 
      	</div>
      		<ul class="fenye clearfix">
-     			<li><a href="">上一页</a></li>
-     			<li><a href="" class="at">1</a></li>
-     			<li><a href="">2</a></li>
-     			<li><a href="">3</a></li>
-     			<li>...</li>
-     			<li><a href="">下一页</a></li>
+            {% if all_university.has_previous %}
+     			<li><a href="?{{ all_university.previous_page_number.querystring }}">上一页</a></li>
+            {% endif %}
+            {% for page in all_university.pages %}
+                {% if page %}
+                    {% ifequal page all_university.number %}
+         			<li><a href="?{{ page.querystring }}" class="at">{{ page }}</a></li>
+                    {% else %}
+         			<li><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                    {% endifequal %}
+                {% else %}	
+             		<li>...</li>
+                {% endif %}
+            {% endfor %}
+            {% if all_university.has_next %}
+         			<li><a href="?{{ all_university.next_page_number.querystring }}">下一页</a></li>
+            {% endif %}
      		</ul>
     </div>
 

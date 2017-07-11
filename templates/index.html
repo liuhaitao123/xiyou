@@ -126,8 +126,8 @@
     			<li><a href="{% url 'service:doc' %}"><img src="{% static 'img/文书和签证服务.png' %}" alt=""></a><p>文书和签证服务</p></li>
     			<li><a href=""><img src="{% static 'img/留学服务.png' %}" alt=""></a><p>行程准备</p></li>
     		</ul>
-    		<h3>西燕留学评估系统，快速匹配，优选方案！</h3>
-    		<h4>您的报告将通过西燕评估系统及专业顾问的全面评估，分析留学的优劣势，享受专业审核及海外院校管理，设计适合自身情况的最优留学方案。
+    		<h3>西柚留学评估系统，快速匹配，优选方案！</h3>
+    		<h4>您的报告将通过西柚评估系统及专业顾问的全面评估，分析留学的优劣势，享受专业审核及海外院校管理，设计适合自身情况的最优留学方案。
     		</h4>
     		<div class="an-pinggu">
     			<a href="{% url 'university:estimate' %}">马上评估</a>
@@ -150,12 +150,12 @@
 				{% for case in win_case_one %}
     				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a>
 					<span>
-					<a style="color:white" href="{% url 'user:wincase' case.id %}">{{ case.name}}</a><br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
+					<a style="color:white" href="{% url 'user:wincase' case.id %}">{{ case.name}}</a><br>{{ case.university }}<br>西柚教育让我实现了梦想！</span></li>
 				{% endfor %}
     			</ul>
     			<ul class="stu-img clearfix">
 				{% for case in win_case_two %}
-    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span>{{ case.name}}<br>{{ case.university }}<br>西燕教育让我实现了梦想！</span></li>
+    				<li><a href=""><img width="280px;" height="320px;" src="{{ MEDIA_URL }}{{ case.image }}" alt=""></a><span>{{ case.name}}<br>{{ case.university }}<br>西柚教育让我实现了梦想！</span></li>
 				{% endfor %}
     			</ul>
     		</div>

@@ -16,7 +16,7 @@
 <body>
 	<div class="top-header">
 		<div class="wrap clearfix">
-			<p class="top-header-l">欢迎来到西燕留学网！咨询热线：<span>010-62514855</span></p>
+			<p class="top-header-l">欢迎来到西柚留学网！咨询热线：<span>010-62514855</span></p>
 			<ul class="top-header-r">
 				{% if request.user.is_authenticated %}
 				<li class="deng">您好，</li>
@@ -26,15 +26,15 @@
 					<li class="deng">您好，请<a href="{% url 'user:login' %}">登录</a></li>
 					<li class="deng">免费<a href="{% url 'user:register' %}">注册</a></li>
 				{% endif %}
-					<li id="guan"><a href="">|&nbsp关注西燕</a></li>
+					<li id="guan"><a href="">|&nbsp关注西柚</a></li>
 					<li id="ke"><a href="">|&nbsp客户服务</a></li>
 					<li id="dao"><a href="">|&nbsp网站导航</a></li>
 			</ul>
 			<div id="wode" class="wode">
 				<ul>
-					<li><a href="">我的订单</a></li>
-					<li><a href="">账号管理</a></li>				
-					<li><a href="">我的问答</a></li>
+					<li><a href="{% url 'user:myorder' %}">我的订单</a></li>
+					<li><a href="{% url 'user:usercenter' %}">账号管理</a></li>				
+					<li><a href="{% url 'user:myask' %}">我的问答</a></li>
 				</ul>
 			</div>
 			<div id="guanzhu" class="guanzhu">
@@ -42,8 +42,10 @@
 			</div>
 			<div id="kefu" class="kefu">
 				<ul>
-					<li><a href="">联系我们</a></li>
-					<li><a href="">帮助中心</a></li>				
+					<li><a href="{% url 'operation:about' %}">公司简介</a></li>
+					<li><a href="{% url 'operation:about' %}">帮助中心</a></li>
+					<li><a href="{% url 'operation:about' %}">联系我们</a></li>
+					
 				</ul>
 			</div>
 			<div id="daohang" class="daohang clearfix">
@@ -74,7 +76,7 @@
 				<img src="{% static 'img/logo-top.png' %}" alt="">
 			</div>
 			<div class="back">
-			   <h3>关于西燕</h3>
+			   <h3>关于西柚</h3>
 			   <a href="{% url 'user:index' %}">返回首页</a>
 				
 			</div>

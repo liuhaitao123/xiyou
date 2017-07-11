@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}文书服务|西柚留学网{% endblock %}
+{% block title %}关于西柚|西柚留学网{% endblock %}
 {% block css %}
 {% load staticfiles %}
 	<link rel="stylesheet" href="{% static 'css/about.css' %}">
@@ -15,17 +15,17 @@
 {% block content %}
     <div class="wrap about clearfix">
     	<div class="fl our">
-    	     <h4>关于西燕</h4>
+    	     <h4>关于西柚</h4>
     		<ul class="about-our">
     			<li class="nn">公司简介</li>
-    			<li>西燕动态</li>
-    			<li>联系西燕</li>
+    			<li>帮助中心</li>
+    			<li>联系西柚</li>
     		</ul>
     	</div>
     	<div class="fr con">
     	  <div class="jieshao">
     	  	<img src="{% static 'img/about.png'  %}" alt="">
-    	  	<p>西燕留学网是中国是最早提供留学服务机构之一,被称为留学第一站,包括留学申请,留学签证,大学排名,大学费用,留学条件,零距离接触留学。</p>
+    	  	<p>西柚留学网是中国是最早提供留学服务机构之一,被称为留学第一站,包括留学申请,留学签证,大学排名,大学费用,留学条件,零距离接触留学。</p>
     	  	<p>现在的社会是需要大量的优秀知识型人才，越来越多的家庭注重自己孩子的教育培养，为了就是将来孩子步入社会的时候有较强的专业还有国人的本领，也希望孩子得到更好的教育，那么不少的家庭选择让孩子留学，到国外接受更加优质高等的教育，让孩子告别传统的应试教育，打破传统接受新型的教育理念，澳洲就比较热门的选择，那么为什么如此多的学生都愿意选择澳洲留学呢。</p>
     	  	<p>该集团成立于1994年，共有24所英国遗留的研究型大学构成。这些大学的校长每年春天都会在伦敦罗素广场旁边的罗素饭店开会而得名。这些英国大学相当于美国的常春藤联盟，中国的985名校。有些罗素集团大学的成员大学在英国榜或者世界QS排行榜上名词不高，但是作为罗素大学集团的一员，其教育质量和在英国当地的声望都是有较高水准的。该集团每年囊括了英国大学65%以上的科研经费和赞助资金。24个成员高校中，有4所是2012年3月收到邀请新加入的，分别是杜伦大学，埃克塞特大学，伦敦大学玛丽女王大学以及约克大学。</p>
     	  	<p>现在的社会是需要大量的优秀知识型人才，越来越多的家庭注重自己孩子的教育培养，为了就是将来孩子步入社会的时候有较强的专业还有国人的本领，也希望孩子得到更好的教育，那么不少的家庭选择让孩子留学，到国外接受更加优质高等的教育，让孩子告别传统的应试教育，打破传统接受新型的教育理念，澳洲就比较热门的选择，那么为什么如此多的学生都愿意选择澳洲留学呢。</p>
@@ -36,49 +36,17 @@
     	  	<p>该集团成立于1994年，共有24所英国遗留的研究型大学构成。这些大学的校长每年春天都会在伦敦罗素广场旁边的罗素饭店开会而得名。这些英国大学相当于美国的常春藤联盟，中国的985名校。有些罗素集团大学的成员大学在英国榜或者世界QS排行榜上名词不高，但是作为罗素大学集团的一员，其教育质量和在英国当地的声望都是有较高水准的。该集团每年囊括了英国大学65%以上的科研经费和赞助资金。24个成员高校中，有4所是2012年3月收到邀请新加入的，分别是杜伦大学，埃克塞特大学，伦敦大学玛丽女王大学以及约克大学。</p>
     	  </div>
     	  <div class="dongtai">
-    	    <a class="list clearfix" href="about-con.html">
+          {% for article in all_articles %}
+    	    <a class="list clearfix">
     	    	<img src="{% static 'img/dongtai.png'  %}" alt="" href="">
     	  	    <ul>
-	    	  	 	<li class="top clearfix">申请赴美国读研究生的六大步骤<span>2016-08-10</span></li>
-	    	  	 	<li class="bot">如果您想去美国留学并且获得由美国大学提供的奖学金，那么 您最好遵循以下步骤，以节省时间并取得事半功倍的效果。一、选择专业。要综合考虑你本科所学的专业和今后工作的兴趣，选择一个适合你并且和你所学有较高相关性的专业……</li>
+	    	  	 	<li class="top clearfix">{{ article.title }}<span>{{ article.add_time|date:'Y-m-d' }}</span></li>
+	    	  	 	<li class="bot">{{ article.content|slice:'100' }}</li>
     	  	    </ul>
     	    </a>
-    	    <a class="list clearfix">
-    	    	<img src="{% static 'img/dongtai.png'  %}" alt="">
-    	  	    <ul>
-	    	  	 	<li class="top clearfix">申请赴美国读研究生的六大步骤<span>2016-08-10</span></li>
-	    	  	 	<li class="bot">如果您想去美国留学并且获得由美国大学提供的奖学金，那么 您最好遵循以下步骤，以节省时间并取得事半功倍的效果。一、选择专业。要综合考虑你本科所学的专业和今后工作的兴趣，选择一个适合你并且和你所学有较高相关性的专业……</li>
-    	  	    </ul>
-    	    </a>
-    	    <a class="list clearfix">
-    	    	<img src="{% static 'img/dongtai.png'  %}" alt="">
-    	  	    <ul>
-	    	  	 	<li class="top clearfix">申请赴美国读研究生的六大步骤<span>2016-08-10</span></li>
-	    	  	 	<li class="bot">如果您想去美国留学并且获得由美国大学提供的奖学金，那么 您最好遵循以下步骤，以节省时间并取得事半功倍的效果。一、选择专业。要综合考虑你本科所学的专业和今后工作的兴趣，选择一个适合你并且和你所学有较高相关性的专业……</li>
-    	  	    </ul>
-    	    </a>
-    	    <a class="list clearfix">
-    	    	<img src="{% static 'img/dongtai.png'  %}" alt="">
-    	  	    <ul>
-	    	  	 	<li class="top clearfix">申请赴美国读研究生的六大步骤<span>2016-08-10</span></li>
-	    	  	 	<li class="bot">如果您想去美国留学并且获得由美国大学提供的奖学金，那么 您最好遵循以下步骤，以节省时间并取得事半功倍的效果。一、选择专业。要综合考虑你本科所学的专业和今后工作的兴趣，选择一个适合你并且和你所学有较高相关性的专业……</li>
-    	  	    </ul>
-    	    </a>
-    	    <a class="list clearfix">
-    	    	<img src="{% static 'img/dongtai.png'  %}" alt="">
-    	  	    <ul>
-	    	  	 	<li class="top clearfix">申请赴美国读研究生的六大步骤<span>2016-08-10</span></li>
-	    	  	 	<li class="bot">如果您想去美国留学并且获得由美国大学提供的奖学金，那么 您最好遵循以下步骤，以节省时间并取得事半功倍的效果。一、选择专业。要综合考虑你本科所学的专业和今后工作的兴趣，选择一个适合你并且和你所学有较高相关性的专业……</li>
-    	  	    </ul>
-    	    </a>
-    	    <a class="list clearfix">
-    	    	<img src="{% static 'img/dongtai.png'  %}" alt="">
-    	  	    <ul>
-	    	  	 	<li class="top clearfix">申请赴美国读研究生的六大步骤<span>2016-08-10</span></li>
-	    	  	 	<li class="bot">如果您想去美国留学并且获得由美国大学提供的奖学金，那么 您最好遵循以下步骤，以节省时间并取得事半功倍的效果。一、选择专业。要综合考虑你本科所学的专业和今后工作的兴趣，选择一个适合你并且和你所学有较高相关性的专业……</li>
-    	  	    </ul>
-    	    </a>
-	    	    <ul class="fenye clearfix">
+            {% endfor %}
+    	  
+	    	  <!--   <ul class="fenye clearfix">
 	     			<li><a href="">上一页</a></li>
 	     			<li><a href="" class="at">1</a></li>
 	     			<li><a href="">2</a></li>
@@ -86,22 +54,22 @@
 	     			<li>...</li>
 	     			<li><a href="">下一页</a></li>
 	     		</ul>
-    	  	 
+    	  	  -->
     	  </div>
     	  <div class="lianxi">
     	  	  <img src="{% static 'img/map.png'  %}" alt=""> 
     	  	  <div class="clearfix">
-    	  	  	<h5>西燕留学</h5>
+    	  	  	<h5>西柚留学</h5>
                  <ul class="fx  fl">
-                 	<li>电话：010-62514855</li>
-                 	<li>邮箱：xiyanliuxue@xiyan.com</li>
-                 	<li>传真：xiyanliuxue@xiyan.com</li>
-                 	<li>QQ：xiyanliuxue@xiyan.com</li>
+                 	<li>电话：010-88888888</li>
+                 	<li>邮箱：88888888@xiyou.com</li>
+                 	<li>传真：88888888@xiyou.com</li>
+                 	<li>QQ：88888888@xiyou.com</li>
                  	<li>地址：北京市东城区</li>
                  </ul>
                  <ul class="fr wx">
                  	<li><img src="{% static 'img/weixin-b.png'  %}" alt=""></li>
-                 	<li>西燕官方微信平台</li>
+                 	<li>西柚官方微信平台</li>
                  </ul>
     	  	  </div>
     	  </div>
