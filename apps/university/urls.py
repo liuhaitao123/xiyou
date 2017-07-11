@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from .views import UniversityView, EstimateView, StrategyView, ArticleView, StrategyListView, UniversityDetailView, MajorApplyView
+from .views import UniversityView, EstimateView, StrategyView, ArticleView, StrategyListView, UniversityDetailView, MajorApplyView, ResultView
 
 urlpatterns = [
     url(r'^university/$', UniversityView.as_view(), name='university'),
@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^strategy-list/$', StrategyListView.as_view(), name='strategy-list'),
     url(r'^strategy/article/(?P<article_id>\d+)$', ArticleView.as_view(), name='article'),
     url(r'^major-apply/$', MajorApplyView.as_view(), name='major-apply'),
+	url(r'^estimate-result/$', ResultView.as_view(), name='result'),
 ]

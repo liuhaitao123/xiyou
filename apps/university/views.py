@@ -50,7 +50,8 @@ class UniversityView(View):
 class UniversityDetailView(View):
     def get(self, request, university_id):
         university = University.objects.get(pk=int(university_id))
-        return render(request, 'university-detail.html', {'university': university})
+        recommend_list = University.objects.filter(recommend=1)[:6]
+        return render(request, 'university-detail.html', {'university': university, 'recommend_list': recommend_list})
 
 
 class EstimateView(View):
@@ -121,3 +122,8 @@ class MajorApplyView(View):
             user_major.save()
             json_data = {'status': 'success', 'msg': '申请成功'}
             return HttpResponse(json.dumps(json_data), content_type="application/json")
+			
+	
+class ResultView(View):
+	def post(self, request):
+		return render(request, 'result.html')

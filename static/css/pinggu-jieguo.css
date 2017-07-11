@@ -1,5 +1,5 @@
 .zizhu{
-	background:#FaFaFa url(../images/juxing.png) no-repeat;
+	background:#FaFaFa url(/static/img/juxing.png) no-repeat;
 	height: 120px;
 	margin-top: 40px ;
 	margin-bottom: 40px ;   
@@ -70,7 +70,7 @@
 	margin-left: 80px;
 }
 .school-li .school-li-box .paiming{
-	background: url(../images/pai-bg.png);
+	background: url(/static/img/pai-bg.png);
 	width: 136px;
 	height: 154px;
 	margin-top: 13px;

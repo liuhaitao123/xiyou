@@ -830,9 +830,9 @@ body{
 	line-height: 30px;
 	color: #808080;
 }
-.information .dongtai li a{
-	float: right;
-}
+/* .information .dongtai li a{ */
+	/* float: left; */
+/* } */
 .foot{
 	background: #e8e8e8;
 	

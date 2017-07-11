@@ -96,6 +96,7 @@
 }
 .school-li .school-li-box img{
 	margin-right: 26px;
+	margin-left:20px;
 }
 .school-li .school-li-box ul li h3{
 	font-size: 20px;
@@ -126,7 +127,7 @@
 	width: 136px;
 	height: 154px;
 	margin-top: 13px;
-	margin-left: 70px;
+	margin-left: 40px;
 }
 .school-li .school-li-box .paiming p{
 	font-size: 20px;
@@ -145,7 +146,7 @@
 }
 .school-li .school-li-box .bnt{
 	margin-top: 13px;
-	margin-left: 70px;
+	margin-left: 60px;
 }
 .school-li .school-li-box .bnt a{
    width: 120px;

@@ -3,16 +3,16 @@
 {% block css %}
 {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'css/pinggu.css' %}">
-<script src="{% static 'js/common.js' %}"></script>
 {% endblock %}
 {% block js %}
-
+<script src="{% static 'js/common.js' %}"></script>
 {% endblock %}
 
 {% block banner %}
     {% include 'banner.html' %}
 {% endblock %}
 {% block content %}
+
     <div class="system">
     	<div class="wrap">
     		<h1>免费录取率评估系统</h1>
@@ -20,7 +20,8 @@
     		<h6>温馨提示:</h6>
     		<p>1、您提供的信息将提交系统进行自动录取率评估，返回结果仅供参考。<br>2、我们会对您的资料进行保密。<br>3、为能准确评估，带有"<span>*</span>"标志的为必填项。<br>4、您填写的信息越充分，我们为您提供的评估越精准。</p>
     		<div class="b-box">
-    			<form action="">
+    			<form action="{% url 'university:result' %}" method="post">
+				{% csrf_token %}
     				<div class="yixiang">
     					<h3>留学意向</h3>
     					<ul class="clearfix">

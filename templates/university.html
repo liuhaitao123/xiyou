@@ -2,11 +2,10 @@
 {% block title %}院校数据|西柚留学网{% endblock %}
 {% block css %}
 {% load staticfiles %}
-<link rel="stylesheet" href="{% static 'css/shuju.css' %}">
-<script src="{% static 'js/common.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'css/shuju.css' %}">
 {% endblock %}
 {% block js %}
-
+	<script src="{% static 'js/common.js' %}"></script>
 {% endblock %}
 
 {% block banner %}
@@ -82,7 +81,7 @@
 	     </dl>
     	</div>
     </div>
-  <script language="javascript"> 
+	<script language="javascript"> 
 		$('dd label').click(function(){ 
 		$(this).addClass("action").siblings().removeClass();
 		  // 删除其他兄弟元素的样式
@@ -90,7 +89,7 @@
 		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
 		// $(".bd > li").hide().eq($('.bb li').index(this)).show(); 
 		});
-		</script>
+	</script>
     <div class="school-li">
      	<div class="wrap">
      		<hr>
@@ -105,12 +104,12 @@
      				
      				<h3><a href="{% url 'university:univer-detail' university.id %}">{{ university.name }}</a></h3>
      				<h4>{{ university.english_name }}</h4>
-     				<p>学校所在地：{{ university.address }}</p>
-     				<p>所在大学类型：公立大学</p>
-     				<p>申请截止日期：{{ university.end_time }}</p>
+     				<p>地址：{{ university.address|slice:'9' }}</p>
+     				<p>大学类型：公立大学</p>
+     				<p>申请截止日期：{{ university.end_time|date:'Y-m-d' }}</p>
      				</li>
      				<li class="time">
-     				<p>建校时间：{{ university.bulid_time }}</p>
+     				<p>建校时间：{{ university.bulid_time|date:'Y-m-d' }}</p>
      				<p>学生人数：{{ university.students }}人</p>
      				<p>学费：{{ university.tuition }}美元/年</p>
      				</li>
@@ -122,11 +121,11 @@
      				<li class="paiming"><p>综合排名</p>
      				<h2>{{ university.rank }}</h2>
      				</li>
-     				<!-- <li class="bnt">
+     				<li class="bnt">
      					<a href="" class="duibi">加入对比</a>
      					<a href="" class="luqu">评估录取率</a>
-     					<a href="" class="shenqing">立即申请</a>
-     				</li> -->
+     					<a href="{% url 'university:univer-detail' university.id %}" class="shenqing">立即申请</a>
+     				</li>
      			</ul>
      		</div>
 
@@ -142,7 +141,6 @@
      			<li>...</li>
      			<li><a href="">下一页</a></li>
      		</ul>
-     	</div>
     </div>
 
 
@@ -203,5 +201,4 @@
     		</ul>
     	</div>
     </div>
-   
 {% endblock %}

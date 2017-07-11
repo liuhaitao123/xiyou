@@ -2,12 +2,12 @@
 {% block title %}文书服务|西柚留学网{% endblock %}
 {% block css %}
 {% load staticfiles %}
-<link rel="stylesheet" href="{% static 'css/shuju-xyxq.css' %}">
+	<link rel="stylesheet" href="{% static 'css/shuju-xyxq.css' %}">
     <script src="{% static 'js/layer.js' %}"></script>
-	<script src="{% static 'js/common.js' %}"></script>
+
 {% endblock %}
 {% block js %}
-
+	<script src="{% static 'js/common.js' %}"></script>
 {% endblock %}
 
 {% block banner %}
@@ -213,40 +213,21 @@
 			</div>
 			<div class="tuijian">
 				<h4>推荐院校</h4>
+				{% for university in recommend_list %}
 				<div class="sc-list cleafix">
 	    			<div class="img-tu fl">
-	    				<img src="{% static  'img/boshidun-logo.png' %}" alt="">
+	    				<img src="{{ MEDIA_URL }}{{ university.logo }}" alt="">
 	    			</div>
 	    			<div class="img-con fl">
-	    					<p>波士顿学院</p>
-	    					<p>Princeton University</p>
-	    					<p>综合排名：38</p>
-	    					<p>学历层次：硕士</p>
+	    					<p>{{ university.name }}</p>
+	    					<p>类型：{{ university.get_type_display }}</p>
+	    					<p>综合排名：{{ university.rank }}</p>
+	    					<p>学历层次：{{ university.level }}</p>
 	    		   </div>
 	    		</div>
-	    		<div class="sc-list cleafix">
-	    			<div class="img-tu fl">
-	    				<img src="{% static  'img/boshidun-logo.png' %}" alt="">
-	    			</div>
-	    			<div class="img-con fl">
-	    					<p>波士顿学院</p>
-	    					<p>Princeton University</p>
-	    					<p>综合排名：38</p>
-	    					<p>学历层次：硕士</p>
-	    		   </div>
-	    		</div>
+				{% endfor %}
 	    
-   		<div class="sc-list cleafix">
-	    			<div class="img-tu fl">
-	    				<img src="{% static  'img/boshidun-logo.png' %}" alt="">
-	    			</div>
-	    			<div class="img-con fl">
-	    					<p>波士顿学院</p>
-	    					<p>Princeton University</p>
-	    					<p>综合排名：38</p>
-	    					<p>学历层次：硕士</p>
-	    		   </div>
-	    		</div>
+				
 			</div>
 		</div>
 
