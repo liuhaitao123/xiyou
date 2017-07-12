@@ -77,17 +77,17 @@
 			     <div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div>
 			     <div class="Cont" id="ISL_Cont">
 			      <div class="ScrCont">
-			       <div id="List1">
-
-			        <!-- 图片列表 begin -->
+					{% for scenery in all_scenery %}
+						<div id="List1">
+						<!-- 图片列表 begin -->
+							<div class="pic">
+							  <a href="/" target="_blank"><img src="{{ MEDIA_URL }}{{ scenery.image }}"></a>
+							</div>       
+						</div>
+					{% endfor %}
 					
-			         <div class="pic">
-			          <a href="/" target="_blank"><img src="{% static  'img/1.jpg' %}"></a>
-			          </div>       
 					
-
-			       </div>
-			       <div id="List2"></div>
+					
 			      </div>
 			     </div>
 			     <div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()">  	
@@ -222,7 +222,7 @@
 		function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
 		function AutoPlay(){ //自动滚动
 		 clearInterval(AutoPlayObj);
-		 AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',5000); //间隔时间
+		 AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',3000); //间隔时间
 		}
 		function ISL_GoUp(){ //上翻开始
 		 if(MoveLock) return;

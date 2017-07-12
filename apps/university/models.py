@@ -33,7 +33,7 @@ class Level(models.Model):
 
 class University(models.Model):
     name = models.CharField(verbose_name=u'学校名称', max_length=200)
-    image = models.ImageField(verbose_name=u'首页展示图', upload_to=u'university', max_length=200)
+    image = models.ImageField(verbose_name=u'首页展示图', upload_to=u'university/index', max_length=200)
     logo = models.ImageField(verbose_name=u'校徽', upload_to=u'university/logo', max_length=200, default='university/logo/logo.jpg')
     english_name = models.CharField(verbose_name=u'英文名', max_length=200)
     country = models.ForeignKey(Country, verbose_name=u'所属国家')
@@ -103,16 +103,9 @@ class Major(models.Model):
 
 
 class Scenery(models.Model):
-    title = models.CharField(verbose_name=u'标题', max_length=50)
+    title = models.CharField(verbose_name=u'标题', max_length=50, null=True, blank=True)
     university = models.ForeignKey(University, verbose_name=u'所属大学')
-    image = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光')
-    image1 = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光')
-    image2 = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光')
-    image3 = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光')
-    image4 = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光')
-    image5 = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光')
-    image6 = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光')
-    image7 = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光')
+    image = models.ImageField(upload_to=u'university/scenery/%y/%m', verbose_name=u'校园风光',null=True, blank=True, max_length=200)
     add_time = models.DateTimeField(verbose_name=u'添加时间', default=datetime.now)
 
     class Meta:

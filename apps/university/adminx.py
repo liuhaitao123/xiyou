@@ -41,10 +41,10 @@ class MajorAdmin(object):
 
 
 class SceneryAdmin(object):
-    list_display = ('title', 'university', 'image', 'image1', 'image2', 'image3', 'image4', 'add_time')
-    list_display_links = ('title',)
-    search_fields = ('title',)
-    list_filter = ('title', 'add_time',)
+    list_display = ('university', 'image', 'add_time')
+    list_display_links = ('university',)
+    search_fields = ('university',)
+    list_filter = ('university', 'add_time',)
 
 xadmin.site.register(Country, CountryAdmin)
 xadmin.site.register(Level, LevelAdmin)

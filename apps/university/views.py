@@ -10,7 +10,7 @@ from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 import json
 
-from university.models import Country, Level, University, Major
+from university.models import Country, Level, University, Major, Scenery
 from information.models import Article, WinCase
 from users.models import BannerOther
 from operation.models import UserAsk, UserMajor
@@ -65,9 +65,11 @@ class UniversityDetailView(View):
 
         university.click_num += 1
         university.save()
+		
+        all_scenery = Scenery.objects.filter(university=int(university_id))
         view_other_list = University.objects.order_by('-click_num')[:4]
         recommend_list = University.objects.filter(recommend=1)[:6]
-        return render(request, 'university-detail.html', {'university': university, 'recommend_list': recommend_list,'view_other_list': view_other_list})
+        return render(request, 'university-detail.html', {'university': university, 'recommend_list': recommend_list,'view_other_list': view_other_list, 'all_scenery': all_scenery})
 
 
 class EstimateView(View):
