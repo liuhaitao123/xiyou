@@ -1,0 +1,13 @@
+<div class="fl our">
+    		<ul class="about-our">
+    		    <li class="pic">
+    		      <img src="{% static 'img/touxiang.png' %}" alt="">
+    	     	   <a href="wode.html">更换头像</a>
+    	     	   <p>欢迎您，1***9</p></li>
+    			<li {% if request.path|slice:'5' == '/user' %}class="nn"{% endif %}><a href="{% url 'user:usercenter' %}">账号管理</a></li>
+    			<li {% if request.path|slice:'5' == '/myap' %}class="nn"{% endif %}><a href="{% url 'user:myapply' %}">我的申请</a></li>
+    			<li {% if request.path|slice:'5' == '/myor' %}class="nn"{% endif %}><a href="{% url 'user:myorder' %}">我的订单</a></li>
+    			<li><a href="">上传文书</a></li>
+    			<li {% if request.path|slice:'5' == '/myas' %}class="nn"{% endif %}><a href="{% url 'user:myask' %}">我的问答</a></li>
+    		</ul>
+    	</div>

@@ -2,7 +2,7 @@
     <ul class="slides">
     {% for banner in banner_list %}
         <li>
-            <a title="" target="_blank" href="#">
+            <a title="" target="_blank" href="{{ banner.url }}">
                 <img width="1920" height="550" alt="" src="{{ MEDIA_URL }}{{ banner.image }}">
             </a>
         </li>

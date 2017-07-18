@@ -35,9 +35,10 @@
 				<li>订单号：<a href="">1234567</a></li>
 			 </ul>
 		 </div>
+		 {% for order in all_orders %}
 		 <div class="sp">
 			<ul class="clearfix">  
-				<li class="mc"><img src="/static/img/ps-1.png" alt=""><span>PS(个人陈述)</span></li>
+				<li class="mc"><img src="/static/img/ps-1.png" alt=""><span>{{ order.store_id }}</span></li>
 				<li class="num"><a href="">-</a><span>1</span><a href="">+</a></li>
 				<li>¥500.00</li>
 				<li>等待买家付款</li>
@@ -45,25 +46,26 @@
 				<button>付款</button></li>
 			</ul>
 		 </div>
-		 <div class="sp sp1">
-			<ul class="clearfix">  
-				<li class="mc"><img src="/static/img/ps-1.png" alt=""><span>PS(个人陈述)</span></li>
-				<li class="num"><a href="">-</a><span>1</span><a href="">+</a></li>
-				<li class="mj">¥500.00
+		 {% endfor %}
+		 <!-- <div class="sp sp1"> -->
+			<!-- <ul class="clearfix">   -->
+				<!-- <li class="mc"><img src="/static/img/ps-1.png" alt=""><span>PS(个人陈述)</span></li> -->
+				<!-- <li class="num"><a href="">-</a><span>1</span><a href="">+</a></li> -->
+				<!-- <li class="mj">¥500.00 -->
 		 
-				</li>
-				<li class="mj">等待买家付款</li>
-				<li class="fk"><a href="wode-ddxq.html" class="sq">订单详情</a><a href="">删除</a>
-				<button>定金付款</button></li>
-			</ul>
-			<ul class="clearfix wk">
-				<li class="mj">¥500.00
-				</li>
-				<li class="mj">等待买家付款</li>
-				<li class="fk">
-				<button>尾款付款</button></li>
-			</ul>
-		 </div>
+				<!-- </li> -->
+				<!-- <li class="mj">等待买家付款</li> -->
+				<!-- <li class="fk"><a href="wode-ddxq.html" class="sq">订单详情</a><a href="">删除</a> -->
+				<!-- <button>定金付款</button></li> -->
+			<!-- </ul> -->
+			<!-- <ul class="clearfix wk"> -->
+				<!-- <li class="mj">¥500.00 -->
+				<!-- </li> -->
+				<!-- <li class="mj">等待买家付款</li> -->
+				<!-- <li class="fk"> -->
+				<!-- <button>尾款付款</button></li> -->
+			<!-- </ul> -->
+		 <!-- </div> -->
 
     </div>
 {% endblock %}

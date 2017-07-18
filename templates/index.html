@@ -7,13 +7,41 @@
 {% endblock %}
 {% block js %}
 <script src="{% static 'js/common.js' %}"></script>
+ <!-- 轮播 -->
+<script type="text/javascript">
+	 var scrollPhoto = new ScrollPicleft();
+	 scrollPhoto.scrollContId = "img-sc"; // 内容容器ID""
+	 scrollPhoto.arrLeftId = "Left_Photo";//左箭头ID
+	 scrollPhoto.arrRightId = "Right_Photo"; //右箭头ID
+	 scrollPhoto.frameWidth = 1200;//显示框宽度
+	 scrollPhoto.pageWidth = 1200; //翻页宽度
+	 scrollPhoto.speed = 10; //移动速度(单位毫秒，越小越快)
+	 scrollPhoto.space = 100; //每次移动像素(单位px，越大越快)
+	 scrollPhoto.autoPlay = false; //自动播放
+	 scrollPhoto.autoPlayTime = 3; //自动播放间隔时间(秒)
+	 scrollPhoto.initialize(); //初始化 
+</script>
+
+
+	<!-- 鼠标移上显示 -->
+<script>
+	$(function(){
+		$('.stu-img li').hover(function(){
+			$(this).children('span').stop(true,true).delay(100).animate({'top':0},300);
+		},function(){
+			$(this).children('span').stop(true,true).animate({'top':320},300);
+		})
+			
+		})
+</script>
+
 {% endblock %}
 {% block content %}
 	<div id="banner_tabs" class="flexslider">
 		<ul class="slides">
-		{% for banner in banner_list%}
+		{% for banner in banner_list %}
 			<li>
-				<a title="" target="_blank" href="#">
+				<a title="" target="_blank" href="{{ banner.url }}">
 					<img width="1920" height="550" alt=""  src="{{ MEDIA_URL }}{{ banner.image }}">
 				</a>
 			</li>
@@ -101,15 +129,7 @@
 			</div>
     	   
     	</div>
-    	<script language="javascript"> 
-		$('.hd li').click(function(){ 
-		$(this).addClass("on").siblings().removeClass();
-		  // 删除其他兄弟元素的样式
-		       // $(this).addClass('selected'); 
-		//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
-		$(".bd > ul").hide().eq($('.hd li').index(this)).show(); 
-		}); 
-		</script> 
+    	 
         <!-- <ul class="carousel wrap">
     	   	   <li class="car-left"><a href=""></a></li>
     	   	   <li class="car-right"><a href=""></a></li>
@@ -166,33 +186,7 @@
     	</div>    
     </div>
 
-    <!-- 轮播 -->
-    <script type="text/javascript">
-	 var scrollPhoto = new ScrollPicleft();
-	 scrollPhoto.scrollContId = "img-sc"; // 内容容器ID""
-	 scrollPhoto.arrLeftId = "Left_Photo";//左箭头ID
-	 scrollPhoto.arrRightId = "Right_Photo"; //右箭头ID
-	 scrollPhoto.frameWidth = 1200;//显示框宽度
-	 scrollPhoto.pageWidth = 1200; //翻页宽度
-	 scrollPhoto.speed = 10; //移动速度(单位毫秒，越小越快)
-	 scrollPhoto.space = 100; //每次移动像素(单位px，越大越快)
-	 scrollPhoto.autoPlay = false; //自动播放
-	 scrollPhoto.autoPlayTime = 3; //自动播放间隔时间(秒)
-	 scrollPhoto.initialize(); //初始化 
-	</script>
-
-
-	<!-- 鼠标移上显示 -->
-  <script>
-	$(function(){
-		$('.stu-img li').hover(function(){
-			$(this).children('span').stop(true,true).delay(100).animate({'top':0},300);
-		},function(){
-			$(this).children('span').stop(true,true).animate({'top':320},300);
-		})
-			
-		})
-  </script>
+   
     <div class="information">
     	<div class="wrap clearfix ">
     		<p class="tit">留学资讯<span>Study Abroad Information</span>

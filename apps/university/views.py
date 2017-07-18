@@ -119,7 +119,8 @@ class ArticleView(View):
 class MajorApplyView(View):
     def post(self, request):
         if not request.user.is_authenticated():
-            return HttpResponseRedirect(reverse('user:login'))
+            json_data = {'status': 'nologin', 'msg': '您已申请该专业！'}
+            return HttpResponse(json.dumps(json_data), content_type="application/json")
 
         major = UserMajor.objects.filter(user=request.user).filter(major_id=int(request.POST.get('major_id', '')))
 

@@ -49,7 +49,7 @@
     		  	</ul>
     		  	<ul class="fr ff clearfix">
     		  		<li class="car" doc="{{ doc.id }}"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
-    		  		<li class="now">立即购买</li>
+    		  		<a href="{% url 'operation:cart' %}"><li class="now">立即购买</li>
     		  		<li class="down"><span><img src="{% static 'img/down.png' %}"/></span>个人信息表下载</li>
     		  	</ul>
     		  </div>

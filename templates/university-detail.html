@@ -147,6 +147,9 @@
                         xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
                     },
                     success: function(data) {
+						if(data.status == 'nologin'){
+							window.location.href = '{% url 'user:login' %}'
+						}
                         if(data.status == 'fail'){
                             layer.open({
                               title: '西柚留学网提示'

@@ -9,7 +9,7 @@ from django.core.urlresolvers import reverse
 import json
 
 from forms import RegisterForm, LoginForm
-from operation.models import HighApply, UserAsk, UserMajor
+from operation.models import HighApply, UserAsk, UserMajor, UserCart
 from users.models import BannerIndex
 from information.models import WinCase, Article
 from university.models import University
@@ -50,6 +50,7 @@ class LogoutView(View):
 
 class IndexView(View):
     def get(self, request):
+
         banner_list = BannerIndex.objects.all().order_by('index')[:3]
         win_case_one = WinCase.objects.filter(show_index=1)[:8]
         win_case_two = WinCase.objects.filter(show_index=1)[8:15]
@@ -60,18 +61,20 @@ class IndexView(View):
         ask_list = UserAsk.objects.all()[:3]
         infor_zx = Article.objects.filter(category='zx')[:6]
         infor_gl = Article.objects.filter(category='gl')[:6]
+		
+        context = {'banner_list': banner_list,
+				   'win_case_one': win_case_one,
+				   'win_case_two': win_case_two,
+				   'univer_ame': univer_ame,
+				   'univer_eng': univer_eng,
+				   'univer_can': univer_can,
+				   'univer_aus': univer_aus,
+				   'ask_list': ask_list,
+				   'infor_zx': infor_zx,
+				   'infor_gl': infor_gl,
+				  }
 
-        return render(request, 'index.html', {'banner_list': banner_list,
-                                              'win_case_one': win_case_one,
-                                              'win_case_two': win_case_two,
-                                              'univer_ame': univer_ame,
-                                              'univer_eng': univer_eng,
-                                              'univer_can': univer_can,
-                                              'univer_aus': univer_aus,
-                                              'ask_list': ask_list,
-                                              'infor_zx': infor_zx,
-                                              'infor_gl': infor_gl,
-                                              })
+        return render(request, 'index.html', context)
 
 
 class HighApplyView(View):
@@ -106,18 +109,22 @@ class UsercenterView(View):
 class MyApplyView(View):
     def get(self, request):
         apply_list = UserMajor.objects.filter(user=request.user)
-        return render(request, 'usercenter-myapply.html', {'apply_list': apply_list})
+        context = {'apply_list': apply_list}
+        return render(request, 'usercenter-myapply.html', context)
 
 
 class MyOrderView(View):
     def get(self, request):
-        return render(request, 'usercenter-myorder.html')
+        all_orders = UserCart.objects.filter(user=request.user)
+        context = {'all_orders': all_orders}
+        return render(request, 'usercenter-myorder.html', context)
 
 
 class MyAskView(View):
     def get(self, request):
         question_list = UserAsk.objects.filter(user=request.user)
-        return render(request, 'usercenter-myask.html', {'question_list': question_list})
+        context = {'question_list': question_list}
+        return render(request, 'usercenter-myask.html', context)
 
 
 class MyQstView(View):
@@ -138,5 +145,11 @@ class MyQstView(View):
 class CaseView(View):
     def get(self, request, case_id):
         wincase = WinCase.objects.get(id=int(case_id))
-        return render(request, 'wincase.html', {'wincase': wincase})
+        recommed_list = University.objects.filter(recommend=1)[:3]
+		
+        context = {'wincase': wincase,
+                   'recommed_list': recommed_list,
+                  }
+		
+        return render(request, 'wincase.html', context)
 

@@ -21,3 +21,8 @@ class AboutView(View):
 	def get(self, request):
 		all_articles = HelpCenter.objects.all()
 		return render(request, 'about.html', {'all_articles': all_articles})
+		
+
+class CartView(View):
+	def get(self, request):
+		return render(request, 'cart.html')
