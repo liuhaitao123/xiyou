@@ -39,9 +39,13 @@
 		 <div class="sp">
 			<ul class="clearfix">  
 				<li class="mc"><img src="/static/img/ps-1.png" alt=""><span>{{ order.store_id }}</span></li>
-				<li class="num"><a href="">-</a><span>1</span><a href="">+</a></li>
+				<li class="num">
+					<!-- <a href="">-</a> -->
+					<span>{{ order.nums }} 份</span>
+					<!-- <a href="">+</a> -->
+				</li>
 				<li>¥500.00</li>
-				<li>等待买家付款</li>
+				<li {% if order.status == 0 %}style="color:red;"{% else %}style="color:blue;"{% endif %}>{{ order.get_status_display }}</li>
 				<li class="fk"><a href="wode-ddxq.html" class="sq">订单详情</a><a href="">删除</a>
 				<button>付款</button></li>
 			</ul>

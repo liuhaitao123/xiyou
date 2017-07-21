@@ -87,12 +87,12 @@
                 <!-- </div> -->
 		    <!-- </div> -->
     </div>
-
-    <div class="recom">
+	
+	<div class="recom">
 		<p class="tit">推荐院校<span>Recommended Universities</span></p>
 		<a class="more" href="{% url 'university:university' %}">更多院校&nbsp></a>
-    	<div class="wrap slideTxtBox">
-	    	<div class="hd">
+			<div class="wrap slideTxtBox">
+				<div class="hd">
 				<hr>
 				<ul class="school-tit clearfix">
 					<li class="on">美国院校</li>
@@ -100,41 +100,50 @@
 					<li>加拿大院校</li>
 					<li>澳洲院校</li>
 					
-				</ul>
-	    	</div>
-    		
-			<div class="bd">
-				<ul class="clearfix TTSliderPicList">
+			   </ul>
+				</div>
+				
+			  <div class="bd">
+				<ul class="clearfix">
 				{% for univer in univer_ame %}
 					<li class="{% if forloop.counter|divisibleby:4 %}right{% endif %}"><a href="{% url 'university:univer-detail' univer.id %}"><img src="{{ MEDIA_URL }}{{ univer.image }}" alt=""></a></li>
-					
 				{% endfor %}
-				</ul>
+			   </ul>
 				<ul class="clearfix ht">
-				{% for univer in univer_eng %}
+					{% for univer in univer_eng %}
 					<li class="{% if forloop.counter|divisibleby:4 %}right{% endif %}"><a href="{% url 'university:univer-detail' univer.id %}"><img src="{{ MEDIA_URL }}{{ univer.image }}" alt=""></a></li>
 				{% endfor %}
-				</ul>
+			   </ul>
 				<ul class="clearfix ht">
-				{% for univer in univer_can %}
+					{% for univer in univer_can %}
 					<li class="{% if forloop.counter|divisibleby:4 %}right{% endif %}"><a href="{% url 'university:univer-detail' univer.id %}"><img src="{{ MEDIA_URL }}{{ univer.image }}" alt=""></a></li>
 				{% endfor %}
-				</ul>
-				<ul class="clearfix ht">
-				{% for univer in univer_aus %}
+			   </ul>
+			   <ul class="clearfix ht">
+					{% for univer in univer_aus %}
 					<li class="{% if forloop.counter|divisibleby:4 %}right{% endif %}"><a href="{% url 'university:univer-detail' univer.id %}"><img src="{{ MEDIA_URL }}{{ univer.image }}" alt=""></a></li>
 				{% endfor %}
-				</ul>
+			   </ul>
 				
 			</div>
-    	   
-    	</div>
-    	 
-        <!-- <ul class="carousel wrap">
-    	   	   <li class="car-left"><a href=""></a></li>
-    	   	   <li class="car-right"><a href=""></a></li>
-    	</ul> -->
+			   
+			</div>
+			<script language="javascript"> 
+			$('.hd li').click(function(){ 
+			$(this).addClass("on").siblings().removeClass();
+			  // 删除其他兄弟元素的样式
+				   // $(this).addClass('selected'); 
+			//removeClass就是删除当前其他类；只有当前对象有addClass("selected")；siblings()意思就是当前对象的同级元素，removeClass就是删除； 
+			$(".bd > ul").hide().eq($('.hd li').index(this)).show(); 
+			}); 
+			</script> 
+			<!-- <ul class="carousel wrap">
+				   <li class="car-left"><a href=""></a></li>
+				   <li class="car-right"><a href=""></a></li>
+			</ul> -->
 	</div>
+
+   
     <div class="process">
     	<div class="wrap">
     		<p class="tit">申请流程<span>Application Process</span>

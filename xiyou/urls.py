@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^captche/', include('captcha.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root':MEDIA_ROOT}),
+	url(r'^ueditor/',include('DjangoUeditor.urls' )),
     url(r'', include('apps.users.urls', namespace='user')),
     url(r'', include('apps.service.urls', namespace='service')),
     url(r'', include('apps.operation.urls', namespace='operation')),

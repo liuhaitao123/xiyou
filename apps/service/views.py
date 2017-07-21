@@ -31,7 +31,7 @@ class DocView(View):
         except PageNotAnInteger:
             page = 1
 
-        p = Paginator(all_docs, 2, request=request)
+        p = Paginator(all_docs, 3, request=request)
 
         docs = p.page(page)
 
@@ -43,17 +43,29 @@ class DocView(View):
     def post(self, request):
         store_id = request.POST.get('doc_id', '')
         store_type = request.POST.get('store_type', '')
+        number = request.POST.get('nums', 1)
 
         json_data = {'status': 'success'}
 
         if not request.user.is_authenticated():
             return HttpResponseRedirect(reverse('user:login'))
-        user_cart = UserCart()
-        user_cart.user = request.user
-        user_cart.store_id = store_id
-        user_cart.store_type = store_type
-        user_cart.save()
-        return HttpResponse(json.dumps(json_data), content_type="application/json")
+        try:	
+            records = UserCart.objects.get(user=request.user, store_id=store_id, store_type=store_type)
+        except:
+            records = None
+		
+        if records:
+            records.nums = records.nums + int(number)
+            records.save()
+            return HttpResponse(json.dumps(json_data), content_type="application/json")
+        else:
+            user_cart = UserCart()
+            user_cart.user = request.user
+            user_cart.store_id = store_id
+            user_cart.store_type = store_type
+            user_cart.nums = int(number)
+            user_cart.save()
+            return HttpResponse(json.dumps(json_data), content_type="application/json")
 
 
 class VisaView(View):

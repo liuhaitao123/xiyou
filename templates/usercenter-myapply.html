@@ -3,6 +3,7 @@
 {% block css %}
 {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'css/wode-sq.css' %}">
+<script src="{% static 'js/layer.js' %}"></script>
 {% endblock %}
 {% block js %}
 
@@ -12,20 +13,20 @@
 	<div class="fr con">
 	  
 		 <h4>我的申请</h4> 
-{#		 <div class="up">#}
-{#			<ul class="clearfix">#}
-{#				<li>申请号：<input type="text"></li>#}
-{#				<li>商品名称：<input type="text"></li>#}
-{#				<li>申请时间：<input type="text"></li>#}
-{#				<li class="ss"><a href="">搜索</a></li>#}
-{#			</ul>#}
-{#		 </div>#}
+		 <!-- <div class="up"> -->
+			<!-- <ul class="clearfix"> -->
+				<!-- <li>申请号：<input type="text"></li> -->
+				<!-- <li>商品名称：<input type="text"></li> -->
+				<!-- <li>申请时间：<input type="text"></li> -->
+				<!-- <li class="ss"><a href="">搜索</a></li> -->
+			<!-- </ul> -->
+		 <!-- </div> -->
 		 <div class="list">
 			<ul class="clearfix">  
 				<li style="width: 180px;">用户</li>
 				<li style="width: 300px;">申请大学</li>
 				<li style="width: 230px;">申请专业</li>
-{#				<li>意向专业</li>#}
+				<!-- <li>意向专业</li> -->
 				<li style="width: 150px;">操作</li>
 			</ul>
 		 </div>
@@ -42,16 +43,49 @@
 			<ul class="clearfix">  
 				<li style="width: 180px;"><span>{{ apply.user.username }}</span></li>
 				<li style="width: 300px;"><span>{{ apply.university }}</span></li>
-{#				<li>{{ apply.type }}</li>#}
+				<!-- <li>{{ apply.type }}</li> -->
 				<li style="width: 230px;">{{ apply.major }}</li>
 				<li style="width: 150px;" class="fk">
-{#                    <a href="wode-sqxq.html" class="sq">申请详情</a>#}
-{#                    <a href="">删除</a>#}
-				<button>删除</button>
+                    <!-- <a href="wode-sqxq.html" class="sq">申请详情</a> -->
+                    <!-- <a href="">删除</a> -->
+				<button class="delete" apply="{{ apply.id }}">删除</button>
                 </li>
 			</ul>
 		 </div>
         {% endfor %}
 
 	</div>
+	<script>
+		$('.delete').on('click', function(){
+			var apply_id = parseInt($(this).attr('apply'));
+			
+			$.ajax({
+                cache: false,
+                type: "POST",
+                url:"{% url 'operation:delete' %}",
+                data:{'apply_id':apply_id},
+                async: true,
+                beforeSend:function(xhr, settings){
+                    xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                },
+                success: function(data) {
+                    if(data.status == 'fail'){
+                        layer.open({
+                          title: '西柚留学网提示'
+                          ,content: '删除失败，请稍后再试！'
+                        });
+                    }else if(data.status == 'success'){
+                        layer.open({
+                          title: '西柚留学网提示'
+                          ,content: '申请删除成功！'
+                        });	
+                    }
+					setTimeout(function () { 
+						location.reload();
+					}, 2000);
+					
+                },
+            });		
+		})
+	</script>
 {% endblock %}

@@ -25,8 +25,8 @@ class HignApplyAdmin(object):
 
 
 class UserCartAdmin(object):
-    list_display = ('id', 'user', 'store_id', 'store_type', 'add_time')
-    list_display_links = ('user',)
+    list_display = ('id', 'user', 'store_id', 'store_type', 'nums', 'add_time')
+    list_display_links = ('id',)
     search_fields = ('user', 'store_id', 'store_type')
     list_filter = ('user__username', 'store_id', 'store_type', 'add_time')
 

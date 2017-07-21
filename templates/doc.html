@@ -43,13 +43,17 @@
     		  </div>
     		  <div class="bott clearfix">
     		  	<ul class="fl">
-    		  		<li>价格：<span>¥{{ doc.price }}</span></li>
-    		  		<li class="shc">市场价：<span>¥{{ doc.price|add:100 }}</span></li>
-    		  		<li class="num">数量 :<a class="add">-</a><span id="number">1</span><a class="reduce">+</a></li>
+    		  		<li>价格：¥<span>{{ doc.price }}</span></li>
+    		  		<li class="shc">市场价：¥<span>{{ doc.price|add:100 }}</span></li>
+    		  		<li class="num">数量 :
+						<a class="reduce" href="javascript:;">-</a>
+						<span id="number">1</span>
+						<a class="added" href="javascript:;">+</a>
+					</li>
     		  	</ul>
     		  	<ul class="fr ff clearfix">
     		  		<li class="car" doc="{{ doc.id }}"><span><img src="{% static 'img/shoppingcar-1.png' %}"/></span>加入购物车</li>
-    		  		<a href="{% url 'operation:cart' %}"><li class="now">立即购买</li>
+    		  		<a href="{% url 'operation:cart' %}"><li class="now">立即购买</li></a>
     		  		<li class="down"><span><img src="{% static 'img/down.png' %}"/></span>个人信息表下载</li>
     		  	</ul>
     		  </div>
@@ -60,37 +64,73 @@
     </div>
     <div class="fen">
     	<ul class="fenye clearfix">
-     			 {% if all_docs.has_previous %}
-                <li><a href="?{{ all_docs.previous_page_number.querystring }}">上一页</a></li>
+     		{% if all_docs.has_previous %}
+            <li><a href="?{{ all_docs.previous_page_number.querystring }}">上一页</a></li>
+            {% endif %}
+            {% for page in all_docs.pages %}
+                {% if page %}
+                    {% ifequal page all_docs.number %}
+                    <li><a href="?{{ page.querystring }}" class="at">{{ page }}</a></li>
+                    {% else %}
+                    <li><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                    {% endifequal %}
+                {% else %}  
+                    <li>...</li>
                 {% endif %}
-                {% for page in all_docs.pages %}
-                    {% if page %}
-                        {% ifequal page all_docs.number %}
-                        <li><a href="?{{ page.querystring }}" class="at">{{ page }}</a></li>
-                        {% else %}
-                        <li><a href="?{{ page.querystring }}">{{ page }}</a></li>
-                        {% endifequal %}
-                    {% else %}  
-                        <li>...</li>
-                    {% endif %}
-                {% endfor %}
-                {% if all_docs.has_next %}
-                        <li><a href="?{{ all_docs.next_page_number.querystring }}">下一页</a></li>
-                {% endif %}
+            {% endfor %}
+            {% if all_docs.has_next %}
+                    <li><a href="?{{ all_docs.next_page_number.querystring }}">下一页</a></li>
+            {% endif %}
      	</ul>
     </div>
 	<script>
+		
+		$('.added').on('click', function(){
+			
+			var price = parseInt($(this).parent().prev().children().eq(0).text());
+			var price_shichang = parseInt($(this).parent().prev().prev().children().eq(0).text());
+		
+			var nums = $(this).prev().text();
+			if (nums == 5){
+				return;
+			} else {
+				$(this).prev().text(parseInt($(this).prev().text()) + 1);
+			}
+			price = price/parseInt(nums);
+			price_shichang = price_shichang/parseInt(nums);
 
+			$(this).parent().prev().prev().children().eq(0).text(price_shichang * (parseInt(nums)+1));
+			$(this).parent().prev().children().eq(0).text(price * (parseInt(nums)+1));
+		})
+		$('.reduce').on('click', function(){
+			var price = parseInt($(this).parent().prev().children().eq(0).text());
+			var price_shichang = parseInt($(this).parent().prev().prev().children().eq(0).text());
+			
+			var nums = parseInt($(this).next().text());
+			if (nums == 1){
+				return;
+			} else {
+				$(this).next().text(parseInt($(this).next().text()) - 1);
+			}		
+			
+			price = price/parseInt(nums);
+			price_shichang = price_shichang/parseInt(nums);
+
+			$(this).parent().prev().prev().children().eq(0).text(price_shichang * (parseInt(nums)-1));
+			$(this).parent().prev().children().eq(0).text(price * (parseInt(nums)-1));
+		})
 	</script>
     <script>
         $('.car').on('click', function () {
             var doc_id = $(this).attr('doc');
+			var nums = parseInt($('#number').text());
+			
 
             $.ajax({
                 cache: false,
                 type: "POST",
                 url:"{% url 'service:doc' %}",
-                data:{'doc_id':doc_id, 'store_type':1},
+                data:{'doc_id':doc_id, 'store_type':1, 'nums':nums},
                 async: true,
                 beforeSend:function(xhr, settings){
                     xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");

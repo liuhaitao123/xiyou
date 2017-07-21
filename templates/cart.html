@@ -1,5 +1,5 @@
-{% extends 'usercenter-base.html' %}
-{% block title %}我的问答|西柚留学网{% endblock %}
+{% extends 'base.html' %}
+{% block title %}我的购物车|西柚留学网{% endblock %}
 {% block css %}
 {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'css/gouwuche.css' %}">
@@ -12,21 +12,21 @@
 
 	<div class="shunxu">
 		<ul class="clearfix">
-			<li class="oo">查看购物车<span><img src="../images/dbx1.png" alt=""></span></li>
-			<li  class="">确认订单<span><img src="../images/dbx2.png" alt=""></span></li>
+			<li class="oo">查看购物车<span><img src="{% static 'img/dbx1.png' %}" alt=""></span></li>
+			<li  class="">确认订单<span><img src="{% static 'img/dbx2.png' %}" alt=""></span></li>
 			<li>支付</li>
 		</ul>
 	</div>
 
 	<div class="wrap sp">
-		<p><span><img src="../images/car.png" alt=""></span>我的购物车</p>
+		<p><span><img src="{% static 'img/car.png' %}" alt=""></span>我的购物车</p>
 		<form action="">
 		<table>
 		  <tr>
 			<th class="first"><label for=""></label><span>全选</span>商品</th><th>单价</th><th>数量</th><th>小计</th><th>操作</th>
 		 </tr>
 		 <tr>
-			<td><label for=""></label><img src="../images/ps-80.png" alt=""><i>PS(个人陈述)</i></td><td>¥500</td><td class="mid"><a href="" class="jian">-</a><span class="num">1</span><a href="" class="jia">+</a></td><td>¥500</td><td>删除</td>
+			<td><label for=""></label><img src="{% static 'img/ps-80.png' %}" alt=""><i>PS(个人陈述)</i></td><td>¥500</td><td class="mid"><a href="" class="jian">-</a><span class="num">1</span><a href="" class="jia">+</a></td><td>¥500</td><td>删除</td>
 		 </tr>
 		</table>
 		  <div class="zong">

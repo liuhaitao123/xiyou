@@ -14,34 +14,77 @@
 {% block content %} 
     <div class="wrap up">
        <h4>文件提交</h4>
-       <ul>
-       		<li class="list"><a>PS（个人陈述）（英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i><button>去购买</button>
-            </li>
-            <li class="list"><a>CV（个人简历）（英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i><button>去购买</button>
-            </li>
-            <li class="list"><a>RL（推荐信）（英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i><button>去购买</button>
-            </li>
-            <li class="list"><a>成绩单（中英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
-            </li>
-             <li class="list"><a>在读证明/毕业证（中英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
-            </li>
-             <li class="list"><a>资金证明（中英文）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
-            </li>
-             <li class="list"><a>护照扫描件</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
-            </li>
-             <li class="list"><a>语言成绩单</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
-            </li>
-             <li class="list"><a>其他附加文件（SAT、AP、IB等）</a><span></span><input type="text" value="上传PDF文件  文件大小小于2MB"><i>浏览</i>
-            </li>
-             <li class="list"><a>照片</a><span></span><input type="text" value="硕士需要工作证明（中英文）"><i>浏览</i>
-            </li>
-             <li class="list"><a>留学生个人信息表</a><span></span><input type="text" value=""><i>浏览</i>
-            </li>
+	   <form action="{% url 'operation:upload' %}" method="POST" enctype="multipart/form-data">
+	   {% csrf_token %}
+		   <ul>
+				<li class="list">
+					<a>PS（个人陈述）（英文）</a>   
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+					<!-- <a href="{% url 'service:doc' %}">去购买</a> -->
+					<!-- <button>去购买</button> -->
+				</li>
+				<li class="list">
+					<a>CV（个人简历）（英文）</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+					<button>去购买</button>
+				</li>
+				<li class="list">
+					<a>RL（推荐信）（英文）</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+					<button>去购买</button>
+				</li>
+				<li class="list">
+					<a>成绩单（中英文）</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
+				<li class="list">
+					<a>在读证明/毕业证（中英文）</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
+				 <li class="list">
+					<a>资金证明（中英文）</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
+				 <li class="list">
+					<a>护照扫描件</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
+				 <li class="list">
+					<a>语言成绩单</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
+				 <li class="list">
+					<a>其他附加文件（SAT、AP、IB等）</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
+				 <li class="list">
+					<a>照片</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
+				 <li class="list">
+					<a>留学生个人信息表</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
 
-             <li class="list"><a>硕士需要工作证明（中英文）</a><span></span><input type="text" value=""><i>浏览</i>
-            </li>
-       </ul>
-       <input class="tj" value="提交" type="submit">  	
+				 <li class="list">
+					<a>硕士需要工作证明（中英文）</a>
+					<input type="file" name="myfiles">
+					<!-- <i>浏览</i> -->
+				</li>
+			</ul>
+			<input class="tj" value="提交" type="submit">  
+		</form>
     </div>
     <div class="wrap sm">
     	<h2>国家申请文书递交说明</h2>

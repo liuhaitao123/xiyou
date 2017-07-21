@@ -57,11 +57,13 @@ class UserCart(models.Model):
     user = models.ForeignKey(UserProfile, verbose_name=u'用户')
     store_id = models.IntegerField(default=0, verbose_name=u'类型id')
     store_type = models.IntegerField(choices=((1, u'文书'), (2, u'签证')), default=1, verbose_name=u'购物车类型')
+    nums = models.IntegerField(verbose_name=u'数量', null=True, blank=True)
+    status = models.IntegerField(choices=((1, u'已付款'),(0, u'未付款')), default=0, verbose_name=u'订单状态')
     add_time = models.DateTimeField(default=datetime.now, verbose_name=u'加入时间')
 
     class Meta:
         verbose_name = u'购物车'
-        verbose_name_plural = verbose_name
+        verbose_name_plural = verbose_name	
 
     def __unicode__(self):
         return self.user
